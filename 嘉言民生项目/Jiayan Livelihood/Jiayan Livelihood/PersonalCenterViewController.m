@@ -145,7 +145,44 @@
 #pragma mark --cell点击
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.section==0 && indexPath.row==1) {
+        //修改密码
+    }
+    if (indexPath.section==1) {
+        switch (indexPath.row) {
+            case 0:
+                //我的收藏
+                break;
+            case 1:
+                //我的买卖
+                break;
+            case 2:
+                //我的帮助
+                break;
+                
+            default:
+                break;
+        }
+    }
+    if (indexPath.section==2) {
+        switch (indexPath.row) {
+            case 0:
+                //我要分享
+                
+                break;
+            case 1:
+                //客服电话
+                
+                break;
+            case 2:
+                //关于我们
+                
+                break;
+                
+            default:
+                break;
+        }
+    }
 
 }
 #pragma mark --点击退出登录
