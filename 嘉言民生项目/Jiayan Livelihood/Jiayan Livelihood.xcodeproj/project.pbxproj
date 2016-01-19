@@ -273,6 +273,7 @@
 		33E006891C4E23BA001327F8 /* 提问返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E006861C4E23BA001327F8 /* 提问返回.png */; };
 		33E0068A1C4E23BA001327F8 /* 提问返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E006871C4E23BA001327F8 /* 提问返回@2x.png */; };
 		33E0068B1C4E23BA001327F8 /* 提问返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E006881C4E23BA001327F8 /* 提问返回@3x.png */; };
+		33E0068E1C4E31CF001327F8 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0068D1C4E31CF001327F8 /* AboutUsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -634,6 +635,8 @@
 		33E006861C4E23BA001327F8 /* 提问返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提问返回.png"; sourceTree = "<group>"; };
 		33E006871C4E23BA001327F8 /* 提问返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提问返回@2x.png"; sourceTree = "<group>"; };
 		33E006881C4E23BA001327F8 /* 提问返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提问返回@3x.png"; sourceTree = "<group>"; };
+		33E0068C1C4E31CF001327F8 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		33E0068D1C4E31CF001327F8 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1232,6 +1235,8 @@
 		3356A8C11C4358BF004FDB97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				33E0068C1C4E31CF001327F8 /* AboutUsViewController.h */,
+				33E0068D1C4E31CF001327F8 /* AboutUsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1748,6 +1753,7 @@
 				333E00A51C4740310096FE44 /* MJRefreshBackStateFooter.m in Sources */,
 				336BF5F71C44DFD700A055C9 /* BaseViewController.m in Sources */,
 				334D03C01C3E3AC800AADCEC /* AnswerViewController.m in Sources */,
+				33E0068E1C4E31CF001327F8 /* AboutUsViewController.m in Sources */,
 				333E009F1C4740310096FE44 /* MJRefreshHeader.m in Sources */,
 				333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */,
 				33032B871C3B5916005B5899 /* ViewController.m in Sources */,
@@ -1960,7 +1966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GH.Jiayan-Livelihood";
 				PRODUCT_MODULE_NAME = jiayan;
 				PRODUCT_NAME = demo;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bqm/Desktop/SVN/repos/嘉言民生项目/Jiayan Livelihood/Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bqm/jyms_bqm/嘉言民生项目/Jiayan Livelihood/Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1978,7 +1984,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GH.Jiayan-Livelihood";
 				PRODUCT_MODULE_NAME = jiayan;
 				PRODUCT_NAME = demo;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bqm/Desktop/SVN/repos/嘉言民生项目/Jiayan Livelihood/Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bqm/jyms_bqm/嘉言民生项目/Jiayan Livelihood/Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
 			};
 			name = Release;
 		};

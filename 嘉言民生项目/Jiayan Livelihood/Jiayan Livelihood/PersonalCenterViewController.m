@@ -13,6 +13,7 @@
 #import "LoginViewController.h"
 #import "RootViewController.h"
 #import "BQMImageView.h"
+#import "AboutUsViewController.h"
 
 @interface PersonalCenterViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray *_imageArr;
@@ -174,9 +175,12 @@
                 //客服电话
                 
                 break;
-            case 2:
+            case 2:{
                 //关于我们
+                AboutUsViewController *aboutVC=[[AboutUsViewController alloc]init];
+                [self.navigationController pushViewController:aboutVC animated:YES];
                 
+            }
                 break;
                 
             default:
