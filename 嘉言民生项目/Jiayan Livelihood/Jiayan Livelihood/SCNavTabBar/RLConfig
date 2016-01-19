@@ -1,0 +1,36 @@
+// SCNavTabBar 使用说明：
+
+/*
+    主要说明：
+    1. 展示效果：
+        类似于网易新闻，支持多页面滑动切换;
+        在最上方，有可点击切换页面的title滑动视图;
+
+    2. 局限性：
+        2.1 多个页面之间没有复用机制;
+        2.2 title滑动视图没有，兼容iOS7.0的风格（和状态栏融为一整体）
+        2.3 为此，适当选取该类的使用，必要时候，需要对其进行修改
+*/
+
+
+/*
+    参考代码：
+    SCNavTabBarController * scnController = [[SCNavTabBarController alloc] init];
+    scnController.subViewControllers = @[latestVC, activeVC, gameVC, videoVC, enjoyVC, officalVC, beautyVC, strategyVC];
+    scnController.navTabBarColor = UIColorWithRGBA(31, 33, 44, 1);
+    [scnController addParentController:self];
+
+
+    其他补充说明：
+    1. 关于子控制器使用说明：
+    eg： rootVC下管理了vc1， vc2，等
+
+        [rootVC addChildController:vc1]
+        [rootVC.view addSubViews:vc1.view]
+
+        其中vc1.view.frame 是可以控制的
+
+    2. 这种模式下，页面切换时动画效果用的比较多；
+        而系统提供的经典的页面切换：模态弹出（presentXXX／ dismissXXX）
+                                压栈／弹栈：（push／pop）
+*/
