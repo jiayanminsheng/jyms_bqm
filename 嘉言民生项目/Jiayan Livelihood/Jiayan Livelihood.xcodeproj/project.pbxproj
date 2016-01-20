@@ -255,6 +255,8 @@
 		336BF5F41C44D6C500A055C9 /* AFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 336BF5F31C44D6C500A055C9 /* AFHelper.m */; };
 		336BF5F71C44DFD700A055C9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336BF5F61C44DFD700A055C9 /* BaseViewController.m */; };
 		336BF5FB1C44E00B00A055C9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 336BF5FA1C44E00B00A055C9 /* MBProgressHUD.m */; };
+		33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */; };
+		33807A6B1C4F52DA005D9B67 /* ModifyPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */; };
 		33A1EA241C3B8BF9008774E4 /* BQMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A1EA231C3B8BF9008774E4 /* BQMLabel.m */; };
 		33A1EA281C3BA320008774E4 /* 导航栏.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A1EA251C3BA320008774E4 /* 导航栏.png */; };
 		33A1EA291C3BA320008774E4 /* 导航栏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A1EA261C3BA320008774E4 /* 导航栏@2x.png */; };
@@ -604,6 +606,9 @@
 		336BF5F61C44DFD700A055C9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		336BF5F91C44E00B00A055C9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		336BF5FA1C44E00B00A055C9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		33807A671C4F52DA005D9B67 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPasswordViewController.xib; sourceTree = "<group>"; };
 		33A1EA221C3B8BF9008774E4 /* BQMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMLabel.h; sourceTree = "<group>"; };
 		33A1EA231C3B8BF9008774E4 /* BQMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQMLabel.m; sourceTree = "<group>"; };
 		33A1EA251C3BA320008774E4 /* 导航栏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏.png"; sourceTree = "<group>"; };
@@ -1237,6 +1242,9 @@
 			children = (
 				33E0068C1C4E31CF001327F8 /* AboutUsViewController.h */,
 				33E0068D1C4E31CF001327F8 /* AboutUsViewController.m */,
+				33807A671C4F52DA005D9B67 /* ModifyPasswordViewController.h */,
+				33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */,
+				33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1598,6 +1606,7 @@
 				3356A8B91C433205004FDB97 /* JingDong.png in Resources */,
 				334D039B1C3E18D500AADCEC /* 50pt_@1x.png in Resources */,
 				33E0068B1C4E23BA001327F8 /* 提问返回@3x.png in Resources */,
+				33807A6B1C4F52DA005D9B67 /* ModifyPasswordViewController.xib in Resources */,
 				3360831A1C4E1A2100A134FF /* 发送-@3x.png in Resources */,
 				335FDE6E1C3D020F002C1F85 /* 图层-1@3x.png in Resources */,
 				33032C361C3B63F7005B5899 /* 引导页2.png in Resources */,
@@ -1797,6 +1806,7 @@
 				33032BC71C3B5B84005B5899 /* RDVTabBar.m in Sources */,
 				333E00661C4725870096FE44 /* ReleaseViewController.m in Sources */,
 				3357425B1C3F9CA1009F725D /* HelpAnswerCell.m in Sources */,
+				33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */,
 				3347DAFF1C46515900F27F40 /* AnswerDetailViewController.m in Sources */,
 				336BF5F41C44D6C500A055C9 /* AFHelper.m in Sources */,
 				33A1EA481C3BB91B008774E4 /* AFNetworkReachabilityManager.m in Sources */,

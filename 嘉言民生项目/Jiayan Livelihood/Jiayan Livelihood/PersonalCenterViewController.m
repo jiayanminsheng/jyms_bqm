@@ -14,6 +14,7 @@
 #import "RootViewController.h"
 #import "BQMImageView.h"
 #import "AboutUsViewController.h"
+#import "ModifyPasswordViewController.h"
 
 @interface PersonalCenterViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray *_imageArr;
@@ -148,6 +149,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0 && indexPath.row==1) {
         //修改密码
+        ModifyPasswordViewController *modifyVC=[[ModifyPasswordViewController alloc]init];
+        [self.navigationController pushViewController:modifyVC animated:YES];
     }
     if (indexPath.section==1) {
         switch (indexPath.row) {
@@ -170,12 +173,14 @@
             case 0:
                 //我要分享
                 
+                
                 break;
             case 1:{
                 //客服电话
                 BQMLog(@"正在打电话");
                 UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-                [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"tel://10010"]]];
+                [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"tel://400-111-1111"]]];
+                [self.view addSubview:webView];
                 
             }
                 break;
