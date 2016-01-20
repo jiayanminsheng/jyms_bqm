@@ -23,9 +23,6 @@
 }
 #pragma mark --UI
 -(void)creatUI{
-    UIImageView *bg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 2*self.view.frame.size.height/3.0)];
-    bg.backgroundColor=[UIColor greenColor];
-    [self.view addSubview:bg];
     
     NSArray *iconArr=@[[UIImage imageNamed:@"TianMao.png"],[UIImage imageNamed:@"TaoBao.png"],[UIImage imageNamed:@"JingDong.png"],[UIImage imageNamed:@"GanJi.png"],[UIImage imageNamed:@"1HaoDian.png"],[UIImage imageNamed:@"GuoHongShangCheng200x200.png"],[UIImage imageNamed:@"GuoHongShangCheng200x200.png"],[UIImage imageNamed:@"58.png"],[UIImage imageNamed:@"SuNing.png"],[UIImage imageNamed:@"GuoMei.png"],[UIImage imageNamed:@"WeiPinHui.png"],[UIImage imageNamed:@"DangDang.png"]];
     CGFloat width=(SCREEN_WIDTH-50)/4;
@@ -58,8 +55,8 @@
        
     }
     
-    BQMImageView *ADImageView=[[BQMImageView alloc]initWithFrame:CGRectMake(0, 50+3*width, SCREEN_WIDTH, self.view.frame.size.height/3.0)];
-    ADImageView.backgroundColor=[UIColor redColor];
+    BQMImageView *ADImageView=[[BQMImageView alloc]initWithFrame:CGRectMake(0, 50+3*width, SCREEN_WIDTH, SCREEN_HEIGHT-(50+3*width)-49)];
+   
     ADImageView.image=[UIImage imageNamed:@"720x280活动图.png"];
     [ADImageView addTarget:self action:@selector(ADclicked:)];
     [self.view addSubview:ADImageView];

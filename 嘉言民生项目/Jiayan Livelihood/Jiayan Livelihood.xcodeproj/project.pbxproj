@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		147EF54D1C429E6500C4A459 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147EF54B1C429E6500C4A459 /* BuyViewController.m */; };
-		147EF54E1C429E6500C4A459 /* BuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147EF54C1C429E6500C4A459 /* BuyViewController.xib */; };
-		147EF5521C429ECA00C4A459 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147EF5501C429ECA00C4A459 /* SellViewController.m */; };
-		147EF5531C429ECA00C4A459 /* SellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147EF5511C429ECA00C4A459 /* SellViewController.xib */; };
 		147EF5611C42A14600C4A459 /* 我要买.png in Resources */ = {isa = PBXBuildFile; fileRef = 147EF5551C42A14600C4A459 /* 我要买.png */; };
 		147EF5621C42A14600C4A459 /* 我要买@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 147EF5561C42A14600C4A459 /* 我要买@2x.png */; };
 		147EF5631C42A14600C4A459 /* 我要买@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 147EF5571C42A14600C4A459 /* 我要买@3x.png */; };
@@ -48,8 +44,6 @@
 		33032BC91C3B5B84005B5899 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BC61C3B5B84005B5899 /* RDVTabBarItem.m */; };
 		33032BCC1C3B5BDC005B5899 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BCB1C3B5BDC005B5899 /* RootViewController.m */; };
 		33032BD01C3B5C0E005B5899 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController.m */; };
-		33032BD51C3B5C26005B5899 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BD31C3B5C26005B5899 /* BusinessViewController.m */; };
-		33032BD61C3B5C26005B5899 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33032BD41C3B5C26005B5899 /* BusinessViewController.xib */; };
 		33032BDA1C3B5C37005B5899 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BD81C3B5C37005B5899 /* HelpViewController.m */; };
 		33032BDB1C3B5C37005B5899 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33032BD91C3B5C37005B5899 /* HelpViewController.xib */; };
 		33032BDF1C3B5C5A005B5899 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BDD1C3B5C5A005B5899 /* PolicyViewController.m */; };
@@ -257,6 +251,13 @@
 		336BF5FB1C44E00B00A055C9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 336BF5FA1C44E00B00A055C9 /* MBProgressHUD.m */; };
 		33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */; };
 		33807A6B1C4F52DA005D9B67 /* ModifyPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */; };
+		33807A701C4F80F4005D9B67 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A6E1C4F80F4005D9B67 /* BusinessViewController.m */; };
+		33807A711C4F80F4005D9B67 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33807A6F1C4F80F4005D9B67 /* BusinessViewController.xib */; };
+		33807A7B1C4F8133005D9B67 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A741C4F8133005D9B67 /* BuyViewController.m */; };
+		33807A7C1C4F8133005D9B67 /* BuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33807A751C4F8133005D9B67 /* BuyViewController.xib */; };
+		33807A7D1C4F8133005D9B67 /* SellDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A771C4F8133005D9B67 /* SellDetailViewController.m */; };
+		33807A7E1C4F8133005D9B67 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33807A791C4F8133005D9B67 /* SellViewController.m */; };
+		33807A7F1C4F8133005D9B67 /* SellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33807A7A1C4F8133005D9B67 /* SellViewController.xib */; };
 		33A1EA241C3B8BF9008774E4 /* BQMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A1EA231C3B8BF9008774E4 /* BQMLabel.m */; };
 		33A1EA281C3BA320008774E4 /* 导航栏.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A1EA251C3BA320008774E4 /* 导航栏.png */; };
 		33A1EA291C3BA320008774E4 /* 导航栏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A1EA261C3BA320008774E4 /* 导航栏@2x.png */; };
@@ -296,12 +297,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		147EF54A1C429E6500C4A459 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
-		147EF54B1C429E6500C4A459 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
-		147EF54C1C429E6500C4A459 /* BuyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyViewController.xib; sourceTree = "<group>"; };
-		147EF54F1C429ECA00C4A459 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
-		147EF5501C429ECA00C4A459 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
-		147EF5511C429ECA00C4A459 /* SellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellViewController.xib; sourceTree = "<group>"; };
 		147EF5551C42A14600C4A459 /* 我要买.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我要买.png"; sourceTree = "<group>"; };
 		147EF5561C42A14600C4A459 /* 我要买@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我要买@2x.png"; sourceTree = "<group>"; };
 		147EF5571C42A14600C4A459 /* 我要买@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我要买@3x.png"; sourceTree = "<group>"; };
@@ -352,9 +347,6 @@
 		33032BCB1C3B5BDC005B5899 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		33032BCD1C3B5C0E005B5899 /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
 		33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
-		33032BD21C3B5C26005B5899 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
-		33032BD31C3B5C26005B5899 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
-		33032BD41C3B5C26005B5899 /* BusinessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
 		33032BD71C3B5C37005B5899 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		33032BD81C3B5C37005B5899 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		33032BD91C3B5C37005B5899 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
@@ -609,6 +601,17 @@
 		33807A671C4F52DA005D9B67 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
 		33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
 		33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPasswordViewController.xib; sourceTree = "<group>"; };
+		33807A6D1C4F80F4005D9B67 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
+		33807A6E1C4F80F4005D9B67 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
+		33807A6F1C4F80F4005D9B67 /* BusinessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
+		33807A731C4F8133005D9B67 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
+		33807A741C4F8133005D9B67 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
+		33807A751C4F8133005D9B67 /* BuyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyViewController.xib; sourceTree = "<group>"; };
+		33807A761C4F8133005D9B67 /* SellDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellDetailViewController.h; sourceTree = "<group>"; };
+		33807A771C4F8133005D9B67 /* SellDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellDetailViewController.m; sourceTree = "<group>"; };
+		33807A781C4F8133005D9B67 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
+		33807A791C4F8133005D9B67 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
+		33807A7A1C4F8133005D9B67 /* SellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellViewController.xib; sourceTree = "<group>"; };
 		33A1EA221C3B8BF9008774E4 /* BQMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMLabel.h; sourceTree = "<group>"; };
 		33A1EA231C3B8BF9008774E4 /* BQMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQMLabel.m; sourceTree = "<group>"; };
 		33A1EA251C3BA320008774E4 /* 导航栏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏.png"; sourceTree = "<group>"; };
@@ -669,33 +672,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		147EF5471C429E1C00C4A459 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		147EF5481C429E2B00C4A459 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		147EF5491C429E3500C4A459 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				147EF54A1C429E6500C4A459 /* BuyViewController.h */,
-				147EF54B1C429E6500C4A459 /* BuyViewController.m */,
-				147EF54C1C429E6500C4A459 /* BuyViewController.xib */,
-				147EF54F1C429ECA00C4A459 /* SellViewController.h */,
-				147EF5501C429ECA00C4A459 /* SellViewController.m */,
-				147EF5511C429ECA00C4A459 /* SellViewController.xib */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		147EF5541C42A12700C4A459 /* 我要买卖 */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,11 +791,11 @@
 		33032BB21C3B595C005B5899 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				33807A6C1C4F80A9005D9B67 /* Business */,
 				33032BBA1C3B5A78005B5899 /* Root */,
 				33032BB51C3B59C6005B5899 /* Home */,
 				33032BB61C3B59D5005B5899 /* Policy */,
 				33032BB71C3B5A07005B5899 /* Help */,
-				33032BB81C3B5A1B005B5899 /* Business */,
 				33032BB91C3B5A40005B5899 /* PersonalCenter */,
 			);
 			name = Classes;
@@ -889,19 +865,6 @@
 				334D03BA1C3E39BE00AADCEC /* Controllers */,
 			);
 			name = Help;
-			sourceTree = "<group>";
-		};
-		33032BB81C3B5A1B005B5899 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				33032BD21C3B5C26005B5899 /* BusinessViewController.h */,
-				33032BD31C3B5C26005B5899 /* BusinessViewController.m */,
-				33032BD41C3B5C26005B5899 /* BusinessViewController.xib */,
-				147EF5471C429E1C00C4A459 /* Models */,
-				147EF5481C429E2B00C4A459 /* Views */,
-				147EF5491C429E3500C4A459 /* Controllers */,
-			);
-			name = Business;
 			sourceTree = "<group>";
 		};
 		33032BB91C3B5A40005B5899 /* PersonalCenter */ = {
@@ -1390,6 +1353,32 @@
 			path = MBProgress;
 			sourceTree = "<group>";
 		};
+		33807A6C1C4F80A9005D9B67 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				33807A6D1C4F80F4005D9B67 /* BusinessViewController.h */,
+				33807A6E1C4F80F4005D9B67 /* BusinessViewController.m */,
+				33807A6F1C4F80F4005D9B67 /* BusinessViewController.xib */,
+				33807A721C4F8124005D9B67 /* Controllers */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		33807A721C4F8124005D9B67 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33807A731C4F8133005D9B67 /* BuyViewController.h */,
+				33807A741C4F8133005D9B67 /* BuyViewController.m */,
+				33807A751C4F8133005D9B67 /* BuyViewController.xib */,
+				33807A761C4F8133005D9B67 /* SellDetailViewController.h */,
+				33807A771C4F8133005D9B67 /* SellDetailViewController.m */,
+				33807A781C4F8133005D9B67 /* SellViewController.h */,
+				33807A791C4F8133005D9B67 /* SellViewController.m */,
+				33807A7A1C4F8133005D9B67 /* SellViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		33A1EA211C3B8B71008774E4 /* MyLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,6 +1526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				335FDE6D1C3D020F002C1F85 /* 图层-1@2x.png in Resources */,
+				33807A7C1C4F8133005D9B67 /* BuyViewController.xib in Resources */,
 				147EF5681C42A14600C4A459 /* 我要卖@2x.png in Resources */,
 				3356A8B31C433205004FDB97 /* 58.png in Resources */,
 				33A1EA2A1C3BA320008774E4 /* 导航栏@3x.png in Resources */,
@@ -1553,7 +1543,6 @@
 				14C84A271C3EA1BC00D5E794 /* 问答平台.png in Resources */,
 				3356A8BD1C433205004FDB97 /* WeiPinHui.png in Resources */,
 				334D03A51C3E18D500AADCEC /* 76pt_@1x.png in Resources */,
-				147EF5531C429ECA00C4A459 /* SellViewController.xib in Resources */,
 				33032C471C3B63F7005B5899 /* 我要买卖icon_选中状态.png in Resources */,
 				333E006C1C4739190096FE44 /* Safari-Forward@3x.png in Resources */,
 				33032C351C3B63F7005B5899 /* 引导页1.png in Resources */,
@@ -1614,7 +1603,6 @@
 				334D03A01C3E18D500AADCEC /* 57pt_@2x.png in Resources */,
 				147EF5641C42A14600C4A459 /* 我要买选中态.png in Resources */,
 				3356A93B1C4389CD004FDB97 /* 我的收藏@3x.png in Resources */,
-				33032BD61C3B5C26005B5899 /* BusinessViewController.xib in Resources */,
 				33032C3F1C3B63F7005B5899 /* 了解政策icon_正常状态@2x.png in Resources */,
 				33A1EA291C3BA320008774E4 /* 导航栏@2x.png in Resources */,
 				33032B8A1C3B5916005B5899 /* Main.storyboard in Resources */,
@@ -1625,6 +1613,7 @@
 				3356A9331C4389CD004FDB97 /* 我的买卖.png in Resources */,
 				334D03971C3E18D500AADCEC /* 29pt_@3x.png in Resources */,
 				335FDE6C1C3D020F002C1F85 /* 图层-1.png in Resources */,
+				33807A7F1C4F8133005D9B67 /* SellViewController.xib in Resources */,
 				334D03B91C3E38D400AADCEC /* 使用说明.rtf in Resources */,
 				3356A8BA1C433205004FDB97 /* SuNing.png in Resources */,
 				14C84A211C3EA1BC00D5E794 /* 专家热线.png in Resources */,
@@ -1712,6 +1701,7 @@
 				333E00AB1C4740310096FE44 /* RLConfig in Resources */,
 				334D03B51C3E38D400AADCEC /* SCNavTabBar.bundle in Resources */,
 				33032C511C3B63F7005B5899 /* 首页icon_正常状态@2x.png in Resources */,
+				33807A711C4F80F4005D9B67 /* BusinessViewController.xib in Resources */,
 				334D03A61C3E18D500AADCEC /* 76pt_@2x.png in Resources */,
 				3356A9371C4389CD004FDB97 /* 我的帮助@2x.png in Resources */,
 				147EF5621C42A14600C4A459 /* 我要买@2x.png in Resources */,
@@ -1723,7 +1713,6 @@
 				334D037D1C3DEE4D00AADCEC /* 注册.png in Resources */,
 				33032C481C3B63F7005B5899 /* 我要买卖icon_选中状态@2x.png in Resources */,
 				33032C201C3B63F7005B5899 /* 120pt_@1x.png in Resources */,
-				147EF54E1C429E6500C4A459 /* BuyViewController.xib in Resources */,
 				33032C441C3B63F7005B5899 /* 我要买卖icon_正常状态.png in Resources */,
 				33032C341C3B63F7005B5899 /* Default.png in Resources */,
 				3356A8B61C433205004FDB97 /* GanJi.png in Resources */,
@@ -1766,8 +1755,8 @@
 				333E009F1C4740310096FE44 /* MJRefreshHeader.m in Sources */,
 				333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */,
 				33032B871C3B5916005B5899 /* ViewController.m in Sources */,
+				33807A7E1C4F8133005D9B67 /* SellViewController.m in Sources */,
 				333E00A31C4740310096FE44 /* MJRefreshBackGifFooter.m in Sources */,
-				147EF54D1C429E6500C4A459 /* BuyViewController.m in Sources */,
 				333E009D1C4740310096FE44 /* MJRefreshComponent.m in Sources */,
 				333E00A01C4740310096FE44 /* MJRefreshAutoGifFooter.m in Sources */,
 				333E00A21C4740310096FE44 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1785,17 +1774,19 @@
 				335FDE491C3CE96B002C1F85 /* LoginViewController.m in Sources */,
 				33032BC81C3B5B84005B5899 /* RDVTabBarController.m in Sources */,
 				333E00AA1C4740310096FE44 /* MJRefreshConst.m in Sources */,
+				33807A701C4F80F4005D9B67 /* BusinessViewController.m in Sources */,
 				333E00AC1C4740310096FE44 /* UIScrollView+MJExtension.m in Sources */,
-				33032BD51C3B5C26005B5899 /* BusinessViewController.m in Sources */,
 				333E009E1C4740310096FE44 /* MJRefreshFooter.m in Sources */,
 				33A1EA4E1C3BB91B008774E4 /* UIButton+AFNetworking.m in Sources */,
 				33A1EA4B1C3BB91B008774E4 /* AFURLRequestSerialization.m in Sources */,
 				335FDE451C3CACDD002C1F85 /* startViewController.m in Sources */,
 				333E00AD1C4740310096FE44 /* UIScrollView+MJRefresh.m in Sources */,
+				33807A7B1C4F8133005D9B67 /* BuyViewController.m in Sources */,
 				333E00A11C4740310096FE44 /* MJRefreshAutoNormalFooter.m in Sources */,
 				335FDE4E1C3CE97E002C1F85 /* RegisterViewController.m in Sources */,
 				33032B841C3B5916005B5899 /* AppDelegate.m in Sources */,
 				333E00A81C4740310096FE44 /* MJRefreshStateHeader.m in Sources */,
+				33807A7D1C4F8133005D9B67 /* SellDetailViewController.m in Sources */,
 				334D03B61C3E38D400AADCEC /* SCNavTabBarController.m in Sources */,
 				33A1EA471C3BB91B008774E4 /* AFHTTPSessionManager.m in Sources */,
 				33A1EA451C3BB91B008774E4 /* AFHTTPRequestOperation.m in Sources */,
@@ -1811,7 +1802,6 @@
 				336BF5F41C44D6C500A055C9 /* AFHelper.m in Sources */,
 				33A1EA481C3BB91B008774E4 /* AFNetworkReachabilityManager.m in Sources */,
 				33A1EA4D1C3BB91B008774E4 /* AFURLSessionManager.m in Sources */,
-				147EF5521C429ECA00C4A459 /* SellViewController.m in Sources */,
 				333E00B41C4785560096FE44 /* PolicyVC.swift in Sources */,
 				33032BDF1C3B5C5A005B5899 /* PolicyViewController.m in Sources */,
 				335742691C3FAFE6009F725D /* MXPullDownMenu.m in Sources */,

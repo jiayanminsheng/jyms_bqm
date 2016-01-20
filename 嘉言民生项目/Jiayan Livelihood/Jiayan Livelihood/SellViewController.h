@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SellViewController : UIViewController
-
+    @property (nonatomic,strong) UIScrollView   *sellScrollView;
 @end
