@@ -14,10 +14,8 @@ public let textColor = UIColor(red: 120/255, green: 120/255, blue: 120/255, alph
 
 
 
-class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
+class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate
 {
-    private var navView:UIView?                                                              //导航栏
-    private var tabView:UIView?                                                              //tababr
     private var scrollView:UIImageView?                                                      //图片轮播
     private var switchView:UIView?                                                           //二级页面切换条
     private var jymsView:UIScrollView!                                                       //嘉言民生主页面
@@ -41,14 +39,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     private var btnHelp  :UIButton!                                                            //需要帮助按钮
     private var btnTrade:UIButton!                                                            //我要买卖按钮
     private var btnSelf  :UIButton!                                                            //个人中心按钮
-
+    
+    private var imageView : UIImageView!                                                        //导航栏图片
     
     
-    override func viewDidLoad()
-    {
-        
-        //initNavView();     //初始化导航栏
-        //initTabBar();      //初始化tabbar
+    
+    override func viewWillAppear(animated: Bool) {
+        initNavDelegate();   //加载导航栏delegate
         initScrollBar();   //初始化图片轮播页面
         initSwitchView();  //初始化二级页面切换按钮
         
@@ -60,62 +57,51 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         initGZSNView()    //关注三农初始化主页面
         initGZSNNews()    //关注三农初始化最新动态子页面
-    }
+        
+        self.navigationController?.navigationItem.leftBarButtonItem=nil
+        self.navigationItem.hidesBackButton=true;
+        
+        self.parentViewController?.rdv_tabBarController.tabBarHidden=false
+        
+        //让导航栏图片实现自适应
+        let bgImg:UIImage = UIImage(named:"导航栏1")!
+        let size:CGSize=bgImg.size
+        _=UIApplication.sharedApplication().statusBarFrame.height
+        let imgHeight=(self.navigationController?.navigationBar.frame.size.height) //图片高
+        let imgWidth=imgHeight!*size.width/size.height
+        let imgCenter=CGSizeMake((self.navigationController?.navigationBar.center.x)!, imgHeight!/2)
+        
+        imageView=UIImageView(frame:CGRectMake((imgCenter.width)-imgWidth/2,0, imgWidth, imgHeight!))
+        imageView.image=bgImg
+        
+        self.navigationController?.navigationBar.addSubview(imageView)
+        
+        
 
+    }
+   
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     
     }
     
-    //初始化导航栏
-    func initNavView()
-    {
-        navView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.1))
-        navView!.backgroundColor = themeColor;
-        
-         self.view.addSubview(navView!);
-    }
+   
     
-    //初始化tabbar
-    func initTabBar()
+    override func viewWillDisappear(animated: Bool)
     {
-        tabView = UIView(frame: CGRectMake(0,sHeight*0.923,sWidth,sHeight*0.077));
-        tabView!.backgroundColor = tabColor;
         
-        //首页按钮
-        btnHome=UIButton(frame: CGRectMake(0,0,sWidth*0.2,sHeight*0.076))
-        btnHome.addTarget(self, action: Selector("btnHomeTapped:"), forControlEvents: .TouchUpInside)
-        btnHome.setImage(UIImage(named: "logo_01"),forState: .Normal)
-        tabView?.addSubview(btnHome)
+        self.scrollView?.removeFromSuperview()
+        self.switchView?.removeFromSuperview()
+        self.jymsView.removeFromSuperview()
+        self.gzsnView.removeFromSuperview()
+    }
         
-        //了解政策按钮
-        btnPolicy=UIButton(frame: CGRectMake(sWidth*0.2,0,sWidth*0.2,sHeight*0.076))
-        btnPolicy.addTarget(self, action: Selector("btnPolicyTapped:"), forControlEvents: .TouchUpInside)
-        btnPolicy.setImage(UIImage(named: "logo_02"),forState: .Normal)
-        tabView?.addSubview(btnPolicy)
-        
-        //需要帮助按钮
-        btnHelp=UIButton(frame: CGRectMake(sWidth*0.4,0,sWidth*0.2,sHeight*0.076))
-        btnHelp.addTarget(self, action: Selector("btnHelpTapped:"), forControlEvents: .TouchUpInside)
-        btnHelp.setImage(UIImage(named: "logo_03"),forState: .Normal)
-        tabView?.addSubview(btnHelp)
-        
-        //我要买卖按钮
-        btnTrade=UIButton(frame: CGRectMake(sWidth*0.6,0,sWidth*0.2,sHeight*0.076))
-        btnTrade.addTarget(self, action: Selector("btnTradeTapped:"), forControlEvents: .TouchUpInside)
-        btnTrade.setImage(UIImage(named: "logo_04"),forState: .Normal)
-        tabView?.addSubview(btnTrade)
-        
-        
-        //个人中心按钮
-        btnSelf=UIButton(frame:CGRectMake(sWidth*0.8,0,sWidth*0.2,sHeight*0.076))
-        btnSelf.addTarget(self, action: Selector("btnSelfTapped:"), forControlEvents: .TouchUpInside)
-        btnSelf.setImage(UIImage(named: "logo_05"),forState: .Normal)
-        tabView?.addSubview(btnSelf)
-        
-        
-        self.view.addSubview(tabView!)
+    
+    //加载导航栏delegate
+    func initNavDelegate()
+    {
+        self.navigationController?.delegate=self;
 
     }
     
@@ -165,7 +151,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     //初始化滚动主页面
     func initJYMSView()
     {
-        jymsView=UIScrollView(frame:CGRectMake(0,sHeight*0.31,sWidth,sHeight*0.514))
+        jymsView=UIScrollView(frame:CGRectMake(0,sHeight*0.302,sWidth,sHeight*0.614))
         jymsView.scrollEnabled=true;
         jymsView.showsHorizontalScrollIndicator=true;
         jymsView.contentSize=CGSizeMake(sWidth, sHeight*1.2)
@@ -180,7 +166,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     func initSubTitle()
     {
         subTitleView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = tabColor;
+        subTitleView.backgroundColor = UIColor.whiteColor();
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="公司概况";
@@ -258,7 +244,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         //公司动态标题
         subTitleView = UIView(frame: CGRectMake(0,sHeight*0.345,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = tabColor;
+        subTitleView.backgroundColor = UIColor.whiteColor();
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="最新动态";
@@ -312,42 +298,15 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
-    //--------------------------------------------------------------------------
-    
-    func btnHomeTapped(button:UIButton)
-    {
-        print("111")
-    }
-    
-    func btnPolicyTapped (button:UIButton)
-    {
-        //跳至政策页面
-//        let policyVC:PolicyVC = PolicyVC();
-        
-//        self.presentViewController(policyVC, animated: true, completion: nil)
-    }
-    
-    func btnHelpTapped(button:UIButton)
-    {
-        print("333")
-    }
-    
-    func btnTradeTapped(button:UIButton)
-    {
-        print("444")
-    }
-    
-    func btnSelfTapped(button:UIButton)
-    {
-        print("555")
-    }
-//---------------------------------------------------------------------------------
+   //---------------------------------------------------------------------------------
     func CompanyInfoBtnTapped(button:UIButton)
     {
         //跳入公司信息页面
         let companyInfoVC:CompanyInfoVC=CompanyInfoVC();
         companyInfoVC.switchIndex=0
-        self.presentViewController(companyInfoVC, animated: true, completion: nil);
+        imageView.removeFromSuperview()
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
+        self.navigationController?.pushViewController(companyInfoVC, animated: true)
     }
     
     func btnDevTapped(button:UIButton)
@@ -356,9 +315,10 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let companyInfoVC:CompanyInfoVC=CompanyInfoVC()
         companyInfoVC.switchIndex=1
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+        imageView.removeFromSuperview()
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
         self.navigationController?.pushViewController(companyInfoVC, animated: true)
-        //self.presentViewController(companyInfoVC, animated: true, completion: nil)
+      
     }
     
     func btnPartnerTapped(button:UIButton)
@@ -366,27 +326,27 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         //跳入合作伙伴页面
         let companyInfoVC:CompanyInfoVC=CompanyInfoVC()
         companyInfoVC.switchIndex=2
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+        imageView.removeFromSuperview()
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
         self.navigationController?.pushViewController(companyInfoVC, animated: true)
-        //self.presentViewController(companyInfoVC, animated: true, completion: nil)
     }
     
     func btnLoveTapped(button:UIButton)
     {
         let companyInfoVC:CompanyInfoVC=CompanyInfoVC()
         companyInfoVC.switchIndex=3
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+        imageView.removeFromSuperview();
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
         self.navigationController?.pushViewController(companyInfoVC, animated: true)
-        //self.presentViewController(companyInfoVC, animated: true, completion: nil)
     }
     
     func btnRepTapped(button:UIButton)
     {
         let companyInfoVC:CompanyInfoVC=CompanyInfoVC()
+        imageView.removeFromSuperview()
         companyInfoVC.switchIndex=4
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
-         self.navigationController?.pushViewController(companyInfoVC, animated: true)
-        //self.presentViewController(companyInfoVC, animated: true, completion: nil)
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
+        self.navigationController?.pushViewController(companyInfoVC, animated: true)
         
     }
     
@@ -468,7 +428,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let newsVC:NewsVC = NewsVC()
-        self.presentViewController(newsVC, animated: true, completion: nil)
+        
+        //隐藏tabbar和导航栏
+        self.navigationController?.navigationBar.hidden=true
+        self.parentViewController?.rdv_tabBarController.tabBarHidden=true
+        
+       
+        self.navigationController?.pushViewController(newsVC, animated: true)
         
         
     }
@@ -477,7 +443,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func initGZSNView()
     {
-        gzsnView=UIScrollView(frame:CGRectMake(0,sHeight*0.41,sWidth,sHeight*0.514))
+        gzsnView=UIScrollView(frame:CGRectMake(0,sHeight*0.302,sWidth,sHeight*0.614))
         gzsnView.scrollEnabled=true;
         gzsnView.showsHorizontalScrollIndicator=true;
         gzsnView.contentSize=CGSizeMake(sWidth, sHeight*0.845)
@@ -487,7 +453,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     func initGZSNNews()
     {
         subTitleView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = tabColor;
+        subTitleView.backgroundColor = UIColor.whiteColor()
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="最新动态";
@@ -502,11 +468,12 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         //公司动态内容
         let contentView:UITableView = UITableView(frame:CGRectMake(0,sHeight*0.025,sWidth,sHeight*0.845),style:UITableViewStyle.Plain)
         contentView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        contentView.scrollEnabled=false;
+        contentView.scrollEnabled=false
         contentView.dataSource = self
         contentView.delegate   = self
         
         gzsnView.addSubview(contentView);
+        
     }
     
     
@@ -516,7 +483,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     //移除嘉言民生页面内容
     func removeJYMSFromView()
     {
-        jymsView.removeFromSuperview();
+        jymsView.removeFromSuperview()
     }
     
     //添加嘉言民生页面内容
@@ -529,13 +496,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     //移除关注关注三农页面内容内容
     func removeGZMSFromView()
     {
-        gzsnView.removeFromSuperview();
+        gzsnView.removeFromSuperview()
     }
     
     //添加关注关注三农页面内容
     func addGZMSFromView()
     {
-        self.view.addSubview(gzsnView);
+        self.view.addSubview(gzsnView)
     }
 
 

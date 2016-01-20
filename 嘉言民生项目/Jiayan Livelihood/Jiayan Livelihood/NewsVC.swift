@@ -13,10 +13,10 @@ class NewsVC: UIViewController
     private var newsView:UIView!
     private var toolBar:UIView!
     
-    override func viewDidLoad()
-    {
+    override func viewWillAppear(animated: Bool) {
         initToolBar()
         initNews()
+
     }
     
     func initNews()
@@ -61,7 +61,7 @@ class NewsVC: UIViewController
         
         
         let lineView=UIView(frame: CGRectMake(sWidth*0.05,sHeight*0.13,sWidth*0.9,sHeight*0.0015))
-        lineView.backgroundColor=contentColor
+        lineView.backgroundColor=UIColor.whiteColor()
         newsView.addSubview(lineView)
         
         self.view.addSubview(newsView)
@@ -84,7 +84,7 @@ class NewsVC: UIViewController
     {
         //新闻页面工作栏
         toolBar = UIView(frame:CGRectMake(0,sHeight*0.923,sWidth,sHeight*0.077))
-        toolBar.backgroundColor = tabColor;
+        toolBar.backgroundColor = UIColor.whiteColor()
         
         //返回按钮
         let logo1=UIButton(frame:CGRectMake(0,0,sWidth*0.33,sHeight*0.077))
@@ -108,8 +108,10 @@ class NewsVC: UIViewController
     
     func returnBtnTapped(button:UIButton)
     {
-        let homeVC:HomeVC=HomeVC();
-        self.presentViewController(homeVC, animated: true, completion: nil);
+        //返回主页面
+        self.parentViewController?.rdv_tabBarController.tabBarHidden=false
+        self.navigationController?.navigationBar.hidden=false
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 }
 

@@ -14,6 +14,7 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
     public var switchIndex:Int=0            //当前页面切换条序数，0为公司简介，1为发展历程，2为合作伙伴，3为领导关怀，4为资质荣誉
     
+    private var btnReturn:UIButton!          //返回按钮
     private var navView:UIView!              //导航栏
     private var switchView:UIView!           //切换条
     private var contentView:UIView!          //内容
@@ -27,40 +28,60 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     ]
     
     
+
     
-    
-    override func viewDidLoad()
+
+   
+    override func viewWillAppear(animated: Bool)
+        
     {
-        initNavView()     //初始化导航栏
+        initNav()
         initSwitch()      //初始化切换条
-        initContent();    //初始化内容
+        initContent()    //初始化内容
+        
+        
+        
+        
+        
+        
     }
     
-    
-    //初始化导航栏
-    func initNavView()
+    override func viewWillDisappear(animated: Bool)
     {
-        navView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.1))
-        navView!.backgroundColor = UIColor.whiteColor();
-        
-        //返回按钮
-        
-        let returnBtn=UIButton(frame: CGRectMake(0,sHeight*0.02,sWidth*0.1,sHeight*0.05))
-        returnBtn.setImage(UIImage(named: "return"), forState: .Normal)
-        returnBtn.addTarget(self, action: Selector("btnReturnTapped:"), forControlEvents: .TouchUpInside)
-        navView.addSubview(returnBtn)
-        
-        self.view.addSubview(navView!);
-        
-        
-        
+       self.contentView.removeFromSuperview()
     }
+    
+    func initNav()
+    {
+        self.parentViewController?.rdv_tabBarController.tabBarHidden=true
+        self.navigationItem.hidesBackButton=true;
+        
+        
+        //添加返回按钮
+        
+        self.btnReturn = UIButton(frame:CGRectMake(sWidth*0.05,sHeight*0.01,sWidth*0.06,sHeight*0.04))
+        btnReturn.setImage(UIImage(named: "return"), forState: .Normal)
+        btnReturn.addTarget(self, action: Selector("btnReturnTapped:"), forControlEvents: .TouchUpInside)
+        self.navigationController?.navigationBar.addSubview(btnReturn)
+        
+
+ 
+    }
+    
+    
+    
+    
+    
+  
+
+   
+    
     
     //初始化切换条
     func initSwitch()
     {
-        switchView = UIView(frame:CGRectMake(0,sHeight*0.1,sWidth,sHeight*0.043))
-        switchView.backgroundColor=tabColor
+        switchView = UIView(frame:CGRectMake(0,0,sWidth,sHeight*0.043))
+        switchView.backgroundColor=UIColor.whiteColor()
         
         //公司简介按钮
         let companyBtn     = UIButton(frame:CGRectMake(sWidth*0.0,sHeight*0.01,sWidth*0.2,sHeight*0.025))
@@ -103,8 +124,10 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     func initContent()
     {
         //具体内容页面
-        contentView = UIView(frame:CGRectMake(0,sHeight*0.143,sWidth,sHeight*0.857))
-        contentView.backgroundColor=UIColor.whiteColor()
+        self.contentView = UIView(frame:CGRectMake(0,sHeight*0.043,sWidth,sHeight*0.957))
+        self.contentView.backgroundColor=UIColor.whiteColor()
+        self.view.bringSubviewToFront(self.contentView)
+        //contentView.backgroundColor=UIColor.whiteColor()
         
         switch switchIndex
         {
@@ -125,8 +148,12 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func btnReturnTapped(button:UIButton)
     {
-        let homeVC:HomeVC=HomeVC();
-        self.presentViewController(homeVC, animated: true, completion: nil);
+        //返回主页面
+        self.parentViewController?.rdv_tabBarController.tabBarHidden=false
+        self.navigationController?.navigationBar.hidden=false
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+        self.btnReturn.removeFromSuperview()
     }
     
     //--------------------------------------------------------------------------------------------------
@@ -176,6 +203,7 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         //发展历程页面
         let developmentTitle=UILabel(frame: CGRectMake(sWidth*0.05,sHeight*0.05,sWidth*0.9,sHeight*0.043))
+        developmentTitle.backgroundColor=UIColor.whiteColor()
         developmentTitle.text="公司发展历程"
         developmentTitle.font=UIFont(name: "HelveticaNeue", size: 22.0)
         developmentTitle.textAlignment = .Center//居中显示
@@ -193,6 +221,7 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         //合作伙伴
         let innerPartnerTitle=UILabel(frame: CGRectMake(sWidth*0.05,sHeight*0.05,sWidth*0.9,sHeight*0.043));
+        innerPartnerTitle.backgroundColor=UIColor.whiteColor()
         innerPartnerTitle.text="内部合作单位"
         innerPartnerTitle.font=UIFont(name: "HelveticaNeue", size: 20.0)
         innerPartnerTitle.textAlignment = .Center
