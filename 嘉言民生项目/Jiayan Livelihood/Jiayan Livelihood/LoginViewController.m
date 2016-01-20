@@ -47,41 +47,41 @@
 }
 #pragma mark --登录
 - (IBAction)loginBtn:(id)sender {
-    if (_userTextField.text.length!=0 && _passwordTextField.text.length!=0) {
-        
-        NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
-        [params setObject:@"authorize" forKey:@"key"];
-        [params setObject:_userTextField.text forKey:@"u_id"];
-        [params setObject:_passwordTextField.text forKey:@"u_pwd"];
-        [AFHelper PostWithPath:@"/oauth/authorize.ashx" andParameters:params andSuccess:^(id  responseObject) {
-            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//            BQMLog(@"%@",dic);
-            if ([dic[@"error"] isEqual:@0]) {
-                NSDictionary *userList=dic[@"list"];
-                
-                //保存登录信息  dic[@"list"]
-                UserPrefs *userPrefs=[UserPrefs shareUserPrefs];
-                [userPrefs saveUserName:_userTextField.text];
-                [userPrefs saveUserPassword:_passwordTextField.text];
-                [userPrefs saveuserID:userList[@"id"]];
-                
-                [self showHUDWithMessage:@"登录成功" view:self.view];
-                [self performSelector:@selector(gotoRootVC) withObject:nil afterDelay:1];
-            }else{
-                [self showHUDWithMessage:dic[@"message"] view:self.view];
-            }
-            
-        } andFailure:^(NSError *error) {
-            [self showHUDWithMessage:@"网络超时" view:self.view];
-        }];
- 
-    }else{
-            [self showHUDWithMessage:@"用户名或密码不可以为空" view:self.view];
-    
-    }
+//    if (_userTextField.text.length!=0 && _passwordTextField.text.length!=0) {
+//        
+//        NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
+//        [params setObject:@"authorize" forKey:@"key"];
+//        [params setObject:_userTextField.text forKey:@"u_id"];
+//        [params setObject:_passwordTextField.text forKey:@"u_pwd"];
+//        [AFHelper PostWithPath:@"/oauth/authorize.ashx" andParameters:params andSuccess:^(id  responseObject) {
+//            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+////            BQMLog(@"%@",dic);
+//            if ([dic[@"error"] isEqual:@0]) {
+//                NSDictionary *userList=dic[@"list"];
+//                
+//                //保存登录信息  dic[@"list"]
+//                UserPrefs *userPrefs=[UserPrefs shareUserPrefs];
+//                [userPrefs saveUserName:_userTextField.text];
+//                [userPrefs saveUserPassword:_passwordTextField.text];
+//                [userPrefs saveuserID:userList[@"id"]];
+//                
+//                [self showHUDWithMessage:@"登录成功" view:self.view];
+//                [self performSelector:@selector(gotoRootVC) withObject:nil afterDelay:1];
+//            }else{
+//                [self showHUDWithMessage:dic[@"message"] view:self.view];
+//            }
+//            
+//        } andFailure:^(NSError *error) {
+//            [self showHUDWithMessage:@"网络超时" view:self.view];
+//        }];
+// 
+//    }else{
+//            [self showHUDWithMessage:@"用户名或密码不可以为空" view:self.view];
+//    
+//    }
     
     //测试
-//    [self performSelector:@selector(gotoRootVC) withObject:nil afterDelay:1];
+    [self performSelector:@selector(gotoRootVC) withObject:nil afterDelay:1];
     
     
 }

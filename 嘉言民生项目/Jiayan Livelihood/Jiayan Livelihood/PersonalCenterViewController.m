@@ -171,9 +171,13 @@
                 //我要分享
                 
                 break;
-            case 1:
+            case 1:{
                 //客服电话
+                BQMLog(@"正在打电话");
+                UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+                [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"tel://10010"]]];
                 
+            }
                 break;
             case 2:{
                 //关于我们
