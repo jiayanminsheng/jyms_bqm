@@ -28,10 +28,10 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     ]
     
     
-
     
-
-   
+    
+    
+    
     override func viewWillAppear(animated: Bool)
         
     {
@@ -48,7 +48,7 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewWillDisappear(animated: Bool)
     {
-       self.contentView.removeFromSuperview()
+        self.contentView.removeFromSuperview()
     }
     
     func initNav()
@@ -64,17 +64,17 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         btnReturn.addTarget(self, action: Selector("btnReturnTapped:"), forControlEvents: .TouchUpInside)
         self.navigationController?.navigationBar.addSubview(btnReturn)
         
-
- 
+        
+        
     }
     
     
     
     
     
-  
-
-   
+    
+    
+    
     
     
     //初始化切换条

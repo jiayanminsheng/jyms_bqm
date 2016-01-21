@@ -16,7 +16,7 @@ class NewsVC: UIViewController
     override func viewWillAppear(animated: Bool) {
         initToolBar()
         initNews()
-
+        
     }
     
     func initNews()

@@ -11,7 +11,7 @@
 #import "startViewController.h"
 #import "LoginViewController.h"
 #import "AFNetworking.h"
-#import "jiayan-swift.h"
+
 
 @interface AppDelegate ()<UIAlertViewDelegate>
 

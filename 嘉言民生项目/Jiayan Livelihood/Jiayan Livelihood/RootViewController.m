@@ -13,7 +13,7 @@
 #import "HelpViewController.h"
 #import "BusinessViewController.h"
 #import "PersonalCenterViewController.h"
-#import "jiayan-swift.h"
+#import "Jiayan Livelihood-Swift.h"
 
 @interface RootViewController ()
 
@@ -31,7 +31,8 @@
 //    homeVC.title=@"首页";
     HomeVC *homeVC=[[HomeVC alloc]init];
     UINavigationController *homeNC=[[UINavigationController alloc]initWithRootViewController:homeVC];
-    [homeVC.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航栏"] forBarMetrics:UIBarMetricsDefault];
+    [homeVC.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:28.0f/255.0f green:167.0f/255.0f blue:53.0f/255.0f alpha:1.0f]];
+//    [homeVC.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航栏"] forBarMetrics:UIBarMetricsDefault];
     // 政策
 //    PolicyViewController *policyVC=[[PolicyViewController alloc]init];
     PolicyVC *policyVC=[[PolicyVC alloc]init];

@@ -7,8 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "jiayan-swift.h"
-
 
 
 @interface HomeViewController ()

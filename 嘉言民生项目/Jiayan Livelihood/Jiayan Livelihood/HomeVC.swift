@@ -77,16 +77,16 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         self.navigationController?.navigationBar.addSubview(imageView)
         
         
-
+        
     }
-   
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-    
+        
     }
     
-   
+    
     
     override func viewWillDisappear(animated: Bool)
     {
@@ -96,13 +96,13 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         self.jymsView.removeFromSuperview()
         self.gzsnView.removeFromSuperview()
     }
-        
+    
     
     //加载导航栏delegate
     func initNavDelegate()
     {
         self.navigationController?.delegate=self;
-
+        
     }
     
     //初始化滚动条
@@ -137,7 +137,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         
         btnJYMS!.addTarget(self, action: Selector("jymsBtnTapped:"), forControlEvents: .TouchUpInside);
         btnGZSN!.addTarget(self, action: Selector("gzsnBtnTapped:"), forControlEvents: .TouchUpInside);
-  
+        
         
         switchView?.addSubview(btnJYMS!);
         switchView?.addSubview(btnGZSN!);
@@ -182,7 +182,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     func initCompanyDetailView()
     {
         companyDetailView = UIView(frame: CGRectMake(0,sHeight*0.025,sWidth,sHeight*0.32));
-       
+        
         //公司简介
         let companyInfoView:UIButton=UIButton(frame: CGRectMake(0,0,sWidth*0.5,sHeight*0.32));
         companyInfoView.addTarget(self, action: Selector("CompanyInfoBtnTapped:"), forControlEvents: .TouchUpInside)
@@ -262,7 +262,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         
         jymsView.addSubview(contentView)
     }
-//--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
     //嘉言民生按钮点击触发
     func jymsBtnTapped(button:UIButton)
     {
@@ -294,11 +294,11 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
             removeJYMSFromView()//移除嘉言民生页面内容
             addGZMSFromView() //添加关注三农页面内容
             
-             subBtnIndex=1
+            subBtnIndex=1
         }
     }
     
-   //---------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------
     func CompanyInfoBtnTapped(button:UIButton)
     {
         //跳入公司信息页面
@@ -318,7 +318,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         imageView.removeFromSuperview()
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics:.Default)
         self.navigationController?.pushViewController(companyInfoVC, animated: true)
-      
+        
     }
     
     func btnPartnerTapped(button:UIButton)
@@ -350,7 +350,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         
     }
     
-//---------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------
     
     //主页面tableview
     //总行数
@@ -394,8 +394,8 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         let numView:UILabel=UILabel(frame:CGRectMake(sWidth*0.86, sHeight*0.12, sWidth*0.08, sHeight*0.02))
         numView.text="1000"
         numView.font=UIFont(name: "HelveticaNeue", size: 10)
-
-
+        
+        
         
         
         
@@ -420,9 +420,9 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?
     {
-        return nil;
+    return nil;
     }
-
+    
     */
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
@@ -433,12 +433,12 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         self.navigationController?.navigationBar.hidden=true
         self.parentViewController?.rdv_tabBarController.tabBarHidden=true
         
-       
+        
         self.navigationController?.pushViewController(newsVC, animated: true)
         
         
     }
-//--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
     //关注三农页面
     
     func initGZSNView()
@@ -461,7 +461,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         
         
         subTitleView.addSubview(subTitle);
-
+        
         
         gzsnView.addSubview(subTitleView);
         
@@ -479,7 +479,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     
     
     
-//--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
     //移除嘉言民生页面内容
     func removeJYMSFromView()
     {
@@ -504,7 +504,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     {
         self.view.addSubview(gzsnView)
     }
-
-
+    
+    
 }
 
