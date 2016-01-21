@@ -1,10 +1,4 @@
-//
-//  AppDelegate.m
-//  Jiayan Livelihood
-//
-//  Created by bqm on 16/1/5.
-//  Copyright © 2016年 bqm. All rights reserved.
-//
+//v1
 
 #import "AppDelegate.h"
 //#import "RootViewController.h"
