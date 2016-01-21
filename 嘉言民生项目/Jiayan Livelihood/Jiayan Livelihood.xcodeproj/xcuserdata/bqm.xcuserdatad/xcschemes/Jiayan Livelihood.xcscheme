@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33032B7B1C3B5916005B5899"
-               BuildableName = "demo.app"
+               BuildableName = "Jiayan Livelihood.app"
                BlueprintName = "Jiayan Livelihood"
                ReferencedContainer = "container:Jiayan Livelihood.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33032B7B1C3B5916005B5899"
-            BuildableName = "demo.app"
+            BuildableName = "Jiayan Livelihood.app"
             BlueprintName = "Jiayan Livelihood"
             ReferencedContainer = "container:Jiayan Livelihood.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33032B7B1C3B5916005B5899"
-            BuildableName = "demo.app"
+            BuildableName = "Jiayan Livelihood.app"
             BlueprintName = "Jiayan Livelihood"
             ReferencedContainer = "container:Jiayan Livelihood.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33032B7B1C3B5916005B5899"
-            BuildableName = "demo.app"
+            BuildableName = "Jiayan Livelihood.app"
             BlueprintName = "Jiayan Livelihood"
             ReferencedContainer = "container:Jiayan Livelihood.xcodeproj">
          </BuildableReference>

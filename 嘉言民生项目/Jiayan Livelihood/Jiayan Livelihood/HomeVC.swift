@@ -108,18 +108,22 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     //初始化滚动条
     func initScrollBar()
     {
-        scrollView = UIImageView(frame: CGRectMake(0,0,sWidth,sHeight*0.23));
-        let image:UIImage = UIImage(named: "scroller.png")!;
-        scrollView?.image=image;
+        let logoImage: [UIImage] = [
+            UIImage(named: "scroller")!,
+            UIImage(named: "product2")!
+        ]
+        let rect=CGRectMake(0,0,sWidth,sHeight*0.28)
+        let sdView:SDCycleScrollView=SDCycleScrollView(frame: rect, imagesGroup: logoImage)
         
-        self.view.addSubview(scrollView!);
+        
+        self.view.addSubview(sdView)
         
     }
     
     //初始化二级页面切换按钮
     func initSwitchView()
     {
-        switchView = UIView(frame: CGRectMake(0,sHeight*0.23,sWidth,sHeight*0.07));
+        switchView = UIView(frame: CGRectMake(0,sHeight*0.28,sWidth,sHeight*0.07));
         btnJYMS = UIButton(frame: CGRectMake(0,0,sWidth * 0.5,sHeight*0.07));          //嘉言民生按钮
         btnGZSN = UIButton(frame: CGRectMake(sWidth*0.5,0,sWidth*0.5,sHeight*0.07));   //关注三农按钮
         
@@ -151,9 +155,10 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     //初始化滚动主页面
     func initJYMSView()
     {
-        jymsView=UIScrollView(frame:CGRectMake(0,sHeight*0.302,sWidth,sHeight*0.614))
-        jymsView.scrollEnabled=true;
-        jymsView.showsHorizontalScrollIndicator=true;
+        jymsView=UIScrollView(frame:CGRectMake(0,sHeight*0.35,sWidth,sHeight*0.614))
+        jymsView.scrollEnabled=true
+        jymsView.bounces=false
+        jymsView.showsHorizontalScrollIndicator=true
         jymsView.contentSize=CGSizeMake(sWidth, sHeight*1.2)
         
         self.view.addSubview(jymsView)
@@ -166,12 +171,11 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     func initSubTitle()
     {
         subTitleView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = UIColor.whiteColor();
+        subTitleView.backgroundColor = tabColor;
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="公司概况";
         subTitle.adjustsFontSizeToFitWidth=true;
-        
         
         subTitleView.addSubview(subTitle);
         
@@ -244,7 +248,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     {
         //公司动态标题
         subTitleView = UIView(frame: CGRectMake(0,sHeight*0.345,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = UIColor.whiteColor();
+        subTitleView.backgroundColor = tabColor
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="最新动态";
@@ -443,8 +447,9 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     
     func initGZSNView()
     {
-        gzsnView=UIScrollView(frame:CGRectMake(0,sHeight*0.302,sWidth,sHeight*0.614))
+        gzsnView=UIScrollView(frame:CGRectMake(0,sHeight*0.35,sWidth,sHeight*0.614))
         gzsnView.scrollEnabled=true;
+        gzsnView.bounces=false
         gzsnView.showsHorizontalScrollIndicator=true;
         gzsnView.contentSize=CGSizeMake(sWidth, sHeight*0.845)
         
@@ -453,7 +458,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
     func initGZSNNews()
     {
         subTitleView = UIView(frame: CGRectMake(0,0,sWidth,sHeight*0.025));
-        subTitleView.backgroundColor = UIColor.whiteColor()
+        subTitleView.backgroundColor = tabColor
         let subTitle:UILabel = UILabel(frame:  CGRectMake(sWidth*0.05,sHeight*0.001,sWidth*0.135,sHeight*0.02));
         
         subTitle.text="最新动态";

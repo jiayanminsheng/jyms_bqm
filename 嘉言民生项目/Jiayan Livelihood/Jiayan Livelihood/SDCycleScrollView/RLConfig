@@ -1,0 +1,30 @@
+// SDCycleScrollView 使用说明
+
+/*
+    其他说明：
+1. 该库中封装了一个广告展示图;
+2. 包含PageControl， 可居中／居右展示;
+3. 包含广告展示的title说明，label;
+*/
+
+
+// 主要提示代码：
+// 1. 添加广告视图：
+/*
+    SDCycleScrollView * sdView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160) imageURLStringsGroup:imageUrls];
+    // 添加属性
+    sdView.titlesGroup = titleArr;
+    sdView.delegate = self;
+    sdView.showPageControl = YES;
+    sdView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    [self.contentView addSubview:sdView];
+*/
+
+// 2. 点击不同广告的事件方法：
+/*
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    // 区分点击不同的广告
+    NSLog(@"index = %ld", index);
+}
+*/

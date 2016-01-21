@@ -72,28 +72,31 @@
     UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-        cell.textLabel.font=[UIFont systemFontOfSize:14.0f];
+//        cell.textLabel.font=[UIFont systemFontOfSize:14.0f];
     }
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (indexPath.section==0) {
         if (indexPath.row==0) {
            cell.imageView.transform=CGAffineTransformMakeScale(2, 2);
-           cell.textLabel.font=[UIFont systemFontOfSize:16.0f];
+           cell.textLabel.font=[UIFont systemFontOfSize:25.0f];
             if (![_userPref getUserName]) {
                 [_titleArr setObject:@"用户昵称" atIndexedSubscript:0];
             }
         }
+        cell.textLabel.font=[UIFont systemFontOfSize:16.0f];
         cell.imageView.image=_imageArr[indexPath.row];
         cell.textLabel.text=_titleArr[indexPath.row];
         
         return cell;
         
     }else if (indexPath.section==1){
+         cell.textLabel.font=[UIFont systemFontOfSize:16.0f];
         cell.imageView.image=_imageArr[indexPath.row+2];
         cell.textLabel.text=_titleArr[indexPath.row+2];
         return cell;
     }else if (indexPath.section==2){
+         cell.textLabel.font=[UIFont systemFontOfSize:16.0f];
         cell.imageView.image=_imageArr[indexPath.row+5];
         cell.textLabel.text=_titleArr[indexPath.row+5];
         return cell;
@@ -126,6 +129,7 @@
     if (section==2) {
         UIView *view=[[UIView alloc]init];
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+        
         btn.frame=CGRectMake(20, 10, SCREEN_WIDTH-40, 40);
         btn.layer.masksToBounds=YES;
         btn.layer.cornerRadius=10;

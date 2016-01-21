@@ -133,6 +133,15 @@
 		333E00B71C4789510096FE44 /* CompanyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333E00B61C4789510096FE44 /* CompanyInfoVC.swift */; };
 		333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333E00B81C47898F0096FE44 /* NewsVC.swift */; };
 		333E00BB1C478DCD0096FE44 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 333E00BA1C478DCD0096FE44 /* demo.html */; };
+		333FFFD01C50858900D2CBB7 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFBF1C50858900D2CBB7 /* NSData+SDDataCache.m */; };
+		333FFFD11C50858900D2CBB7 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC21C50858900D2CBB7 /* TAAbstractDotView.m */; };
+		333FFFD21C50858900D2CBB7 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC41C50858900D2CBB7 /* TAAnimatedDotView.m */; };
+		333FFFD31C50858900D2CBB7 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC61C50858900D2CBB7 /* TADotView.m */; };
+		333FFFD41C50858900D2CBB7 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC81C50858900D2CBB7 /* TAPageControl.m */; };
+		333FFFD51C50858900D2CBB7 /* RLConfig in Resources */ = {isa = PBXBuildFile; fileRef = 333FFFC91C50858900D2CBB7 /* RLConfig */; };
+		333FFFD61C50858900D2CBB7 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFCB1C50858900D2CBB7 /* SDCollectionViewCell.m */; };
+		333FFFD71C50858900D2CBB7 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFCD1C50858900D2CBB7 /* SDCycleScrollView.m */; };
+		333FFFD81C50858900D2CBB7 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFCF1C50858900D2CBB7 /* UIView+SDExtension.m */; };
 		3347DAFC1C45EE6800F27F40 /* UserPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347DAFB1C45EE6800F27F40 /* UserPrefs.m */; };
 		3347DAFF1C46515900F27F40 /* AnswerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347DAFE1C46515900F27F40 /* AnswerDetailViewController.m */; };
 		334D037D1C3DEE4D00AADCEC /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 334D037A1C3DEE4D00AADCEC /* 注册.png */; };
@@ -321,7 +330,7 @@
 		14C84A1E1C3EA1BC00D5E794 /* 问答平台xz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz.png"; sourceTree = "<group>"; };
 		14C84A1F1C3EA1BC00D5E794 /* 问答平台xz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz@2x.png"; sourceTree = "<group>"; };
 		14C84A201C3EA1BC00D5E794 /* 问答平台xz@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz@3x.png"; sourceTree = "<group>"; };
-		33032B7C1C3B5916005B5899 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33032B7C1C3B5916005B5899 /* Jiayan Livelihood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jiayan Livelihood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33032B801C3B5916005B5899 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33032B821C3B5916005B5899 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33032B831C3B5916005B5899 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -463,6 +472,23 @@
 		333E00B61C4789510096FE44 /* CompanyInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyInfoVC.swift; sourceTree = "<group>"; };
 		333E00B81C47898F0096FE44 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		333E00BA1C478DCD0096FE44 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		333FFFBE1C50858900D2CBB7 /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
+		333FFFBF1C50858900D2CBB7 /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
+		333FFFC11C50858900D2CBB7 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		333FFFC21C50858900D2CBB7 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		333FFFC31C50858900D2CBB7 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		333FFFC41C50858900D2CBB7 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		333FFFC51C50858900D2CBB7 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		333FFFC61C50858900D2CBB7 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		333FFFC71C50858900D2CBB7 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		333FFFC81C50858900D2CBB7 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		333FFFC91C50858900D2CBB7 /* RLConfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RLConfig; sourceTree = "<group>"; };
+		333FFFCA1C50858900D2CBB7 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		333FFFCB1C50858900D2CBB7 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		333FFFCC1C50858900D2CBB7 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		333FFFCD1C50858900D2CBB7 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		333FFFCE1C50858900D2CBB7 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		333FFFCF1C50858900D2CBB7 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		3347DAFA1C45EE6800F27F40 /* UserPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPrefs.h; sourceTree = "<group>"; };
 		3347DAFB1C45EE6800F27F40 /* UserPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPrefs.m; sourceTree = "<group>"; };
 		3347DAFD1C46515900F27F40 /* AnswerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerDetailViewController.h; sourceTree = "<group>"; };
@@ -734,7 +760,7 @@
 		33032B7D1C3B5916005B5899 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33032B7C1C3B5916005B5899 /* demo.app */,
+				33032B7C1C3B5916005B5899 /* Jiayan Livelihood.app */,
 				33032B951C3B5916005B5899 /* Jiayan LivelihoodTests.xctest */,
 				33032BA01C3B5916005B5899 /* Jiayan LivelihoodUITests.xctest */,
 			);
@@ -804,6 +830,7 @@
 		33032BB31C3B598A005B5899 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				333FFFBD1C50858900D2CBB7 /* SDCycleScrollView */,
 				333E006D1C4740310096FE44 /* MJRefresh */,
 				3347DAFA1C45EE6800F27F40 /* UserPrefs.h */,
 				3347DAFB1C45EE6800F27F40 /* UserPrefs.m */,
@@ -1105,6 +1132,38 @@
 				333E00B81C47898F0096FE44 /* NewsVC.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		333FFFBD1C50858900D2CBB7 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				333FFFBE1C50858900D2CBB7 /* NSData+SDDataCache.h */,
+				333FFFBF1C50858900D2CBB7 /* NSData+SDDataCache.m */,
+				333FFFC01C50858900D2CBB7 /* PageControl */,
+				333FFFC91C50858900D2CBB7 /* RLConfig */,
+				333FFFCA1C50858900D2CBB7 /* SDCollectionViewCell.h */,
+				333FFFCB1C50858900D2CBB7 /* SDCollectionViewCell.m */,
+				333FFFCC1C50858900D2CBB7 /* SDCycleScrollView.h */,
+				333FFFCD1C50858900D2CBB7 /* SDCycleScrollView.m */,
+				333FFFCE1C50858900D2CBB7 /* UIView+SDExtension.h */,
+				333FFFCF1C50858900D2CBB7 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		333FFFC01C50858900D2CBB7 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				333FFFC11C50858900D2CBB7 /* TAAbstractDotView.h */,
+				333FFFC21C50858900D2CBB7 /* TAAbstractDotView.m */,
+				333FFFC31C50858900D2CBB7 /* TAAnimatedDotView.h */,
+				333FFFC41C50858900D2CBB7 /* TAAnimatedDotView.m */,
+				333FFFC51C50858900D2CBB7 /* TADotView.h */,
+				333FFFC61C50858900D2CBB7 /* TADotView.m */,
+				333FFFC71C50858900D2CBB7 /* TAPageControl.h */,
+				333FFFC81C50858900D2CBB7 /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		334D03801C3E18D500AADCEC /* icon */ = {
@@ -1435,7 +1494,7 @@
 			);
 			name = "Jiayan Livelihood";
 			productName = "Jiayan Livelihood";
-			productReference = 33032B7C1C3B5916005B5899 /* demo.app */;
+			productReference = 33032B7C1C3B5916005B5899 /* Jiayan Livelihood.app */;
 			productType = "com.apple.product-type.application";
 		};
 		33032B941C3B5916005B5899 /* Jiayan LivelihoodTests */ = {
@@ -1682,6 +1741,7 @@
 				33032C311C3B63F7005B5899 /* 76pt_@1x.png in Resources */,
 				335742601C3FA04B009F725D /* 回复量.png in Resources */,
 				14C84A251C3EA1BC00D5E794 /* 专家热线选中态@2x.png in Resources */,
+				333FFFD51C50858900D2CBB7 /* RLConfig in Resources */,
 				335FDE781C3D020F002C1F85 /* 账号按钮.png in Resources */,
 				336083181C4E1A2100A134FF /* 发送-.png in Resources */,
 				3356A8BC1C433205004FDB97 /* TianMao.png in Resources */,
@@ -1754,6 +1814,8 @@
 				33E0068E1C4E31CF001327F8 /* AboutUsViewController.m in Sources */,
 				333E009F1C4740310096FE44 /* MJRefreshHeader.m in Sources */,
 				333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */,
+				333FFFD81C50858900D2CBB7 /* UIView+SDExtension.m in Sources */,
+				333FFFD01C50858900D2CBB7 /* NSData+SDDataCache.m in Sources */,
 				33032B871C3B5916005B5899 /* ViewController.m in Sources */,
 				33807A7E1C4F8133005D9B67 /* SellViewController.m in Sources */,
 				333E00A31C4740310096FE44 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1775,6 +1837,7 @@
 				33032BC81C3B5B84005B5899 /* RDVTabBarController.m in Sources */,
 				333E00AA1C4740310096FE44 /* MJRefreshConst.m in Sources */,
 				33807A701C4F80F4005D9B67 /* BusinessViewController.m in Sources */,
+				333FFFD71C50858900D2CBB7 /* SDCycleScrollView.m in Sources */,
 				333E00AC1C4740310096FE44 /* UIScrollView+MJExtension.m in Sources */,
 				333E009E1C4740310096FE44 /* MJRefreshFooter.m in Sources */,
 				33A1EA4E1C3BB91B008774E4 /* UIButton+AFNetworking.m in Sources */,
@@ -1793,11 +1856,15 @@
 				33032BDA1C3B5C37005B5899 /* HelpViewController.m in Sources */,
 				333E00AE1C4740310096FE44 /* UIView+MJExtension.m in Sources */,
 				33A1EA491C3BB91B008774E4 /* AFSecurityPolicy.m in Sources */,
+				333FFFD61C50858900D2CBB7 /* SDCollectionViewCell.m in Sources */,
+				333FFFD41C50858900D2CBB7 /* TAPageControl.m in Sources */,
 				333E009B1C4740310096FE44 /* MJRefreshAutoFooter.m in Sources */,
 				33032BC71C3B5B84005B5899 /* RDVTabBar.m in Sources */,
+				333FFFD11C50858900D2CBB7 /* TAAbstractDotView.m in Sources */,
 				333E00661C4725870096FE44 /* ReleaseViewController.m in Sources */,
 				3357425B1C3F9CA1009F725D /* HelpAnswerCell.m in Sources */,
 				33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */,
+				333FFFD21C50858900D2CBB7 /* TAAnimatedDotView.m in Sources */,
 				3347DAFF1C46515900F27F40 /* AnswerDetailViewController.m in Sources */,
 				336BF5F41C44D6C500A055C9 /* AFHelper.m in Sources */,
 				33A1EA481C3BB91B008774E4 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1813,6 +1880,7 @@
 				3360830C1C4E197D00A134FF /* ReplyCell.m in Sources */,
 				333E00B21C4775100096FE44 /* HomeVC.swift in Sources */,
 				33032B811C3B5916005B5899 /* main.m in Sources */,
+				333FFFD31C50858900D2CBB7 /* TADotView.m in Sources */,
 				333E00A61C4740310096FE44 /* MJRefreshGifHeader.m in Sources */,
 				33032BC91C3B5B84005B5899 /* RDVTabBarItem.m in Sources */,
 				33A1EA4C1C3BB91B008774E4 /* AFURLResponseSerialization.m in Sources */,
@@ -1888,7 +1956,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1912,6 +1981,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Jiayan Livelihood";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1934,7 +2004,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1951,6 +2022,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "Jiayan Livelihood";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1962,6 +2034,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -1969,7 +2043,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GH.Jiayan-Livelihood";
 				PRODUCT_MODULE_NAME = jiayan;
-				PRODUCT_NAME = demo;
+				PRODUCT_NAME = "Jiayan Livelihood";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Jiayan Livelihood-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1981,6 +2056,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -1988,7 +2065,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GH.Jiayan-Livelihood";
 				PRODUCT_MODULE_NAME = jiayan;
-				PRODUCT_NAME = demo;
+				PRODUCT_NAME = "Jiayan Livelihood";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Jiayan Livelihood/Jiayan Livelihood-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Jiayan Livelihood-Swift.h";
 			};
