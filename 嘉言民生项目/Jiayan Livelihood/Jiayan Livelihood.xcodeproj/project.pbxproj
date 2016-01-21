@@ -43,7 +43,7 @@
 		33032BC81C3B5B84005B5899 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BC41C3B5B84005B5899 /* RDVTabBarController.m */; };
 		33032BC91C3B5B84005B5899 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BC61C3B5B84005B5899 /* RDVTabBarItem.m */; };
 		33032BCC1C3B5BDC005B5899 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BCB1C3B5BDC005B5899 /* RootViewController.m */; };
-		33032BD01C3B5C0E005B5899 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController.m */; };
+		33032BD01C3B5C0E005B5899 /* PersonalCenterViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController1.m */; };
 		33032BDA1C3B5C37005B5899 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BD81C3B5C37005B5899 /* HelpViewController.m */; };
 		33032BDB1C3B5C37005B5899 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33032BD91C3B5C37005B5899 /* HelpViewController.xib */; };
 		33032BDF1C3B5C5A005B5899 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BDD1C3B5C5A005B5899 /* PolicyViewController.m */; };
@@ -133,6 +133,8 @@
 		333E00B71C4789510096FE44 /* CompanyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333E00B61C4789510096FE44 /* CompanyInfoVC.swift */; };
 		333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333E00B81C47898F0096FE44 /* NewsVC.swift */; };
 		333E00BB1C478DCD0096FE44 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 333E00BA1C478DCD0096FE44 /* demo.html */; };
+		333F00201C50D54500D2CBB7 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333F001E1C50D54500D2CBB7 /* PersonalCenterViewController.m */; };
+		333F00211C50D54500D2CBB7 /* PersonalCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333F001F1C50D54500D2CBB7 /* PersonalCenterViewController.xib */; };
 		333FFFD01C50858900D2CBB7 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFBF1C50858900D2CBB7 /* NSData+SDDataCache.m */; };
 		333FFFD11C50858900D2CBB7 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC21C50858900D2CBB7 /* TAAbstractDotView.m */; };
 		333FFFD21C50858900D2CBB7 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333FFFC41C50858900D2CBB7 /* TAAnimatedDotView.m */; };
@@ -354,8 +356,8 @@
 		33032BC61C3B5B84005B5899 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		33032BCA1C3B5BDC005B5899 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		33032BCB1C3B5BDC005B5899 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		33032BCD1C3B5C0E005B5899 /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
-		33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
+		33032BCD1C3B5C0E005B5899 /* PersonalCenterViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController1.h; sourceTree = "<group>"; };
+		33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController1.m; sourceTree = "<group>"; };
 		33032BD71C3B5C37005B5899 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		33032BD81C3B5C37005B5899 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		33032BD91C3B5C37005B5899 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
@@ -472,6 +474,9 @@
 		333E00B61C4789510096FE44 /* CompanyInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyInfoVC.swift; sourceTree = "<group>"; };
 		333E00B81C47898F0096FE44 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		333E00BA1C478DCD0096FE44 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		333F001D1C50D54500D2CBB7 /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
+		333F001E1C50D54500D2CBB7 /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
+		333F001F1C50D54500D2CBB7 /* PersonalCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterViewController.xib; sourceTree = "<group>"; };
 		333FFFBE1C50858900D2CBB7 /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
 		333FFFBF1C50858900D2CBB7 /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
 		333FFFC11C50858900D2CBB7 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -897,8 +902,11 @@
 		33032BB91C3B5A40005B5899 /* PersonalCenter */ = {
 			isa = PBXGroup;
 			children = (
-				33032BCD1C3B5C0E005B5899 /* PersonalCenterViewController.h */,
-				33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController.m */,
+				333F001D1C50D54500D2CBB7 /* PersonalCenterViewController.h */,
+				333F001E1C50D54500D2CBB7 /* PersonalCenterViewController.m */,
+				333F001F1C50D54500D2CBB7 /* PersonalCenterViewController.xib */,
+				33032BCD1C3B5C0E005B5899 /* PersonalCenterViewController1.h */,
+				33032BCE1C3B5C0E005B5899 /* PersonalCenterViewController1.m */,
 				3356A8C31C4358E4004FDB97 /* Models */,
 				3356A8C21C4358DB004FDB97 /* Views */,
 				3356A8C11C4358BF004FDB97 /* Controllers */,
@@ -1698,6 +1706,7 @@
 				3356A8B41C433205004FDB97 /* 720x280活动图.png in Resources */,
 				33032C4B1C3B63F7005B5899 /* 需要帮助icon_正常状态@2x.png in Resources */,
 				335FDE7C1C3D020F002C1F85 /* 返回@2x.png in Resources */,
+				333F00211C50D54500D2CBB7 /* PersonalCenterViewController.xib in Resources */,
 				335742611C3FA04B009F725D /* 回复量@2x.png in Resources */,
 				334D03A11C3E18D500AADCEC /* 60pt_@2x.png in Resources */,
 				33032C2C1C3B63F7005B5899 /* 57pt_@2x.png in Resources */,
@@ -1814,6 +1823,7 @@
 				33E0068E1C4E31CF001327F8 /* AboutUsViewController.m in Sources */,
 				333E009F1C4740310096FE44 /* MJRefreshHeader.m in Sources */,
 				333E00B91C47898F0096FE44 /* NewsVC.swift in Sources */,
+				333F00201C50D54500D2CBB7 /* PersonalCenterViewController.m in Sources */,
 				333FFFD81C50858900D2CBB7 /* UIView+SDExtension.m in Sources */,
 				333FFFD01C50858900D2CBB7 /* NSData+SDDataCache.m in Sources */,
 				33032B871C3B5916005B5899 /* ViewController.m in Sources */,
@@ -1872,7 +1882,7 @@
 				333E00B41C4785560096FE44 /* PolicyVC.swift in Sources */,
 				33032BDF1C3B5C5A005B5899 /* PolicyViewController.m in Sources */,
 				335742691C3FAFE6009F725D /* MXPullDownMenu.m in Sources */,
-				33032BD01C3B5C0E005B5899 /* PersonalCenterViewController.m in Sources */,
+				33032BD01C3B5C0E005B5899 /* PersonalCenterViewController1.m in Sources */,
 				334D03B81C3E38D400AADCEC /* SCPopView.m in Sources */,
 				33A1EA4F1C3BB91B008774E4 /* UIImageView+AFNetworking.m in Sources */,
 				335742651C3FA3B8009F725D /* HelpModel.m in Sources */,
