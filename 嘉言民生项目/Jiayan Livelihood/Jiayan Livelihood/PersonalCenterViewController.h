@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNick;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *exitBtn;
 
 @end
