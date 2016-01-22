@@ -23,21 +23,9 @@
 -(void)creatUI{
     self.sureModifyBtn.layer.masksToBounds=YES;
     self.sureModifyBtn.layer.cornerRadius=5;
-    self.navigationItem.hidesBackButton=YES;
     self.navigationItem.title=@"密码修改";
-    UIButton *backBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"返回.png"] forState:UIControlStateNormal];
+    UIButton *backBtn=[self creatleftBarButtonItemOfBack];
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    //    [self.navigationController.navigationBar addSubview:backBtn];
-    UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    
-    //调整返回按钮距离左屏幕边的距离
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                       target:nil action:nil];
-    negativeSpacer.width = -15;
-    
-    self.navigationItem.leftBarButtonItems=@[negativeSpacer,backItem];
 
 }
 -(void)back{

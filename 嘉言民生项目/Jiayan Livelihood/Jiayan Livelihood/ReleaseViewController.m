@@ -33,12 +33,9 @@
 }
 -(void)creatUI{
     //返回按钮
-    self.navigationItem.hidesBackButton=YES;
-    UIButton *backBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [backBtn setImage:[UIImage imageNamed:@"Safari-Forward.png"] forState:UIControlStateNormal];
+   
+    UIButton *backBtn=[self creatleftBarButtonItemOfBack];
     [backBtn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem=item;
     //提交按钮
     UIButton *submitBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 40)];
     [submitBtn setTitle:@"提交" forState:UIControlStateNormal];

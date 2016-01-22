@@ -222,6 +222,8 @@
 		335742621C3FA04B009F725D /* 回复量@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3357425F1C3FA04B009F725D /* 回复量@3x.png */; };
 		335742651C3FA3B8009F725D /* HelpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 335742641C3FA3B8009F725D /* HelpModel.m */; };
 		335742691C3FAFE6009F725D /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 335742681C3FAFE6009F725D /* MXPullDownMenu.m */; };
+		3358E1AF1C5220C6006F829D /* mySaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358E1AD1C5220C6006F829D /* mySaveViewController.m */; };
+		3358E1B01C5220C6006F829D /* mySaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3358E1AE1C5220C6006F829D /* mySaveViewController.xib */; };
 		335FDE451C3CACDD002C1F85 /* startViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FDE441C3CACDD002C1F85 /* startViewController.m */; };
 		335FDE491C3CE96B002C1F85 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FDE471C3CE96B002C1F85 /* LoginViewController.m */; };
 		335FDE4A1C3CE96B002C1F85 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335FDE481C3CE96B002C1F85 /* LoginViewController.xib */; };
@@ -582,6 +584,9 @@
 		335742641C3FA3B8009F725D /* HelpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpModel.m; sourceTree = "<group>"; };
 		335742671C3FAFE6009F725D /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
 		335742681C3FAFE6009F725D /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
+		3358E1AC1C5220C6006F829D /* mySaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySaveViewController.h; sourceTree = "<group>"; };
+		3358E1AD1C5220C6006F829D /* mySaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySaveViewController.m; sourceTree = "<group>"; };
+		3358E1AE1C5220C6006F829D /* mySaveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mySaveViewController.xib; sourceTree = "<group>"; };
 		335FDE431C3CACDD002C1F85 /* startViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = startViewController.h; sourceTree = "<group>"; };
 		335FDE441C3CACDD002C1F85 /* startViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = startViewController.m; sourceTree = "<group>"; };
 		335FDE461C3CE96B002C1F85 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -1270,6 +1275,9 @@
 				33807A671C4F52DA005D9B67 /* ModifyPasswordViewController.h */,
 				33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */,
 				33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */,
+				3358E1AC1C5220C6006F829D /* mySaveViewController.h */,
+				3358E1AD1C5220C6006F829D /* mySaveViewController.m */,
+				3358E1AE1C5220C6006F829D /* mySaveViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1709,6 +1717,7 @@
 				3360831C1C4E1A2100A134FF /* 收藏@2x.png in Resources */,
 				33032C401C3B63F7005B5899 /* 了解政策icon_正常状态@3x.png in Resources */,
 				33A1EA281C3BA320008774E4 /* 导航栏.png in Resources */,
+				3358E1B01C5220C6006F829D /* mySaveViewController.xib in Resources */,
 				3356A92D1C4389CD004FDB97 /* 客服.png in Resources */,
 				147EF5661C42A14600C4A459 /* 我要买选中态@3x.png in Resources */,
 				3357425C1C3F9CA1009F725D /* HelpAnswerCell.xib in Resources */,
@@ -1866,6 +1875,7 @@
 				333E009B1C4740310096FE44 /* MJRefreshAutoFooter.m in Sources */,
 				33032BC71C3B5B84005B5899 /* RDVTabBar.m in Sources */,
 				333FFFD11C50858900D2CBB7 /* TAAbstractDotView.m in Sources */,
+				3358E1AF1C5220C6006F829D /* mySaveViewController.m in Sources */,
 				333E00661C4725870096FE44 /* ReleaseViewController.m in Sources */,
 				3357425B1C3F9CA1009F725D /* HelpAnswerCell.m in Sources */,
 				33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */,

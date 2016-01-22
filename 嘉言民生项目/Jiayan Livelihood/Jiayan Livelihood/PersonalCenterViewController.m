@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "ModifyPasswordViewController.h"
 #import "AboutUsViewController.h"
+#import "mySaveViewController.h"
 
 @interface PersonalCenterViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>{
 
@@ -126,6 +127,8 @@
 }
 #pragma mark --我的收藏
 - (IBAction)mySave:(id)sender {
+    mySaveViewController *mySaveVC=[[mySaveViewController alloc]init];
+    [self.navigationController pushViewController:mySaveVC animated:YES];
     
 }
 #pragma mark --我的买卖
