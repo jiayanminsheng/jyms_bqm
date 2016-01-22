@@ -54,8 +54,11 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAP-pU-ETk">
                     <rect key="frame" x="8" y="71" width="54" height="54"/>
-                    <color key="backgroundColor" red="1" green="0.31588155959999997" blue="0.21805537550000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" backgroundImage="关于我们.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="getHeaderImage:" destination="-1" eventType="touchUpInside" id="lzU-oQ-sBN"/>
                     </connections>
@@ -138,25 +141,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="YRF-WZ-uc4">
-                    <rect key="frame" x="300" y="142" width="9" height="16"/>
+                    <rect key="frame" x="295" y="142" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-OP-T1w">
-                    <rect key="frame" x="300" y="183" width="9" height="16"/>
+                    <rect key="frame" x="295" y="183" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="deN-Un-fJc">
-                    <rect key="frame" x="300" y="218" width="9" height="16"/>
+                    <rect key="frame" x="295" y="218" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-Tl-ter">
-                    <rect key="frame" x="300" y="253" width="9" height="16"/>
+                    <rect key="frame" x="295" y="253" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-Sh-gc1">
-                    <rect key="frame" x="300" y="294" width="9" height="16"/>
+                    <rect key="frame" x="295" y="294" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4f-RS-ytn">
-                    <rect key="frame" x="300" y="329" width="9" height="16"/>
+                    <rect key="frame" x="295" y="329" width="14" height="16"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari-Back-拷贝-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-cS-C9d">
-                    <rect key="frame" x="300" y="364" width="9" height="16"/>
+                    <rect key="frame" x="295" y="364" width="14" height="16"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-1y-yQu" userLabel="Button1">
                     <rect key="frame" x="0.0" y="132" width="320" height="35"/>
@@ -367,7 +370,7 @@
                 <constraint firstItem="YdP-jN-bUK" firstAttribute="height" secondItem="if0-yx-d64" secondAttribute="height" multiplier="1.2" id="yH3-3N-QK0"/>
                 <constraint firstItem="wQu-dn-cd4" firstAttribute="bottom" secondItem="sA4-mW-WcQ" secondAttribute="bottom" constant="-2" id="yaf-6b-a4l"/>
                 <constraint firstItem="lM3-to-3cS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="zD1-pg-XGI"/>
-                <constraint firstItem="YRF-WZ-uc4" firstAttribute="width" secondItem="WFz-ID-gVx" secondAttribute="height" constant="-25" id="zy0-di-yjU"/>
+                <constraint firstItem="YRF-WZ-uc4" firstAttribute="width" secondItem="WFz-ID-gVx" secondAttribute="height" constant="-20" id="zy0-di-yjU"/>
                 <constraint firstItem="Ki2-KQ-F4g" firstAttribute="bottom" secondItem="IcU-EM-NZ0" secondAttribute="bottom" constant="-2" id="zzF-WU-IUl"/>
             </constraints>
             <point key="canvasLocation" x="313" y="-357"/>

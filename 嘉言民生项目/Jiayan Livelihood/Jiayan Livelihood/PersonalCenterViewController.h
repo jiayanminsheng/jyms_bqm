@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonalCenterViewController : UIViewController
+@property (nonatomic,strong)UIImage * headerImage;
 @property (weak, nonatomic) IBOutlet UIButton *headerBtn;
 
 @property (weak, nonatomic) IBOutlet UILabel *userNick;

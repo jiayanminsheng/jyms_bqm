@@ -10,18 +10,24 @@
 @interface UserPrefs : NSObject
 
 +(UserPrefs*) shareUserPrefs;
-
+//用户名
 -(void) saveUserName:(NSString*)name;
 -(NSString*) getUserName;
 
+//密码
 -(void) saveUserPassword:(NSString*)passwd;
 -(NSString*) getUserPassword;
 
--(void) saveuserNickname:(NSString*) nickname;
--(NSString*) getUserNickname;
-
+//用户id
 -(void) saveuserID:(NSString*) ID;
 -(NSString*) getuserID;
+
+//用户头像
+-(void) saveuserheaderImage:(NSData*) headerImage;
+-(NSData*) getheaderImage;
+
+-(void) saveuserNickname:(NSString*) nickname;
+-(NSString*) getUserNickname;
 
 -(void)clearLoginInfo;
 @end

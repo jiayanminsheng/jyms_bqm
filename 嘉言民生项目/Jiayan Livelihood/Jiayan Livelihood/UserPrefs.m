@@ -14,6 +14,7 @@
 @property NSString * userPasswordKey;
 @property NSString * userNicknameKey;
 @property NSString *userIDKey;
+@property NSString *userHeaderImageKey;
 @end
 
 
@@ -39,6 +40,7 @@ static UserPrefs* instance;
     _userNameKey = @"user";
     _userIDKey=@"id";
     _userNicknameKey = @"nickname";
+    _userHeaderImageKey=@"headerimage";
     return [super init];
 }
 -(void) saveUserName:(NSString *)name
@@ -57,6 +59,7 @@ static UserPrefs* instance;
     [_userDefaults synchronize];
 }
 -(NSString*) getUserPassword
+
 {
     return [_userDefaults stringForKey:_userPasswordKey];
 }
@@ -79,6 +82,16 @@ static UserPrefs* instance;
     return [_userDefaults stringForKey:_userIDKey];
 
 }
+-(void) saveuserheaderImage:(NSData*) headerImage{
+    [_userDefaults setObject:headerImage forKey:_userHeaderImageKey];
+    [_userDefaults synchronize];
+
+}
+-(NSData*) getheaderImage{
+
+    return [_userDefaults objectForKey:_userHeaderImageKey];
+
+}
 
 -(void)clearLoginInfo
 {
@@ -86,6 +99,7 @@ static UserPrefs* instance;
     [_userDefaults removeObjectForKey:_userNameKey];
     [_userDefaults removeObjectForKey:_userNicknameKey];
     [_userDefaults removeObjectForKey:_userIDKey];
+    [_userDefaults removeObjectForKey:_userHeaderImageKey];
     [_userDefaults synchronize];
 }
 @end
