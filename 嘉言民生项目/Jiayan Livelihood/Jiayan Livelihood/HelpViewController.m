@@ -52,6 +52,7 @@
         [btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImageEdgeInsets:UIEdgeInsetsMake(SCREEN_HEIGHT/20.0f,SCREEN_WIDTH/3.0f , SCREEN_HEIGHT/20.0f,SCREEN_WIDTH/3.0f)];
         if (i==0) {
+            
             [btn setImage:_btnSelArr[i] forState:UIControlStateNormal];
         }else{
             [btn setImage:_btnArr[i] forState:UIControlStateNormal];

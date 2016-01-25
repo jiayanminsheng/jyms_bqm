@@ -18,10 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self creatUI];
+    
+    
+}
+-(void)creatUI{
     self.navigationController.toolbarHidden=NO;
     self.navigationController.toolbar.frame=CGRectMake(0, 64, SCREEN_WIDTH,SCREEN_HEIGHT*0.06);
-    
-    
+
+
 }
 
 - (void)didReceiveMemoryWarning {
