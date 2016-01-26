@@ -77,14 +77,8 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
 
         //让导航栏图片实现自适应
         let bgImg:UIImage = UIImage(named:"导航栏1")!
-        let size:CGSize=bgImg.size
-        let height=UIApplication.sharedApplication().statusBarFrame.height
-        print("sdfdfdaf\(height)")
-        let imgHeight=(self.navigationController?.navigationBar.frame.size.height) //图片高
-        let imgWidth=imgHeight!*size.width/size.height
-        let imgCenter=CGSizeMake((self.navigationController?.navigationBar.center.x)!, imgHeight!/2)
         
-        imageView=UIImageView(frame:CGRectMake((imgCenter.width)-imgWidth/2,0, imgWidth, imgHeight!))
+        imageView=UIImageView(frame:CGRectMake(0,((self.navigationController?.navigationBar.center.y)!-sHeight*0.075), sWidth, sHeight*0.08))
         imageView.image=bgImg
         
         self.navigationController?.navigationBar.addSubview(imageView)
