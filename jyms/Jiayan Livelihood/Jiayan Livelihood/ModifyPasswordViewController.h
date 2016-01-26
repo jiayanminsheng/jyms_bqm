@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ModifyPasswordViewController : UIViewController
+@interface ModifyPasswordViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *oldPassword;
 
 @property (weak, nonatomic) IBOutlet UITextField *NewPassword;

@@ -175,6 +175,18 @@
 		334D03B91C3E38D400AADCEC /* 使用说明.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 334D03B31C3E38D400AADCEC /* 使用说明.rtf */; };
 		334D03C01C3E3AC800AADCEC /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 334D03BF1C3E3AC800AADCEC /* AnswerViewController.m */; };
 		334D03C31C3E3B1F00AADCEC /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 334D03C21C3E3B1F00AADCEC /* ExpertViewController.m */; };
+		335451CB1C55BD9300C8A335 /* 了解政策.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C21C55BD9300C8A335 /* 了解政策.png */; };
+		335451CC1C55BD9300C8A335 /* 了解政策@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C31C55BD9300C8A335 /* 了解政策@2x.png */; };
+		335451CD1C55BD9300C8A335 /* 了解政策@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C41C55BD9300C8A335 /* 了解政策@3x.png */; };
+		335451CE1C55BD9300C8A335 /* 关注三农.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C51C55BD9300C8A335 /* 关注三农.png */; };
+		335451CF1C55BD9300C8A335 /* 关注三农@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C61C55BD9300C8A335 /* 关注三农@2x.png */; };
+		335451D01C55BD9300C8A335 /* 关注三农@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C71C55BD9300C8A335 /* 关注三农@3x.png */; };
+		335451D11C55BD9300C8A335 /* 嘉言民生.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C81C55BD9300C8A335 /* 嘉言民生.png */; };
+		335451D21C55BD9300C8A335 /* 嘉言民生@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451C91C55BD9300C8A335 /* 嘉言民生@2x.png */; };
+		335451D31C55BD9300C8A335 /* 嘉言民生@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 335451CA1C55BD9300C8A335 /* 嘉言民生@3x.png */; };
+		335451D61C55C89700C8A335 /* mySaveFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335451D51C55C89700C8A335 /* mySaveFirstViewController.m */; };
+		335451D91C55C8A900C8A335 /* mySaveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335451D81C55C8A900C8A335 /* mySaveSecondViewController.m */; };
+		335451DC1C55C8B400C8A335 /* mySaveThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335451DB1C55C8B400C8A335 /* mySaveThirdViewController.m */; };
 		3356A8B21C433205004FDB97 /* 1HaoDian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3356A8A61C433205004FDB97 /* 1HaoDian.png */; };
 		3356A8B31C433205004FDB97 /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 3356A8A71C433205004FDB97 /* 58.png */; };
 		3356A8B41C433205004FDB97 /* 720x280活动图.png in Resources */ = {isa = PBXBuildFile; fileRef = 3356A8A81C433205004FDB97 /* 720x280活动图.png */; };
@@ -222,6 +234,7 @@
 		335742621C3FA04B009F725D /* 回复量@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3357425F1C3FA04B009F725D /* 回复量@3x.png */; };
 		335742651C3FA3B8009F725D /* HelpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 335742641C3FA3B8009F725D /* HelpModel.m */; };
 		335742691C3FAFE6009F725D /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 335742681C3FAFE6009F725D /* MXPullDownMenu.m */; };
+		3358E1AF1C5220C6006F829D /* mySaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358E1AD1C5220C6006F829D /* mySaveViewController.m */; };
 		335FDE451C3CACDD002C1F85 /* startViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FDE441C3CACDD002C1F85 /* startViewController.m */; };
 		335FDE491C3CE96B002C1F85 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FDE471C3CE96B002C1F85 /* LoginViewController.m */; };
 		335FDE4A1C3CE96B002C1F85 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335FDE481C3CE96B002C1F85 /* LoginViewController.xib */; };
@@ -531,6 +544,21 @@
 		334D03BF1C3E3AC800AADCEC /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 		334D03C11C3E3B1F00AADCEC /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
 		334D03C21C3E3B1F00AADCEC /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
+		335451C21C55BD9300C8A335 /* 了解政策.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "了解政策.png"; sourceTree = "<group>"; };
+		335451C31C55BD9300C8A335 /* 了解政策@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "了解政策@2x.png"; sourceTree = "<group>"; };
+		335451C41C55BD9300C8A335 /* 了解政策@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "了解政策@3x.png"; sourceTree = "<group>"; };
+		335451C51C55BD9300C8A335 /* 关注三农.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关注三农.png"; sourceTree = "<group>"; };
+		335451C61C55BD9300C8A335 /* 关注三农@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关注三农@2x.png"; sourceTree = "<group>"; };
+		335451C71C55BD9300C8A335 /* 关注三农@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关注三农@3x.png"; sourceTree = "<group>"; };
+		335451C81C55BD9300C8A335 /* 嘉言民生.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "嘉言民生.png"; sourceTree = "<group>"; };
+		335451C91C55BD9300C8A335 /* 嘉言民生@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "嘉言民生@2x.png"; sourceTree = "<group>"; };
+		335451CA1C55BD9300C8A335 /* 嘉言民生@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "嘉言民生@3x.png"; sourceTree = "<group>"; };
+		335451D41C55C89700C8A335 /* mySaveFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySaveFirstViewController.h; sourceTree = "<group>"; };
+		335451D51C55C89700C8A335 /* mySaveFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySaveFirstViewController.m; sourceTree = "<group>"; };
+		335451D71C55C8A900C8A335 /* mySaveSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySaveSecondViewController.h; sourceTree = "<group>"; };
+		335451D81C55C8A900C8A335 /* mySaveSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySaveSecondViewController.m; sourceTree = "<group>"; };
+		335451DA1C55C8B400C8A335 /* mySaveThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySaveThirdViewController.h; sourceTree = "<group>"; };
+		335451DB1C55C8B400C8A335 /* mySaveThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySaveThirdViewController.m; sourceTree = "<group>"; };
 		3356A8A61C433205004FDB97 /* 1HaoDian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1HaoDian.png; sourceTree = "<group>"; };
 		3356A8A71C433205004FDB97 /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 		3356A8A81C433205004FDB97 /* 720x280活动图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "720x280活动图.png"; sourceTree = "<group>"; };
@@ -582,6 +610,8 @@
 		335742641C3FA3B8009F725D /* HelpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpModel.m; sourceTree = "<group>"; };
 		335742671C3FAFE6009F725D /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
 		335742681C3FAFE6009F725D /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
+		3358E1AC1C5220C6006F829D /* mySaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySaveViewController.h; sourceTree = "<group>"; };
+		3358E1AD1C5220C6006F829D /* mySaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySaveViewController.m; sourceTree = "<group>"; };
 		335FDE431C3CACDD002C1F85 /* startViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = startViewController.h; sourceTree = "<group>"; };
 		335FDE441C3CACDD002C1F85 /* startViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = startViewController.m; sourceTree = "<group>"; };
 		335FDE461C3CE96B002C1F85 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -1243,6 +1273,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		335451C11C55BD9300C8A335 /* 收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				335451C21C55BD9300C8A335 /* 了解政策.png */,
+				335451C31C55BD9300C8A335 /* 了解政策@2x.png */,
+				335451C41C55BD9300C8A335 /* 了解政策@3x.png */,
+				335451C51C55BD9300C8A335 /* 关注三农.png */,
+				335451C61C55BD9300C8A335 /* 关注三农@2x.png */,
+				335451C71C55BD9300C8A335 /* 关注三农@3x.png */,
+				335451C81C55BD9300C8A335 /* 嘉言民生.png */,
+				335451C91C55BD9300C8A335 /* 嘉言民生@2x.png */,
+				335451CA1C55BD9300C8A335 /* 嘉言民生@3x.png */,
+			);
+			path = "收藏";
+			sourceTree = "<group>";
+		};
 		3356A8A51C433205004FDB97 /* 我要买页面切图 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1316,14 @@
 				33807A671C4F52DA005D9B67 /* ModifyPasswordViewController.h */,
 				33807A681C4F52DA005D9B67 /* ModifyPasswordViewController.m */,
 				33807A691C4F52DA005D9B67 /* ModifyPasswordViewController.xib */,
+				3358E1AC1C5220C6006F829D /* mySaveViewController.h */,
+				3358E1AD1C5220C6006F829D /* mySaveViewController.m */,
+				335451D41C55C89700C8A335 /* mySaveFirstViewController.h */,
+				335451D51C55C89700C8A335 /* mySaveFirstViewController.m */,
+				335451D71C55C8A900C8A335 /* mySaveSecondViewController.h */,
+				335451D81C55C8A900C8A335 /* mySaveSecondViewController.m */,
+				335451DA1C55C8B400C8A335 /* mySaveThirdViewController.h */,
+				335451DB1C55C8B400C8A335 /* mySaveThirdViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1291,6 +1345,7 @@
 		3356A90B1C4389CD004FDB97 /* 个人中心icon */ = {
 			isa = PBXGroup;
 			children = (
+				335451C11C55BD9300C8A335 /* 收藏 */,
 				3356A90C1C4389CD004FDB97 /* Safari-Back-拷贝-3.png */,
 				3356A90D1C4389CD004FDB97 /* Safari-Back-拷贝-3@2x.png */,
 				3356A90E1C4389CD004FDB97 /* Safari-Back-拷贝-3@3x.png */,
@@ -1591,6 +1646,7 @@
 				33807A7C1C4F8133005D9B67 /* BuyViewController.xib in Resources */,
 				147EF5681C42A14600C4A459 /* 我要卖@2x.png in Resources */,
 				3356A8B31C433205004FDB97 /* 58.png in Resources */,
+				335451D21C55BD9300C8A335 /* 嘉言民生@2x.png in Resources */,
 				33A1EA2A1C3BA320008774E4 /* 导航栏@3x.png in Resources */,
 				334D039D1C3E18D500AADCEC /* 512pt_@1x.png in Resources */,
 				334D037F1C3DEE4D00AADCEC /* 注册@3x.png in Resources */,
@@ -1640,6 +1696,7 @@
 				335FDE821C3D130B002C1F85 /* 登录@2x.png in Resources */,
 				33032C531C3B63F7005B5899 /* 首页icon_选中状态.png in Resources */,
 				33032C3C1C3B63F7005B5899 /* 个人中心icon_选中状态@2x.png in Resources */,
+				335451D01C55BD9300C8A335 /* 关注三农@3x.png in Resources */,
 				33032C241C3B63F7005B5899 /* 40pt_@1x.png in Resources */,
 				147EF56B1C42A14600C4A459 /* 我要卖选中态@2x.png in Resources */,
 				33032C501C3B63F7005B5899 /* 首页icon_正常状态.png in Resources */,
@@ -1669,6 +1726,7 @@
 				33A1EA291C3BA320008774E4 /* 导航栏@2x.png in Resources */,
 				33032B8A1C3B5916005B5899 /* Main.storyboard in Resources */,
 				335FDE7A1C3D020F002C1F85 /* 账号按钮@3x.png in Resources */,
+				335451CC1C55BD9300C8A335 /* 了解政策@2x.png in Resources */,
 				334D03951C3E18D500AADCEC /* 29pt_@1x.png in Resources */,
 				334D03B41C3E38D400AADCEC /* RLConfig in Resources */,
 				33032C2B1C3B63F7005B5899 /* 57pt_@1x.png in Resources */,
@@ -1693,6 +1751,7 @@
 				14C84A221C3EA1BC00D5E794 /* 专家热线@2x.png in Resources */,
 				334D037E1C3DEE4D00AADCEC /* 注册@2x.png in Resources */,
 				335FDE7B1C3D020F002C1F85 /* 返回.png in Resources */,
+				335451CD1C55BD9300C8A335 /* 了解政策@3x.png in Resources */,
 				33032C3B1C3B63F7005B5899 /* 个人中心icon_选中状态.png in Resources */,
 				33032C461C3B63F7005B5899 /* 我要买卖icon_正常状态@3x.png in Resources */,
 				334D03941C3E18D500AADCEC /* 120pt_@1x.png in Resources */,
@@ -1705,6 +1764,7 @@
 				335742611C3FA04B009F725D /* 回复量@2x.png in Resources */,
 				334D03A11C3E18D500AADCEC /* 60pt_@2x.png in Resources */,
 				33032C2C1C3B63F7005B5899 /* 57pt_@2x.png in Resources */,
+				335451D31C55BD9300C8A335 /* 嘉言民生@3x.png in Resources */,
 				333E00A91C4740310096FE44 /* MJRefresh.bundle in Resources */,
 				3360831C1C4E1A2100A134FF /* 收藏@2x.png in Resources */,
 				33032C401C3B63F7005B5899 /* 了解政策icon_正常状态@3x.png in Resources */,
@@ -1713,7 +1773,9 @@
 				147EF5661C42A14600C4A459 /* 我要买选中态@3x.png in Resources */,
 				3357425C1C3F9CA1009F725D /* HelpAnswerCell.xib in Resources */,
 				14C84A2B1C3EA1BC00D5E794 /* 问答平台xz@2x.png in Resources */,
+				335451CB1C55BD9300C8A335 /* 了解政策.png in Resources */,
 				3356A92A1C4389CD004FDB97 /* 分享.png in Resources */,
+				335451D11C55BD9300C8A335 /* 嘉言民生.png in Resources */,
 				334D03961C3E18D500AADCEC /* 29pt_@2x.png in Resources */,
 				335FDE791C3D020F002C1F85 /* 账号按钮@2x.png in Resources */,
 				335FDE6F1C3D020F002C1F85 /* 注册账号按钮.png in Resources */,
@@ -1758,6 +1820,7 @@
 				333E00BB1C478DCD0096FE44 /* demo.html in Resources */,
 				3356A8B71C433205004FDB97 /* GuoHongShangCheng200x200.png in Resources */,
 				33032C421C3B63F7005B5899 /* 了解政策icon_选中状态@2x.png in Resources */,
+				335451CE1C55BD9300C8A335 /* 关注三农.png in Resources */,
 				3356A9271C4389CD004FDB97 /* 关于我们.png in Resources */,
 				3356A92F1C4389CD004FDB97 /* 客服@3x.png in Resources */,
 				335742621C3FA04B009F725D /* 回复量@3x.png in Resources */,
@@ -1774,6 +1837,7 @@
 				147EF56C1C42A14600C4A459 /* 我要卖选中态@3x.png in Resources */,
 				335742551C3F3BB4009F725D /* 发布按钮@3x.png in Resources */,
 				335FDE701C3D020F002C1F85 /* 注册账号按钮@2x.png in Resources */,
+				335451CF1C55BD9300C8A335 /* 关注三农@2x.png in Resources */,
 				334D037D1C3DEE4D00AADCEC /* 注册.png in Resources */,
 				33032C481C3B63F7005B5899 /* 我要买卖icon_选中状态@2x.png in Resources */,
 				33032C201C3B63F7005B5899 /* 120pt_@1x.png in Resources */,
@@ -1813,6 +1877,7 @@
 			files = (
 				3356A8C01C433827004FDB97 /* BQMImageView.m in Sources */,
 				333E00A51C4740310096FE44 /* MJRefreshBackStateFooter.m in Sources */,
+				335451D61C55C89700C8A335 /* mySaveFirstViewController.m in Sources */,
 				336BF5F71C44DFD700A055C9 /* BaseViewController.m in Sources */,
 				334D03C01C3E3AC800AADCEC /* AnswerViewController.m in Sources */,
 				33E0068E1C4E31CF001327F8 /* AboutUsViewController.m in Sources */,
@@ -1821,6 +1886,7 @@
 				333F00201C50D54500D2CBB7 /* PersonalCenterViewController.m in Sources */,
 				333FFFD81C50858900D2CBB7 /* UIView+SDExtension.m in Sources */,
 				333FFFD01C50858900D2CBB7 /* NSData+SDDataCache.m in Sources */,
+				335451D91C55C8A900C8A335 /* mySaveSecondViewController.m in Sources */,
 				33032B871C3B5916005B5899 /* ViewController.m in Sources */,
 				33807A7E1C4F8133005D9B67 /* SellViewController.m in Sources */,
 				333E00A31C4740310096FE44 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1866,11 +1932,13 @@
 				333E009B1C4740310096FE44 /* MJRefreshAutoFooter.m in Sources */,
 				33032BC71C3B5B84005B5899 /* RDVTabBar.m in Sources */,
 				333FFFD11C50858900D2CBB7 /* TAAbstractDotView.m in Sources */,
+				3358E1AF1C5220C6006F829D /* mySaveViewController.m in Sources */,
 				333E00661C4725870096FE44 /* ReleaseViewController.m in Sources */,
 				3357425B1C3F9CA1009F725D /* HelpAnswerCell.m in Sources */,
 				33807A6A1C4F52DA005D9B67 /* ModifyPasswordViewController.m in Sources */,
 				333FFFD21C50858900D2CBB7 /* TAAnimatedDotView.m in Sources */,
 				3347DAFF1C46515900F27F40 /* AnswerDetailViewController.m in Sources */,
+				335451DC1C55C8B400C8A335 /* mySaveThirdViewController.m in Sources */,
 				336BF5F41C44D6C500A055C9 /* AFHelper.m in Sources */,
 				33A1EA481C3BB91B008774E4 /* AFNetworkReachabilityManager.m in Sources */,
 				33A1EA4D1C3BB91B008774E4 /* AFURLSessionManager.m in Sources */,

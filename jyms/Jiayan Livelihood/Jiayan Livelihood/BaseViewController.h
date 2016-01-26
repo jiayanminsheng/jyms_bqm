@@ -12,4 +12,6 @@
 -(void)showHUDWithTitle:(NSString *)title Message:(NSString *)message view:(UIView *)view;
 -(void)showHUDWithMessage:(NSString *)message view:(UIView *)view;
 
+-(UIButton *)creatleftBarButtonItemOfBack;
+
 @end
