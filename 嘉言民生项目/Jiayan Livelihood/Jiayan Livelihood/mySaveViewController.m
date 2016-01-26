@@ -94,8 +94,9 @@
 //    [self addSubControllers];
     
         UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH,SCREEN_HEIGHT*0.06)];
+        view.backgroundColor=[UIColor whiteColor];
         [self.view addSubview:view];
-        CGFloat differ=(SCREEN_WIDTH-3*SCREEN_WIDTH*0.1799)/3.0;
+        CGFloat differ=(SCREEN_WIDTH-3*SCREEN_WIDTH*0.1799)/4.0;
         //按钮
         UIButton *btn1=[[UIButton alloc]initWithFrame:CGRectMake(differ,(SCREEN_HEIGHT*0.06-(SCREEN_HEIGHT*0.4527*0.06))/2.0,SCREEN_WIDTH*0.1799,SCREEN_HEIGHT*0.4527*0.06)];
         [btn1 setBackgroundImage:[UIImage imageNamed:@"了解政策.png"] forState:UIControlStateNormal];
@@ -109,23 +110,28 @@
         btn1.tag=11;
         [view addSubview:btn2];
     
-//        UIButton *btn3=[[UIButton alloc]initWithFrame:CGRectMake(btn2.frame.origin.x+btn2.frame.size.width+differ, btn1.frame.origin.y, btn1.frame., SCREEN_HEIGHT*0.4527*0.06)];
-//        [btn3 setBackgroundImage:[UIImage imageNamed:@"关注三农.png"] forState:UIControlStateNormal];
-//        [btn3 addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-//        btn3.tag=12;
-//        UIBarButtonItem *item3=[[UIBarButtonItem alloc]initWithCustomView:btn3];
-//    
-    
-    
-    
-    
+        UIButton *btn3=[[UIButton alloc]initWithFrame:CGRectMake(btn2.frame.origin.x+btn2.frame.size.width+differ, btn1.frame.origin.y, btn1.frame.size.width, SCREEN_HEIGHT*0.4527*0.06)];
+        [btn3 setBackgroundImage:[UIImage imageNamed:@"关注三农.png"] forState:UIControlStateNormal];
+        [btn3 addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        btn3.tag=12;
+        [view addSubview:btn3];
     
         //点击指示
         _label=[[UILabel alloc]initWithFrame:CGRectMake(btn1.frame.origin.x, SCREEN_HEIGHT*0.06-2.0, SCREEN_WIDTH*0.1799, 2.0)];
         _label.backgroundColor=UIColorWithRGBA(35, 165, 58, 1);
-        [self.view  addSubview:_label];
-        [self.view bringSubviewToFront:_label];
+        [view  addSubview:_label];
     
+    //主要滑动视图
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,NAVBAR_HEIGHT+SCREEN_HEIGHT*0.06, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT*0.06))];
+    //    _scrollView.backgroundColor=[UIColor redColor];
+        _scrollView.pagingEnabled = YES;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.bounces = NO;
+        _scrollView.delegate = self;
+        _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 3,SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT*0.06));
+        [self.view addSubview:_scrollView];
+        [self addSubControllers];
 
     
     
