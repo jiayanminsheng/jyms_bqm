@@ -9,6 +9,7 @@
 #import "BusinessViewController.h"
 #import "BuyViewController.h"
 #import "SellViewController.h"
+#import "ProductViewController.h"
 
 @interface BusinessViewController ()<UIScrollViewDelegate>{
     UIButton     *_releaseBtn;
@@ -118,7 +119,9 @@
 }
 #pragma mark --按钮事件
 -(void)releaseBtnClicked:(UIButton *)btn{
-    BQMLog(@"发布按钮被点击");
+//    BQMLog(@"发布按钮被点击");
+    ProductViewController *productVC=[[ProductViewController alloc]init];
+    [self.navigationController pushViewController:productVC animated:YES];
     
     
 }

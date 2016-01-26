@@ -15,6 +15,14 @@
 		33032B8F1C3B5916005B5899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33032B8D1C3B5916005B5899 /* LaunchScreen.storyboard */; };
 		33032B9A1C3B5916005B5899 /* Jiayan_LivelihoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032B991C3B5916005B5899 /* Jiayan_LivelihoodTests.m */; };
 		33032BA51C3B5916005B5899 /* Jiayan_LivelihoodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33032BA41C3B5916005B5899 /* Jiayan_LivelihoodUITests.m */; };
+		331800181C5764B9007DC7C4 /* 椭圆-1-拷贝-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800121C5764B9007DC7C4 /* 椭圆-1-拷贝-2.png */; };
+		331800191C5764B9007DC7C4 /* 椭圆-1-拷贝-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800131C5764B9007DC7C4 /* 椭圆-1-拷贝-2@2x.png */; };
+		3318001A1C5764B9007DC7C4 /* 椭圆-1-拷贝-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800141C5764B9007DC7C4 /* 椭圆-1-拷贝-2@3x.png */; };
+		3318001B1C5764B9007DC7C4 /* 椭圆-1-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800151C5764B9007DC7C4 /* 椭圆-1-拷贝.png */; };
+		3318001C1C5764B9007DC7C4 /* 椭圆-1-拷贝@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800161C5764B9007DC7C4 /* 椭圆-1-拷贝@2x.png */; };
+		3318001D1C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800171C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png */; };
+		331800211C576565007DC7C4 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3318001F1C576565007DC7C4 /* ProductViewController.m */; };
+		331800221C576565007DC7C4 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331800201C576565007DC7C4 /* ProductViewController.xib */; };
 		3384E1DF1C57107E00022F41 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E1681C57107E00022F41 /* AFHTTPRequestOperation.m */; };
 		3384E1E01C57107E00022F41 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16A1C57107E00022F41 /* AFHTTPRequestOperationManager.m */; };
 		3384E1E11C57107E00022F41 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16C1C57107E00022F41 /* AFHTTPSessionManager.m */; };
@@ -70,12 +78,9 @@
 		3384E2131C57107E00022F41 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E1DC1C57107E00022F41 /* UIView+SDExtension.m */; };
 		3384E2141C57107E00022F41 /* UserPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E1DE1C57107E00022F41 /* UserPrefs.m */; };
 		3384E2841C5716FE00022F41 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E2191C5716FE00022F41 /* BusinessViewController.m */; };
-		3384E2851C5716FE00022F41 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3384E21A1C5716FE00022F41 /* BusinessViewController.xib */; };
 		3384E2861C5716FE00022F41 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E21C1C5716FE00022F41 /* BuyViewController.m */; };
-		3384E2871C5716FE00022F41 /* BuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3384E21D1C5716FE00022F41 /* BuyViewController.xib */; };
 		3384E2881C5716FE00022F41 /* SellDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E21F1C5716FE00022F41 /* SellDetailViewController.m */; };
 		3384E2891C5716FE00022F41 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E2211C5716FE00022F41 /* SellViewController.m */; };
-		3384E28A1C5716FE00022F41 /* SellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3384E2221C5716FE00022F41 /* SellViewController.xib */; };
 		3384E28B1C5716FE00022F41 /* AnswerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E2281C5716FE00022F41 /* AnswerDetailViewController.m */; };
 		3384E28C1C5716FE00022F41 /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E22A1C5716FE00022F41 /* AnswerViewController.m */; };
 		3384E28D1C5716FE00022F41 /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E22C1C5716FE00022F41 /* ExpertViewController.m */; };
@@ -355,6 +360,15 @@
 		33032BA01C3B5916005B5899 /* Jiayan LivelihoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jiayan LivelihoodUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33032BA41C3B5916005B5899 /* Jiayan_LivelihoodUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jiayan_LivelihoodUITests.m; sourceTree = "<group>"; };
 		33032BA61C3B5916005B5899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		331800121C5764B9007DC7C4 /* 椭圆-1-拷贝-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝-2.png"; sourceTree = "<group>"; };
+		331800131C5764B9007DC7C4 /* 椭圆-1-拷贝-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝-2@2x.png"; sourceTree = "<group>"; };
+		331800141C5764B9007DC7C4 /* 椭圆-1-拷贝-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝-2@3x.png"; sourceTree = "<group>"; };
+		331800151C5764B9007DC7C4 /* 椭圆-1-拷贝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝.png"; sourceTree = "<group>"; };
+		331800161C5764B9007DC7C4 /* 椭圆-1-拷贝@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝@2x.png"; sourceTree = "<group>"; };
+		331800171C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1-拷贝@3x.png"; sourceTree = "<group>"; };
+		3318001E1C576565007DC7C4 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		3318001F1C576565007DC7C4 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		331800201C576565007DC7C4 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		333E00B01C4775100096FE44 /* Jiayan Livelihood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jiayan Livelihood-Bridging-Header.h"; sourceTree = "<group>"; };
 		3384E1621C570E7300022F41 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		3384E1631C570E7300022F41 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -466,15 +480,12 @@
 		3384E1DE1C57107E00022F41 /* UserPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPrefs.m; sourceTree = "<group>"; };
 		3384E2181C5716FE00022F41 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
 		3384E2191C5716FE00022F41 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
-		3384E21A1C5716FE00022F41 /* BusinessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
 		3384E21B1C5716FE00022F41 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		3384E21C1C5716FE00022F41 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
-		3384E21D1C5716FE00022F41 /* BuyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyViewController.xib; sourceTree = "<group>"; };
 		3384E21E1C5716FE00022F41 /* SellDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellDetailViewController.h; sourceTree = "<group>"; };
 		3384E21F1C5716FE00022F41 /* SellDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellDetailViewController.m; sourceTree = "<group>"; };
 		3384E2201C5716FE00022F41 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
 		3384E2211C5716FE00022F41 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
-		3384E2221C5716FE00022F41 /* SellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellViewController.xib; sourceTree = "<group>"; };
 		3384E2271C5716FE00022F41 /* AnswerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerDetailViewController.h; sourceTree = "<group>"; };
 		3384E2281C5716FE00022F41 /* AnswerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerDetailViewController.m; sourceTree = "<group>"; };
 		3384E2291C5716FE00022F41 /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
@@ -798,13 +809,12 @@
 		33032B7E1C3B5916005B5899 /* Jiayan Livelihood */ = {
 			isa = PBXGroup;
 			children = (
-				3384E2151C5716FE00022F41 /* Classes */,
 				33032B821C3B5916005B5899 /* AppDelegate.h */,
 				33032B831C3B5916005B5899 /* AppDelegate.m */,
+				3384E2151C5716FE00022F41 /* Classes */,
 				3384E1651C57107E00022F41 /* ThirdParty */,
 				3384E1611C570E7300022F41 /* Constant */,
 				33032B7F1C3B5916005B5899 /* Supporting Files */,
-				333E00B01C4775100096FE44 /* Jiayan Livelihood-Bridging-Header.h */,
 			);
 			path = "Jiayan Livelihood";
 			sourceTree = "<group>";
@@ -812,6 +822,7 @@
 		33032B7F1C3B5916005B5899 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				333E00B01C4775100096FE44 /* Jiayan Livelihood-Bridging-Header.h */,
 				33032B851C3B5916005B5899 /* ViewController.h */,
 				33032B861C3B5916005B5899 /* ViewController.m */,
 				33032B881C3B5916005B5899 /* Main.storyboard */,
@@ -839,6 +850,19 @@
 				33032BA61C3B5916005B5899 /* Info.plist */,
 			);
 			path = "Jiayan LivelihoodUITests";
+			sourceTree = "<group>";
+		};
+		331800111C5764B9007DC7C4 /* 协议按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				331800121C5764B9007DC7C4 /* 椭圆-1-拷贝-2.png */,
+				331800131C5764B9007DC7C4 /* 椭圆-1-拷贝-2@2x.png */,
+				331800141C5764B9007DC7C4 /* 椭圆-1-拷贝-2@3x.png */,
+				331800151C5764B9007DC7C4 /* 椭圆-1-拷贝.png */,
+				331800161C5764B9007DC7C4 /* 椭圆-1-拷贝@2x.png */,
+				331800171C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png */,
+			);
+			path = "协议按钮";
 			sourceTree = "<group>";
 		};
 		3384E1611C570E7300022F41 /* Constant */ = {
@@ -1122,15 +1146,15 @@
 			children = (
 				3384E2181C5716FE00022F41 /* BusinessViewController.h */,
 				3384E2191C5716FE00022F41 /* BusinessViewController.m */,
-				3384E21A1C5716FE00022F41 /* BusinessViewController.xib */,
 				3384E21B1C5716FE00022F41 /* BuyViewController.h */,
 				3384E21C1C5716FE00022F41 /* BuyViewController.m */,
-				3384E21D1C5716FE00022F41 /* BuyViewController.xib */,
 				3384E21E1C5716FE00022F41 /* SellDetailViewController.h */,
 				3384E21F1C5716FE00022F41 /* SellDetailViewController.m */,
 				3384E2201C5716FE00022F41 /* SellViewController.h */,
 				3384E2211C5716FE00022F41 /* SellViewController.m */,
-				3384E2221C5716FE00022F41 /* SellViewController.xib */,
+				3318001E1C576565007DC7C4 /* ProductViewController.h */,
+				3318001F1C576565007DC7C4 /* ProductViewController.m */,
+				331800201C576565007DC7C4 /* ProductViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1422,6 +1446,7 @@
 				3384E3311C5717FF00022F41 /* 我要卖选中态.png */,
 				3384E3321C5717FF00022F41 /* 我要卖选中态@2x.png */,
 				3384E3331C5717FF00022F41 /* 我要卖选中态@3x.png */,
+				331800111C5764B9007DC7C4 /* 协议按钮 */,
 				3384E3341C5717FF00022F41 /* 注册登录页面 */,
 				3384E34D1C5717FF00022F41 /* 菜单栏icon */,
 				3384E36C1C5717FF00022F41 /* 需要帮助 */,
@@ -1846,7 +1871,6 @@
 				3384E2B11C5716FF00022F41 /* LoginViewController.xib in Resources */,
 				3384E3FD1C5717FF00022F41 /* 我要卖选中态@2x.png in Resources */,
 				3384E44E1C5717FF00022F41 /* 问答平台@2x.png in Resources */,
-				3384E2871C5716FE00022F41 /* BuyViewController.xib in Resources */,
 				3384E4011C5717FF00022F41 /* 图层-1@3x.png in Resources */,
 				3384E3C31C5717FF00022F41 /* 了解政策.png in Resources */,
 				3384E4081C5717FF00022F41 /* 登录.png in Resources */,
@@ -1863,8 +1887,10 @@
 				3384E41D1C5717FF00022F41 /* 了解政策icon_正常状态.png in Resources */,
 				3384E4341C5717FF00022F41 /* 首页icon_选中状态@3x.png in Resources */,
 				3384E3CE1C5717FF00022F41 /* 29pt_@1x.png in Resources */,
+				3318001C1C5764B9007DC7C4 /* 椭圆-1-拷贝@2x.png in Resources */,
 				3384E41B1C5717FF00022F41 /* 个人中心icon_选中状态@2x.png in Resources */,
 				3384E1FD1C57107E00022F41 /* RLConfig in Resources */,
+				331800221C576565007DC7C4 /* ProductViewController.xib in Resources */,
 				3384E3FC1C5717FF00022F41 /* 我要卖选中态.png in Resources */,
 				3384E3B01C5717FF00022F41 /* 我的买卖@3x.png in Resources */,
 				3384E40C1C5717FF00022F41 /* 确认密码按钮@2x.png in Resources */,
@@ -1883,6 +1909,7 @@
 				3384E3C71C5717FF00022F41 /* 关注三农@2x.png in Resources */,
 				3384E44F1C5717FF00022F41 /* 问答平台@3x.png in Resources */,
 				3384E4521C5717FF00022F41 /* 问答平台xz@3x.png in Resources */,
+				331800181C5764B9007DC7C4 /* 椭圆-1-拷贝-2.png in Resources */,
 				3384E39E1C5717FF00022F41 /* 76pt_@2x.png in Resources */,
 				3384E4441C5717FF00022F41 /* 发送-.png in Resources */,
 				3384E3CC1C5717FF00022F41 /* Default.png in Resources */,
@@ -1983,9 +2010,10 @@
 				3384E39B1C5717FF00022F41 /* 72pt_@1x.png in Resources */,
 				3384E40F1C5717FF00022F41 /* 绿色顶图@2x.png in Resources */,
 				3384E3E61C5717FF00022F41 /* 导航栏@3x.png in Resources */,
-				3384E2851C5716FE00022F41 /* BusinessViewController.xib in Resources */,
+				3318001D1C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png in Resources */,
 				3384E3CD1C5717FF00022F41 /* 120pt_@1x.png in Resources */,
 				3384E3E51C5717FF00022F41 /* 导航栏@2x.png in Resources */,
+				331800191C5764B9007DC7C4 /* 椭圆-1-拷贝-2@2x.png in Resources */,
 				3384E4111C5717FF00022F41 /* 账号按钮.png in Resources */,
 				3384E4511C5717FF00022F41 /* 问答平台xz@2x.png in Resources */,
 				3384E3AA1C5717FF00022F41 /* 客服@3x.png in Resources */,
@@ -1996,12 +2024,12 @@
 				3384E3EC1C5717FF00022F41 /* 我要买选中态@3x.png in Resources */,
 				3384E4431C5717FF00022F41 /* 回复量@3x.png in Resources */,
 				3384E3B61C5717FF00022F41 /* 我的收藏@3x.png in Resources */,
-				3384E28A1C5716FE00022F41 /* SellViewController.xib in Resources */,
 				3384E3CA1C5717FF00022F41 /* 嘉言民生@2x.png in Resources */,
 				3384E4461C5717FF00022F41 /* 发送-@3x.png in Resources */,
 				3384E4471C5717FF00022F41 /* 提问返回.png in Resources */,
 				3384E3AE1C5717FF00022F41 /* 我的买卖.png in Resources */,
 				3384E4361C5717FF00022F41 /* Safari-Forward@2x.png in Resources */,
+				3318001B1C5764B9007DC7C4 /* 椭圆-1-拷贝.png in Resources */,
 				3384E3C51C5717FF00022F41 /* 了解政策@3x.png in Resources */,
 				3384E42A1C5717FF00022F41 /* 需要帮助icon_正常状态@2x.png in Resources */,
 				3384E3C41C5717FF00022F41 /* 了解政策@2x.png in Resources */,
@@ -2016,6 +2044,7 @@
 				3384E3D71C5717FF00022F41 /* 512pt_@2x.png in Resources */,
 				3384E1FB1C57107E00022F41 /* MJRefresh.bundle in Resources */,
 				3384E3B31C5717FF00022F41 /* 我的帮助@3x.png in Resources */,
+				3318001A1C5764B9007DC7C4 /* 椭圆-1-拷贝-2@3x.png in Resources */,
 				3384E3DE1C5717FF00022F41 /* 76pt_@1x.png in Resources */,
 				3384E3F61C5717FF00022F41 /* TaoBao.png in Resources */,
 				3384E3A61C5717FF00022F41 /* 分享@2x.png in Resources */,
@@ -2088,6 +2117,7 @@
 				3384E1F11C57107E00022F41 /* MJRefreshHeader.m in Sources */,
 				3384E1E81C57107E00022F41 /* UIButton+AFNetworking.m in Sources */,
 				3384E1F61C57107E00022F41 /* MJRefreshBackNormalFooter.m in Sources */,
+				331800211C576565007DC7C4 /* ProductViewController.m in Sources */,
 				3384E2A11C5716FF00022F41 /* MyBusinessReleseViewController.m in Sources */,
 				3384E2AA1C5716FF00022F41 /* mySaveThirdViewController.m in Sources */,
 				3384E2021C57107E00022F41 /* RDVTabBar.m in Sources */,

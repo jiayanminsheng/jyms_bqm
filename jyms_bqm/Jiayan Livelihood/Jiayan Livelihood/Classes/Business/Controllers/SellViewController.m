@@ -43,6 +43,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.rdv_tabBarController.tabBarHidden=NO;
     //显示tabbar
     [self displayTabbar];
 }
