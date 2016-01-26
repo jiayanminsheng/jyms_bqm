@@ -7,12 +7,17 @@
 //
 
 #import "ModifyPasswordViewController.h"
+#import "RDVTabBarController.h"
 
 @interface ModifyPasswordViewController ()
 
 @end
 
 @implementation ModifyPasswordViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.rdv_tabBarController.tabBarHidden=YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

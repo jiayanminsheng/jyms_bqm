@@ -7,7 +7,7 @@
 //
 
 #import "AnswerDetailViewController.h"
-#import "RDVTabBarController/RDVTabBarController.h"
+#import "RDVTabBarController.h"
 #import "AFHelper.h"
 #import "HelpModel.h"
 #import "HelpAnswerCell.h"

@@ -8,6 +8,7 @@
 
 #import "AboutUsViewController.h"
 #import "AFHelper.h"
+#import "RDVTabBarController.h"
 
 @interface AboutUsViewController (){
     UITextView *_textView;
@@ -17,7 +18,10 @@
 @end
 
 @implementation AboutUsViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.rdv_tabBarController.tabBarHidden=YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self creatUI];

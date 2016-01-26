@@ -7,7 +7,7 @@
 //
 
 #import "SellViewController.h"
-#import "RDVTabBarController/RDVTabBarController.h"
+#import "RDVTabBarController.h"
 #import "SellDetailViewController.h"
 #import "MXPullDownMenu.h"
 

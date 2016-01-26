@@ -12,6 +12,9 @@
 #import "ModifyPasswordViewController.h"
 #import "AboutUsViewController.h"
 #import "mySaveViewController.h"
+#import "RDVTabBarController.h"
+#import "MyBusinessViewController.h"
+#import "MyHelpViewController.h"
 
 @interface PersonalCenterViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>{
 
@@ -21,6 +24,10 @@
 @end
 
 @implementation PersonalCenterViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.rdv_tabBarController.tabBarHidden=NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -133,11 +140,14 @@
 }
 #pragma mark --我的买卖
 - (IBAction)myBusiness:(id)sender {
+    MyBusinessViewController *mySaveVC=[[MyBusinessViewController alloc]init];
+    [self.navigationController pushViewController:mySaveVC animated:YES];
     
 }
 #pragma mark --我的帮助
 - (IBAction)myHelp:(id)sender {
-    
+    MyHelpViewController *mySaveVC=[[MyHelpViewController alloc]init];
+    [self.navigationController pushViewController:mySaveVC animated:YES];
 }
 #pragma mark --我的分享
 - (IBAction)myShare:(id)sender {

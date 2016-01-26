@@ -7,7 +7,7 @@
 //
 
 #import "ReleaseViewController.h"
-#import "RDVTabBarController/RDVTabBarController.h"
+#import "RDVTabBarController.h"
 #import "AFHelper.h"
 #import "UserPrefs.h"
 

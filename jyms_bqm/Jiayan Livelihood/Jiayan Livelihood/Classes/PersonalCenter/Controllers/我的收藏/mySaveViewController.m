@@ -10,7 +10,7 @@
 #import "mySaveFirstViewController.h"
 #import "mySaveSecondViewController.h"
 #import "mySaveThirdViewController.h"
-#import "RDVTabBarController/RDVTabBarController.h"
+#import "RDVTabBarController.h"
 
 
 
@@ -28,22 +28,20 @@
     [super viewWillAppear:animated];
     self.rdv_tabBarController.tabBarHidden=YES;
 }
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-//    self.navigationController.toolbarHidden=YES;
-    self.rdv_tabBarController.tabBarHidden=NO;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor=GrayColor;
+//    self.view.backgroundColor=GrayColor;
     [self creatUI];
-//  3.0  0.1133  3.70  0.1413       4.76 1.34    26.46  2.96      0.1799   0.4527
     
 }
 -(void)creatUI{
+       //导航返回按钮
+       self.navigationItem.title=@"我的收藏";
+       UIButton *backBtn= [self creatleftBarButtonItemOfBack];
+       [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
 
-    
+
         UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH,SCREEN_HEIGHT*0.06)];
         view.backgroundColor=[UIColor whiteColor];
         [self.view addSubview:view];
@@ -58,7 +56,7 @@
         UIButton *btn2=[[UIButton alloc]initWithFrame:CGRectMake(btn1.frame.origin.x+btn1.frame.size.width+differ,btn1.frame.origin.y, btn1.frame.size.width, SCREEN_HEIGHT*0.4527*0.06)];
         [btn2 setBackgroundImage:[UIImage imageNamed:@"嘉言民生.png"] forState:UIControlStateNormal];
         [btn2 addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-        btn1.tag=11;
+        btn2.tag=11;
         [view addSubview:btn2];
     
         UIButton *btn3=[[UIButton alloc]initWithFrame:CGRectMake(btn2.frame.origin.x+btn2.frame.size.width+differ, btn1.frame.origin.y, btn1.frame.size.width, SCREEN_HEIGHT*0.4527*0.06)];
@@ -94,7 +92,7 @@
     firstvc.view.backgroundColor=[UIColor redColor];
     firstvc.view.frame=CGRectMake(SCREEN_WIDTH*0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT*0.06));
     mySaveSecondViewController *secondvc=[[mySaveSecondViewController alloc]init];
-    secondvc.view.backgroundColor=[UIColor lightGrayColor];
+    secondvc.view.backgroundColor=[UIColor yellowColor];
     secondvc.view.frame=CGRectMake(SCREEN_WIDTH*1,0, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT*0.06));
     mySaveThirdViewController *thirdvc=[[mySaveThirdViewController alloc]init];
     thirdvc.view.backgroundColor=[UIColor greenColor];
@@ -107,11 +105,23 @@
     [self addChildViewController:thirdvc];
     
 }
+#pragma mark --按钮事件
 -(void)btnClicked:(UIButton *)btn{
     _scrollView.contentOffset=CGPointMake(SCREEN_WIDTH*(btn.tag-10), 0);
     _label.frame=CGRectMake(btn.frame.origin.x, SCREEN_HEIGHT*0.06-2.0, SCREEN_WIDTH*0.1799, 2.0);
 
-
+}
+-(void)back{
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+}
+#pragma mark --滑动回调
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSInteger index = scrollView.contentOffset.x / SCREEN_WIDTH;
+    UIButton *btn=[self.view viewWithTag:index+10];
+    _label.frame=CGRectMake(btn.frame.origin.x, SCREEN_HEIGHT*0.06-2.0, SCREEN_WIDTH*0.1799, 2.0);
+    
 }
 
 - (void)didReceiveMemoryWarning {

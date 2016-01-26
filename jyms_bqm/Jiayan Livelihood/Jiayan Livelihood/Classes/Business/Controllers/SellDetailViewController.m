@@ -7,7 +7,7 @@
 //
 
 #import "SellDetailViewController.h"
-#import "RDVTabBarController/RDVTabBarController.h"
+#import "RDVTabBarController.h"
 
 @interface SellDetailViewController()<UITableViewDelegate,UITableViewDataSource>
 
