@@ -11,21 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController">
             <connections>
                 <outlet property="addressTextField" destination="rlw-OE-qCD" id="xUx-Dv-ukn"/>
+                <outlet property="agreeButton" destination="jRc-zQ-ejX" id="LQl-Hk-ecz"/>
+                <outlet property="agreeReleseButton" destination="ADG-8v-hRh" id="KRB-aj-7bC"/>
                 <outlet property="contactNameTextField" destination="XLi-sc-Jgk" id="KAb-Ch-VRw"/>
                 <outlet property="contactPhoneTextField" destination="9hC-NE-UOy" id="CVh-kW-e8M"/>
-                <outlet property="middleBtn" destination="ae7-Z4-mIy" id="CzU-6p-dLf"/>
-                <outlet property="num_unitBtn" destination="AhH-Uq-mvn" id="DLw-Or-1pt"/>
+                <outlet property="describeTextView" destination="BfG-9u-XHv" id="Qux-dY-8JA"/>
+                <outlet property="imageScrollView" destination="R5S-jQ-SWL" id="Dil-gk-wSH"/>
                 <outlet property="num_unitLabel" destination="d6X-W3-dmU" id="ZP6-xr-piB"/>
                 <outlet property="num_unitTextField" destination="9U5-Cc-noc" id="qBV-6T-9Kb"/>
                 <outlet property="placeLabel" destination="yCE-72-TR0" id="ctP-Tg-CIL"/>
-                <outlet property="price_unitBtn" destination="gnT-BK-bT7" id="SeY-OW-eMC"/>
                 <outlet property="price_unitLabel" destination="9Qu-Xq-eSk" id="L4s-TQ-6WO"/>
                 <outlet property="price_unitTextField" destination="pss-95-TWs" id="sMr-fJ-Rv8"/>
                 <outlet property="titleTextField" destination="t3P-KR-xZg" id="PBS-hB-7Av"/>
                 <outlet property="typeNameLabel1" destination="Pyd-vF-17k" id="LdT-1m-rHr"/>
                 <outlet property="typeNameLabel2" destination="h7v-Td-05g" id="wwN-1k-WjA"/>
-                <outlet property="typeNameOneBtn" destination="cVi-Ya-gpt" id="cPQ-ed-P7L"/>
-                <outlet property="typeNameTwoBtn" destination="8jM-16-jMN" id="puN-Sd-YUA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -410,7 +409,7 @@
                 <constraint firstItem="8jM-16-jMN" firstAttribute="bottom" secondItem="ae7-Z4-mIy" secondAttribute="bottom" id="zyk-4l-1bI"/>
                 <constraint firstItem="rlw-OE-qCD" firstAttribute="leading" secondItem="tGi-Zi-Skf" secondAttribute="trailing" id="zz6-Nd-Vg9"/>
             </constraints>
-            <point key="canvasLocation" x="340" y="436"/>
+            <point key="canvasLocation" x="192" y="194"/>
         </view>
     </objects>
     <resources>

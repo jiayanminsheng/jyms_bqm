@@ -57,11 +57,7 @@
     _typeNameTwoTableView.dataSource=self;
     _typeNameTwoTableView.backgroundColor=[UIColor clearColor];
     
-    CGRect _num_unitFrame=self.num_unitLabel.frame;
-    _num_unitTableView=[[UITableView alloc]initWithFrame:CGRectMake(typeNameTwoFrame.origin.x, typeNameTwoFrame.origin.y+typeNameTwoFrame.size.height, 100, 200) style:UITableViewStylePlain];
-    _num_unitTableView.delegate=self;
-    _num_unitTableView.dataSource=self;
-    _num_unitTableView.backgroundColor=[UIColor clearColor];
+   
     
 
 

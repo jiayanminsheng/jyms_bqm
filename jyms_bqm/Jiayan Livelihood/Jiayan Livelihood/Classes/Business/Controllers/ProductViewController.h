@@ -26,12 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *agreeReleseButton;
 
 
-@property (weak, nonatomic) IBOutlet UIButton *typeNameOneBtn;
-@property (weak, nonatomic) IBOutlet UIButton *typeNameTwoBtn;
-@property (weak, nonatomic) IBOutlet UIButton *num_unitBtn;
-@property (weak, nonatomic) IBOutlet UIButton *price_unitBtn;
-
-@property (weak, nonatomic) IBOutlet UIButton *middleBtn;
 
 
 @end
