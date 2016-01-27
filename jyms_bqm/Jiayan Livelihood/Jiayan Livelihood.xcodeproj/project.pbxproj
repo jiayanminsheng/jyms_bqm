@@ -23,6 +23,9 @@
 		3318001D1C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 331800171C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png */; };
 		331800211C576565007DC7C4 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3318001F1C576565007DC7C4 /* ProductViewController.m */; };
 		331800221C576565007DC7C4 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331800201C576565007DC7C4 /* ProductViewController.xib */; };
+		3341574D1C585ACC00CF9C76 /* 下拉箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574A1C585ACC00CF9C76 /* 下拉箭头.png */; };
+		3341574E1C585ACC00CF9C76 /* 下拉箭头@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574B1C585ACC00CF9C76 /* 下拉箭头@2x.png */; };
+		3341574F1C585ACC00CF9C76 /* 下拉箭头@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574C1C585ACC00CF9C76 /* 下拉箭头@3x.png */; };
 		3384E1DF1C57107E00022F41 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E1681C57107E00022F41 /* AFHTTPRequestOperation.m */; };
 		3384E1E01C57107E00022F41 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16A1C57107E00022F41 /* AFHTTPRequestOperationManager.m */; };
 		3384E1E11C57107E00022F41 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16C1C57107E00022F41 /* AFHTTPSessionManager.m */; };
@@ -370,6 +373,9 @@
 		3318001F1C576565007DC7C4 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		331800201C576565007DC7C4 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		333E00B01C4775100096FE44 /* Jiayan Livelihood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jiayan Livelihood-Bridging-Header.h"; sourceTree = "<group>"; };
+		3341574A1C585ACC00CF9C76 /* 下拉箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头.png"; sourceTree = "<group>"; };
+		3341574B1C585ACC00CF9C76 /* 下拉箭头@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头@2x.png"; sourceTree = "<group>"; };
+		3341574C1C585ACC00CF9C76 /* 下拉箭头@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头@3x.png"; sourceTree = "<group>"; };
 		3384E1621C570E7300022F41 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		3384E1631C570E7300022F41 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3384E1641C570E7300022F41 /* UrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlDefine.h; sourceTree = "<group>"; };
@@ -863,6 +869,16 @@
 				331800171C5764B9007DC7C4 /* 椭圆-1-拷贝@3x.png */,
 			);
 			path = "协议按钮";
+			sourceTree = "<group>";
+		};
+		334157491C585ACC00CF9C76 /* 下拉箭头 */ = {
+			isa = PBXGroup;
+			children = (
+				3341574A1C585ACC00CF9C76 /* 下拉箭头.png */,
+				3341574B1C585ACC00CF9C76 /* 下拉箭头@2x.png */,
+				3341574C1C585ACC00CF9C76 /* 下拉箭头@3x.png */,
+			);
+			path = "下拉箭头";
 			sourceTree = "<group>";
 		};
 		3384E1611C570E7300022F41 /* Constant */ = {
@@ -1446,6 +1462,7 @@
 				3384E3311C5717FF00022F41 /* 我要卖选中态.png */,
 				3384E3321C5717FF00022F41 /* 我要卖选中态@2x.png */,
 				3384E3331C5717FF00022F41 /* 我要卖选中态@3x.png */,
+				334157491C585ACC00CF9C76 /* 下拉箭头 */,
 				331800111C5764B9007DC7C4 /* 协议按钮 */,
 				3384E3341C5717FF00022F41 /* 注册登录页面 */,
 				3384E34D1C5717FF00022F41 /* 菜单栏icon */,
@@ -1904,6 +1921,7 @@
 				3384E3E31C5717FF00022F41 /* 引导页3.png in Resources */,
 				3384E43A1C5717FF00022F41 /* 专家热线@3x.png in Resources */,
 				3384E3B91C5717FF00022F41 /* 我的发布@3x.png in Resources */,
+				3341574F1C585ACC00CF9C76 /* 下拉箭头@3x.png in Resources */,
 				3384E3F91C5717FF00022F41 /* 我要卖.png in Resources */,
 				3384E3A31C5717FF00022F41 /* 关于我们@2x.png in Resources */,
 				3384E3C71C5717FF00022F41 /* 关注三农@2x.png in Resources */,
@@ -1918,6 +1936,7 @@
 				3384E4051C5717FF00022F41 /* 注册账号按钮.png in Resources */,
 				3384E3ED1C5717FF00022F41 /* 1HaoDian.png in Resources */,
 				3384E4491C5717FF00022F41 /* 提问返回@3x.png in Resources */,
+				3341574D1C585ACC00CF9C76 /* 下拉箭头.png in Resources */,
 				3384E3FB1C5717FF00022F41 /* 我要卖@3x.png in Resources */,
 				3384E3D91C5717FF00022F41 /* 57pt_@2x.png in Resources */,
 				3384E4411C5717FF00022F41 /* 回复量.png in Resources */,
@@ -1984,6 +2003,7 @@
 				3384E3A11C5717FF00022F41 /* Safari-Back-拷贝-3@3x.png in Resources */,
 				3384E4311C5717FF00022F41 /* 首页icon_正常状态@3x.png in Resources */,
 				3384E38F1C5717FF00022F41 /* 29pt_@3x.png in Resources */,
+				3341574E1C585ACC00CF9C76 /* 下拉箭头@2x.png in Resources */,
 				3384E3C11C5717FF00022F41 /* 我的收藏_文字@2x.png in Resources */,
 				3384E42F1C5717FF00022F41 /* 首页icon_正常状态.png in Resources */,
 				3384E42C1C5717FF00022F41 /* 需要帮助icon_选中状态.png in Resources */,
