@@ -118,6 +118,7 @@ class NewsVC: UIViewController
         //分享按钮
         let logo2=UIButton(frame:CGRectMake(sWidth*0.33,0,sWidth*0.33,sHeight*0.077))
         logo2.setImage(UIImage(named: "news_02"), forState: .Normal)
+        logo2.addTarget(self, action: Selector("shareBtnTapped:"), forControlEvents: .TouchUpInside)
         
         //收藏按钮
         let logo3=UIButton(frame:CGRectMake(sWidth*0.66,0,sWidth*0.33,sHeight*0.077))
@@ -130,13 +131,51 @@ class NewsVC: UIViewController
         self.view.addSubview(toolBar);
     }
     
+     //返回主页面
     func returnBtnTapped(button:UIButton)
     {
-        //返回主页面
+       
         self.parentViewController?.rdv_tabBarController.tabBarHidden=false
         self.navigationController?.navigationBar.hidden=false
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
+    
+    //分享至社交平台
+    func shareBtnTapped(button:UIButton)
+    {
+        let imageArr:[UIImage]=[UIImage(named: "news_01")!]
+        
+        if(!imageArr.isEmpty)
+        {
+            var shareParams=NSMutableDictionary();
+            shareParams.SSDKSetupShareParamsByText("分享内容",
+                                                  images:imageArr,
+                                                  url:NSURL(string: "http://mob.com"),
+                                                  title: "分享标题",
+                                                  type: SSDKContentType.Auto)
+            
+            
+            
+            //2.进行分享
+            let handler:SSUIShareStateChangedHandler = {(state:SSDKResponseState, type:SSDKPlatformType, userdate:[NSObject : AnyObject]!, contentEntity:SSDKContentEntity!,error:NSError!, end:Bool) -> Void in
+                
+                switch state{
+                    
+                case SSDKResponseState.Success:
+                    print("分享成功")
+                    let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
+                    alert.show()
+                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.Cancel:  print("分享取消")
+                    
+                default:
+                    break
+                }
+            
+            }
+            ShareSDK.showShareActionSheet(nil, items: nil, shareParams: shareParams, onShareStateChanged:handler);
+
+        }
+    }
+
 }
-
-
