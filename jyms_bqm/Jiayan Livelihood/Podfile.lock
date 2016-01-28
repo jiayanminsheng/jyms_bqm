@@ -1,29 +1,10 @@
 PODS:
-  - MOBFoundation (1.3.1)
-  - ShareSDK3 (3.2.0):
-    - ShareSDK3/ShareSDK (= 3.2.0)
-  - ShareSDK3/ShareSDK (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/AliPaySocial (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/Kakao (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/QQ (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/RenRen (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.0)
-  - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.0)
-  - ShareSDK3/ShareSDKUI (3.2.0)
+  - UMengSocial (4.4)
 
 DEPENDENCIES:
-  - MOBFoundation
-  - ShareSDK3
-  - ShareSDK3/ShareSDKPlatforms/AliPaySocial
-  - ShareSDK3/ShareSDKPlatforms/Kakao
-  - ShareSDK3/ShareSDKPlatforms/QQ
-  - ShareSDK3/ShareSDKPlatforms/RenRen
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
-  - ShareSDK3/ShareSDKPlatforms/WeChat
-  - ShareSDK3/ShareSDKUI
+  - UMengSocial (~> 4.3)
 
 SPEC CHECKSUMS:
-  MOBFoundation: abbf5616d1d9f758db612cf8d57a72541d1345ef
-  ShareSDK3: 2987b2c38210299d8c3259fff65740f59691a688
+  UMengSocial: aba7296602310385114d82c255539a7bef3b7ab0
 
 COCOAPODS: 0.39.0
