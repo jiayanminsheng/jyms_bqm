@@ -348,7 +348,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E26EB1095ED96B24DAFDAD4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33032B7C1C3B5916005B5899 /* Jiayan Livelihood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jiayan Livelihood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33032B801C3B5916005B5899 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33032B821C3B5916005B5899 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -767,7 +766,8 @@
 		3384E3891C5717FF00022F41 /* 问答平台xz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz.png"; sourceTree = "<group>"; };
 		3384E38A1C5717FF00022F41 /* 问答平台xz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz@2x.png"; sourceTree = "<group>"; };
 		3384E38B1C5717FF00022F41 /* 问答平台xz@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问答平台xz@3x.png"; sourceTree = "<group>"; };
-		E5AD6294740848220EEE9273 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BA2435D0F60EAE8E2A77CB1F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E369F608B9C9171E75D34683 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F4E7B1E088371C7DADE8B45A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1754,8 +1754,8 @@
 		4F1034BE21413FD213C0A8C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E26EB1095ED96B24DAFDAD4 /* Pods.debug.xcconfig */,
-				E5AD6294740848220EEE9273 /* Pods.release.xcconfig */,
+				E369F608B9C9171E75D34683 /* Pods.debug.xcconfig */,
+				BA2435D0F60EAE8E2A77CB1F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2352,7 +2352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Jiayan Livelihood";
@@ -2394,7 +2394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "Jiayan Livelihood";
 				PROVISIONING_PROFILE = "";
@@ -2406,14 +2406,14 @@
 		};
 		33032BAA1C3B5916005B5899 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E26EB1095ED96B24DAFDAD4 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E369F608B9C9171E75D34683 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Constant/PrefixHeader.pch";
 				INFOPLIST_FILE = "Jiayan Livelihood/Info.plist";
@@ -2430,14 +2430,14 @@
 		};
 		33032BAB1C3B5916005B5899 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5AD6294740848220EEE9273 /* Pods.release.xcconfig */;
+			baseConfigurationReference = BA2435D0F60EAE8E2A77CB1F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Constant/PrefixHeader.pch";
 				INFOPLIST_FILE = "Jiayan Livelihood/Info.plist";
