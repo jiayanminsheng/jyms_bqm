@@ -77,7 +77,9 @@
                 [_dataArr addObject:model];
                 [_predicateArr addObject:model.questions];
             }
-            
+            [_tableView.header endRefreshing];
+            //使用searchArray专门负责数据的刷新
+            _searchArr=_dataArr;
         dispatch_async(dispatch_get_main_queue(), ^{
                 [_tableView reloadData];
         });
@@ -89,9 +91,7 @@
         [self showHUDWithMessage:@"请求超时" view:self.view];
     }];
 
-   [_tableView.header endRefreshing];
- //使用searchArray专门负责数据的刷新
-    _searchArr=_dataArr;
+   
    
 }
 

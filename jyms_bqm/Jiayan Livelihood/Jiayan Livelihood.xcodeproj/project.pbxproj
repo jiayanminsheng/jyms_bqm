@@ -26,6 +26,7 @@
 		3341574D1C585ACC00CF9C76 /* 下拉箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574A1C585ACC00CF9C76 /* 下拉箭头.png */; };
 		3341574E1C585ACC00CF9C76 /* 下拉箭头@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574B1C585ACC00CF9C76 /* 下拉箭头@2x.png */; };
 		3341574F1C585ACC00CF9C76 /* 下拉箭头@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3341574C1C585ACC00CF9C76 /* 下拉箭头@3x.png */; };
+		334B9BEB1C5B0FF900A82009 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B9BEA1C5B0FF900A82009 /* ProductModel.m */; };
 		3384E1DF1C57107E00022F41 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E1681C57107E00022F41 /* AFHTTPRequestOperation.m */; };
 		3384E1E01C57107E00022F41 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16A1C57107E00022F41 /* AFHTTPRequestOperationManager.m */; };
 		3384E1E11C57107E00022F41 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E16C1C57107E00022F41 /* AFHTTPSessionManager.m */; };
@@ -377,6 +378,8 @@
 		3341574A1C585ACC00CF9C76 /* 下拉箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头.png"; sourceTree = "<group>"; };
 		3341574B1C585ACC00CF9C76 /* 下拉箭头@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头@2x.png"; sourceTree = "<group>"; };
 		3341574C1C585ACC00CF9C76 /* 下拉箭头@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头@3x.png"; sourceTree = "<group>"; };
+		334B9BE91C5B0FF900A82009 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
+		334B9BEA1C5B0FF900A82009 /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		3384E1621C570E7300022F41 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		3384E1631C570E7300022F41 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3384E1641C570E7300022F41 /* UrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlDefine.h; sourceTree = "<group>"; };
@@ -1193,6 +1196,8 @@
 		3384E2231C5716FE00022F41 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				334B9BE91C5B0FF900A82009 /* ProductModel.h */,
+				334B9BEA1C5B0FF900A82009 /* ProductModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2218,6 +2223,7 @@
 				3384E2021C57107E00022F41 /* RDVTabBar.m in Sources */,
 				3384E1F71C57107E00022F41 /* MJRefreshBackStateFooter.m in Sources */,
 				3384E2A81C5716FF00022F41 /* mySaveFirstViewController.m in Sources */,
+				334B9BEB1C5B0FF900A82009 /* ProductModel.m in Sources */,
 				3384E2111C57107E00022F41 /* SDCollectionViewCell.m in Sources */,
 				3384E20E1C57107E00022F41 /* TADotView.m in Sources */,
 				3384E2B81C57179400022F41 /* AFHelper.m in Sources */,

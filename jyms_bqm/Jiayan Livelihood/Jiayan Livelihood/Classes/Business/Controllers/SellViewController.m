@@ -10,6 +10,9 @@
 #import "RDVTabBarController.h"
 #import "SellDetailViewController.h"
 #import "MXPullDownMenu.h"
+#import "AFHelper.h"
+#import "ProductModel.h"
+#import "MJRefresh.h"
 
 @interface SellViewController ()<MXPullDownMenuDelegate,UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,UISearchResultsUpdating>{
    
@@ -19,6 +22,9 @@
     UITableView *_tableView;
     NSMutableArray *_dataArr;
     NSMutableArray *_searchArr;
+    
+    //存储问题的数组
+    NSMutableArray *_predicateArr;
     
 }
 
@@ -30,9 +36,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self initData];
     //创建ui
     [self creatUI];
+    //下载数据
+    [self DownLoadData];
     
     if(IS_IPHONE_4_OR_LESS)
     {
@@ -75,8 +83,6 @@
             textField.backgroundColor=GrayColor;
         }
     }
-    
-    
     //7.设置代理
     _search.searchResultsUpdater = self;
     _search.delegate = self;
@@ -102,8 +108,20 @@
     _tableView.tableFooterView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 0.01f, 0.01f)];
     _tableView.delegate=self;
     _tableView.dataSource=self;
-    [_tableView setBounces:NO];
+    //[_tableView setBounces:NO];
     [_tableView setBackgroundColor:[UIColor whiteColor]];
+    [_tableView.header beginRefreshing];
+    _tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //判断搜索处于编辑状态，下拉的时候不重新下载数据，不刷新tableview
+        if (!(_search.searchBar.showsCancelButton)) {
+            
+            [self DownLoadData];
+        }else{
+            [_tableView.header endRefreshing];
+        }
+//        [self DownLoadData];
+    }];
+    
     [self.sellScrollView addSubview:_tableView];
     
     
@@ -115,18 +133,41 @@
 #pragma mark --数据初始化
 -(void)initData{
     
-    _dataArr=[[NSMutableArray alloc]init];
-    _searchArr=[[NSMutableArray alloc]init];
     
+    _searchArr=[[NSMutableArray alloc]init];
+    _predicateArr=[[NSMutableArray alloc]init];
     
     
     
 }
 #pragma mark  --下载数据
 -(void)DownLoadData{
-    
-    //使用searchArray专门负责数据的刷新
-    _searchArr=_dataArr;
+//    [_predicateArr removeAllObjects];
+    _dataArr=[[NSMutableArray alloc]init];
+    NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
+    [params setObject:@"p_list" forKey:@"key"];
+    [AFHelper PostWithPath:@"/basic/show.ashx" andParameters:params andSuccess:^(id responseObject) {
+        if (responseObject==nil) {
+            return ;
+        }
+        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *listArr=dic[@"list"];
+        for (NSDictionary *dict in listArr) {
+            ProductModel *model=[ProductModel parseWithDic:dict];
+            [_dataArr addObject:model];
+            [_predicateArr addObject:model.title];
+        }
+//        BQMLog(@"卖%@",_predicateArr);
+        [_tableView.header endRefreshing];
+        //使用searchArray专门负责数据的刷新
+        _searchArr=_dataArr;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tableView reloadData];
+
+        });
+    } andFailure:^(NSError *error) {
+        [self showHUDWithMessage:@"网络请求失败" view:self.view];
+    }];
     
 }
 
@@ -142,33 +183,56 @@
 }
 #pragma mark --UISearchResultsUpdating
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    
     //输关键字实时调用
-    //    BQMLog(@"正在搜索");
+    NSString * str = searchController.searchBar.text;
+    //沙漏，用来筛选数据
+    //NSPredicate
+    NSPredicate * pre = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",str];
+    //在标题的数组中(_predicateArr)中通过指定的筛选条件去筛选出数据，把筛选到的符合条件的数据放到一个数组中返回
+    NSArray * array = [_predicateArr filteredArrayUsingPredicate:pre];
+    for (NSString *a in array) {
+        BQMLog(@"%@",a);
+    }
     
-    
+//        BQMLog(@"＝＝＝＝＝＝＝%@",array);
+    //暂时存放根据问题对应的model
+    NSMutableArray *arr=[[NSMutableArray alloc]init];
+    for (NSString *title  in  array) {
+        for (ProductModel *model in _dataArr) {
+            if ([title isEqualToString:model.title]==YES) {
+                [arr addObject:model];
+            }
+        }
+        
+    }
+    _searchArr=[[NSMutableArray alloc]initWithArray:arr];
+    [_tableView reloadData];
     
 }
 #pragma mark --UISearchControllerDelegate
 //searchController已经消失的时候调用这个方法
 - (void)didDismissSearchController:(UISearchController *)searchController{
     _searchArr=_dataArr;
+    [_tableView reloadData];
     
 }
 #pragma mark --UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return _searchArr.count;
     
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *tableIdientifer=@"sellTable";//tableview标识符
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdientifer];
+    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:tableIdientifer];
     if (cell==nil)
     {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdientifer];
         cell.selectionStyle= UITableViewCellSelectionStyleNone;
-    }
+    
+    ProductModel *model=_searchArr[indexPath.row];
     
     //设置分割线
     UIView *lineView=[self loadLineView];
@@ -179,25 +243,28 @@
     //加载商品标题
     
     UILabel *labelTitle=[self loadTitle];
+    labelTitle.text=model.title;
     
-    //加载商品名称
+    //加载商品类型
     UILabel *labelName=[self loadProductName];
+    labelName.text=model.typeName;
     
     //加载商品产地
     UILabel *labelSource=[self loadSource];
+    labelSource.text=model.address;
     
     //加载商品价格
     UILabel *labelPrice=[self loadPrice];
+    labelPrice.text=model.price_unit;
     
     //加载商品总量
     UILabel *labelAmount=[self loadAmount];
+    labelAmount.text=model.num_unit;
     
     //加载发送时间
     UILabel *labelDate=[self loadDate];
-    
-    
-    
-    
+    NSArray *timeArr=[model.addtime componentsSeparatedByString:@" "];
+    labelDate.text=timeArr[0];
     
     
     [cell.contentView addSubview:lineView];
@@ -208,6 +275,7 @@
     [cell.contentView addSubview:labelPrice];
     [cell.contentView addSubview:labelAmount];
     [cell.contentView addSubview:labelDate];
+    }
     return cell;
     
 }
@@ -260,8 +328,8 @@
 -(UILabel*)  loadTitle
 {
     UILabel *labelTitle=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.02f, SCREEN_WIDTH*0.6f, SCREEN_HEIGHT*0.08f)];
-    NSString *str=@"山东潍坊县青萝卜";
-    [labelTitle setText:str];
+//    NSString *str=string;
+//    [labelTitle setText:str];
     
     if(IS_IPHONE_4_OR_LESS)
     {
@@ -279,9 +347,9 @@
 //加载产品名称
 -(UILabel*) loadProductName
 {
-    NSString *str=@"青萝卜";
+//    NSString *str=string;
     UILabel *productName=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.06f, SCREEN_WIDTH*0.3, SCREEN_HEIGHT*0.08f)];
-    [productName setText:str];
+//    [productName setText:str];
     if(IS_IPHONE_4_OR_LESS)
     {
         [productName  setFont:[UIFont systemFontOfSize:13]];
@@ -297,9 +365,9 @@
 //加载产地
 -(UILabel*) loadSource
 {
-    NSString *str=@"山东寿光";
+//    NSString *str=string;
     UILabel *sourceName=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.65f, SCREEN_HEIGHT*0.06f, SCREEN_WIDTH*0.3, SCREEN_HEIGHT*0.08f)];
-    [sourceName setText:str];
+//    [sourceName setText:str];
     if(IS_IPHONE_4_OR_LESS)
     {
         [sourceName  setFont:[UIFont systemFontOfSize:13]];
@@ -316,9 +384,9 @@
 -(UILabel*) loadPrice
 {
     UILabel *labelPrice=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.10f, SCREEN_WIDTH*0.3f, SCREEN_HEIGHT*0.08f)];
-    CGFloat  price=3.0;
-    NSString *strPrice=[NSString stringWithFormat:@"¥%.02f元／斤",price];
-    [labelPrice setText:strPrice];
+//    CGFloat  price=3.0;
+//    NSString *strPrice=[NSString stringWithFormat:@"¥%.02f元／斤",price];
+//    [labelPrice setText:string];
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelPrice  setFont:[UIFont systemFontOfSize:12]];
@@ -335,9 +403,9 @@
 -(UILabel*) loadAmount
 {
     UILabel *labelAmount=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.65f, SCREEN_HEIGHT*0.10f, SCREEN_WIDTH*0.3f, SCREEN_HEIGHT*0.08f)];
-    NSInteger  amount=10000;
-    NSString *strAmount=[NSString stringWithFormat:@"%ld斤",(long)amount];
-    [labelAmount setText:strAmount];
+//    NSInteger  amount=10000;
+//    NSString *strAmount=[NSString stringWithFormat:@"%ld斤",(long)amount];
+//    [labelAmount setText:string];
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelAmount  setFont:[UIFont systemFontOfSize:12]];
@@ -355,8 +423,8 @@
 -(UILabel*) loadDate
 {
     UILabel *labelDate=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.75f, SCREEN_HEIGHT*0.12f, SCREEN_WIDTH*0.25f, SCREEN_HEIGHT*0.1f)];
-    NSString *strDate=@"2015-10-10";
-    [labelDate setText:strDate];
+//    NSString *strDate=@"2015-10-10";
+//    [labelDate setText:string];
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelDate  setFont:[UIFont systemFontOfSize:9]];

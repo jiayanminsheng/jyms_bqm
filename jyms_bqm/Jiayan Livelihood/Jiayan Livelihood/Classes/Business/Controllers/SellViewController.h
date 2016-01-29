@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SellViewController : UIViewController
+@interface SellViewController : BaseViewController
     @property (nonatomic,strong) UIScrollView   *sellScrollView;
 @end

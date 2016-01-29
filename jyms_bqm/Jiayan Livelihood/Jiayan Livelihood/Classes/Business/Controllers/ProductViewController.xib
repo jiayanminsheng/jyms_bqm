@@ -74,10 +74,11 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2h-zh-Lb4" userLabel="Button9">
                     <rect key="frame" x="0.0" y="420" width="320" height="63"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.97623527489999995" green="0.97623527489999995" blue="0.97623527489999995" alpha="1" colorSpace="calibratedRGB"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配图(最多五张)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtS-Xs-BvP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtS-Xs-BvP">
                     <rect key="frame" x="0.0" y="470" width="88" height="13"/>
+                    <color key="backgroundColor" red="0.97623527489999995" green="0.97623527489999995" blue="0.97623527489999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="88" id="yu5-Ph-4Dz"/>
                     </constraints>
@@ -87,7 +88,7 @@
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-jQ-SWL">
                     <rect key="frame" x="0.0" y="420" width="320" height="50"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.97623527486910999" green="0.97623527486910999" blue="0.97623527486910999" alpha="1" colorSpace="calibratedRGB"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRc-zQ-ejX">
                     <rect key="frame" x="3" y="497" width="10" height="10"/>
@@ -103,7 +104,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADG-8v-hRh">
                     <rect key="frame" x="30" y="520" width="260" height="42"/>
                     <color key="backgroundColor" red="0.22542200032599827" green="0.81968531851204185" blue="0.2783124946372168" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="确认发布">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="agreeReleseClicked:" destination="-1" eventType="touchUpInside" id="XPn-67-0cA"/>
                     </connections>
@@ -150,7 +153,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入要发布的产品简介或主题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3P-KR-xZg">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入要发布的产品简介或主题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3P-KR-xZg">
                     <rect key="frame" x="80" y="64" width="240" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,19 +169,19 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入联系人姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-sc-Jgk">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系人姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-sc-Jgk">
                     <rect key="frame" x="80" y="279" width="240" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入联系人电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hC-NE-UOy">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系人电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hC-NE-UOy">
                     <rect key="frame" x="80" y="322" width="240" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入省/市/县" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-OE-qCD">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入省/市/县" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-OE-qCD">
                     <rect key="frame" x="80" y="236" width="240" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -235,24 +238,24 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斤" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6X-W3-dmU">
-                    <rect key="frame" x="282" y="150" width="20" height="42"/>
+                    <rect key="frame" x="262" y="150" width="40" height="42"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入产品数量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-Cc-noc">
-                    <rect key="frame" x="80" y="150" width="202" height="42"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入产品数量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-Cc-noc">
+                    <rect key="frame" x="80" y="150" width="182" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/斤" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qu-Xq-eSk">
-                    <rect key="frame" x="254" y="193" width="48" height="42"/>
+                    <rect key="frame" x="242" y="193" width="60" height="42"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入产品单价" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pss-95-TWs">
-                    <rect key="frame" x="80" y="193" width="174" height="42"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入产品单价" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pss-95-TWs">
+                    <rect key="frame" x="80" y="193" width="162" height="42"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -276,7 +279,7 @@
                 <constraint firstItem="jxM-yv-Zb6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6zy-uW-IRt"/>
                 <constraint firstItem="8jM-16-jMN" firstAttribute="trailing" secondItem="ae7-Z4-mIy" secondAttribute="trailing" constant="-3" id="7PC-qc-ECA"/>
                 <constraint firstItem="1Cr-kD-NbE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7es-Ib-Bda"/>
-                <constraint firstItem="d6X-W3-dmU" firstAttribute="width" secondItem="Sb6-D3-RCa" secondAttribute="width" multiplier="0.25" id="8QT-g5-EA9"/>
+                <constraint firstItem="d6X-W3-dmU" firstAttribute="width" secondItem="Sb6-D3-RCa" secondAttribute="width" multiplier="0.5" id="8QT-g5-EA9"/>
                 <constraint firstItem="a4P-AS-NwW" firstAttribute="width" secondItem="NRe-WB-1tJ" secondAttribute="width" id="95f-9v-UKm"/>
                 <constraint firstItem="zH9-EF-zJR" firstAttribute="top" secondItem="39l-U8-dwX" secondAttribute="bottom" constant="1" id="9H2-DS-x5P"/>
                 <constraint firstItem="d6X-W3-dmU" firstAttribute="bottom" secondItem="zH9-EF-zJR" secondAttribute="bottom" id="Aai-O9-imr"/>
@@ -364,7 +367,7 @@
                 <constraint firstItem="h7v-Td-05g" firstAttribute="top" secondItem="ae7-Z4-mIy" secondAttribute="top" id="fyI-So-Rrz"/>
                 <constraint firstItem="39l-U8-dwX" firstAttribute="height" secondItem="CVg-xc-rb7" secondAttribute="height" id="gRm-b2-7ye"/>
                 <constraint firstItem="jxM-yv-Zb6" firstAttribute="top" secondItem="CVg-xc-rb7" secondAttribute="top" constant="10" id="gXO-gJ-Dva"/>
-                <constraint firstItem="9Qu-Xq-eSk" firstAttribute="width" secondItem="Znb-3c-LWl" secondAttribute="width" multiplier="0.6" id="gpF-Zj-7hD"/>
+                <constraint firstItem="9Qu-Xq-eSk" firstAttribute="width" secondItem="Znb-3c-LWl" secondAttribute="width" multiplier="0.75" id="gpF-Zj-7hD"/>
                 <constraint firstAttribute="trailing" secondItem="zH9-EF-zJR" secondAttribute="trailing" id="guh-gQ-1an"/>
                 <constraint firstItem="zH9-EF-zJR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hVg-KC-M4S"/>
                 <constraint firstItem="uLd-fI-YD3" firstAttribute="top" secondItem="6WI-FG-bsv" secondAttribute="bottom" constant="1" id="hZG-NC-O57"/>

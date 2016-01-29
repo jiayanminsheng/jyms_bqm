@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ProductViewController : UIViewController
+@interface ProductViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *typeNameLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *typeNameLabel2;
