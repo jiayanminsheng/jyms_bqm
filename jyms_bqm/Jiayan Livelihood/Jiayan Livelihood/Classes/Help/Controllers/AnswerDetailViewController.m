@@ -317,6 +317,8 @@
     if (section==0 || section==1) {
         UIView *headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0,0, 20)];
         UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 50, 20)];
+        label.layer.masksToBounds=YES;
+        label.layer.cornerRadius=2.0;
         label.backgroundColor=UIColorWithRGBA(35, 165, 58, 1);
         label.text=headerTitle[section];
         [headerView addSubview:label];

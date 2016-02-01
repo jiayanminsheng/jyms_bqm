@@ -42,10 +42,10 @@
     //下载数据
     [self DownLoadData];
     
-    if(IS_IPHONE_4_OR_LESS)
-    {
-        NSLog(@"test");
-    }
+//    if(IS_IPHONE_4_OR_LESS)
+//    {
+//        NSLog(@"test");
+//    }
     
 }
 
@@ -119,7 +119,7 @@
         }else{
             [_tableView.header endRefreshing];
         }
-//        [self DownLoadData];
+        
     }];
     
     [self.sellScrollView addSubview:_tableView];
@@ -142,7 +142,6 @@
 }
 #pragma mark  --下载数据
 -(void)DownLoadData{
-//    [_predicateArr removeAllObjects];
     _dataArr=[[NSMutableArray alloc]init];
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
     [params setObject:@"p_list" forKey:@"key"];
@@ -186,27 +185,37 @@
     
     //输关键字实时调用
     NSString * str = searchController.searchBar.text;
+//    NSString *str =@"1";
     //沙漏，用来筛选数据
     //NSPredicate
     NSPredicate * pre = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",str];
     //在标题的数组中(_predicateArr)中通过指定的筛选条件去筛选出数据，把筛选到的符合条件的数据放到一个数组中返回
     NSArray * array = [_predicateArr filteredArrayUsingPredicate:pre];
     for (NSString *a in array) {
-        BQMLog(@"%@",a);
+        BQMLog(@"array======%@",a);
     }
     
 //        BQMLog(@"＝＝＝＝＝＝＝%@",array);
     //暂时存放根据问题对应的model
     NSMutableArray *arr=[[NSMutableArray alloc]init];
-    for (NSString *title  in  array) {
-        for (ProductModel *model in _dataArr) {
-            if ([title isEqualToString:model.title]==YES) {
+    for (ProductModel *model in _dataArr) {
+//        BQMLog(@"%@",model.title);
+        for (NSString *title in array) {
+            if ([model.title isEqualToString:title]) {
                 [arr addObject:model];
+                break;
             }
         }
-        
+    }
+    for (int i=0; i<arr.count; i++) {
+        ProductModel *model=arr[i];
+        BQMLog(@"arr-----------%@",model.title);
     }
     _searchArr=[[NSMutableArray alloc]initWithArray:arr];
+    for (int i=0; i<_searchArr.count; i++) {
+        ProductModel *model=_searchArr[i];
+         BQMLog(@"searchArr-----------%@",model.title);
+    }
     [_tableView reloadData];
     
 }
@@ -225,57 +234,68 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *tableIdientifer=@"sellTable";//tableview标识符
-    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:tableIdientifer];
-    if (cell==nil)
-    {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdientifer];
-        cell.selectionStyle= UITableViewCellSelectionStyleNone;
-    
-    ProductModel *model=_searchArr[indexPath.row];
-    
-    //设置分割线
-    UIView *lineView=[self loadLineView];
-    
-    //加载图片
-    UIImageView *imageView=[self loadImageView];
-    
-    //加载商品标题
-    
-    UILabel *labelTitle=[self loadTitle];
-    labelTitle.text=model.title;
-    
-    //加载商品类型
-    UILabel *labelName=[self loadProductName];
-    labelName.text=model.typeName;
-    
-    //加载商品产地
-    UILabel *labelSource=[self loadSource];
-    labelSource.text=model.address;
-    
-    //加载商品价格
-    UILabel *labelPrice=[self loadPrice];
-    labelPrice.text=model.price_unit;
-    
-    //加载商品总量
-    UILabel *labelAmount=[self loadAmount];
-    labelAmount.text=model.num_unit;
-    
-    //加载发送时间
-    UILabel *labelDate=[self loadDate];
-    NSArray *timeArr=[model.addtime componentsSeparatedByString:@" "];
-    labelDate.text=timeArr[0];
-    
-    
-    [cell.contentView addSubview:lineView];
-    [cell.contentView addSubview:imageView];
-    [cell.contentView addSubview:labelTitle];
-    [cell.contentView addSubview:labelName];
-    [cell.contentView addSubview:labelSource];
-    [cell.contentView addSubview:labelPrice];
-    [cell.contentView addSubview:labelAmount];
-    [cell.contentView addSubview:labelDate];
+//    static NSString *tableIdientifer=@"sellTable";//tableview标识符
+//    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:tableIdientifer];
+//    if (cell==nil)
+//    {
+//        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdientifer];
+//        cell.selectionStyle= UITableViewCellSelectionStyleNone;
+//    
+//    
+//    
+//    //设置分割线
+//    UIView *lineView=[self loadLineView];
+//    
+//    //加载图片
+//    UIImageView *imageView=[self loadImageView];
+//    
+//    //加载商品标题
+//    
+//    UILabel *labelTitle=[self loadTitle];
+////    labelTitle.text=model.title;
+//    
+//    //加载商品类型
+//    UILabel *labelName=[self loadProductName];
+////    labelName.text=model.typeName;
+//    
+//    //加载商品产地
+//    UILabel *labelSource=[self loadSource];
+////    labelSource.text=model.address;
+//    
+//    //加载商品价格
+//    UILabel *labelPrice=[self loadPrice];
+//    labelPrice.text=model.price_unit;
+//    
+//    //加载商品总量
+//    UILabel *labelAmount=[self loadAmount];
+//    labelAmount.text=model.num_unit;
+//    
+//    //加载发送时间
+//    UILabel *labelDate=[self loadDate];
+//    NSArray *timeArr=[model.addtime componentsSeparatedByString:@" "];
+//    labelDate.text=timeArr[0];
+//    
+//    
+//    [cell.contentView addSubview:lineView];
+//    [cell.contentView addSubview:imageView];
+//    [cell.contentView addSubview:labelTitle];
+//    [cell.contentView addSubview:labelName];
+//    [cell.contentView addSubview:labelSource];
+//    [cell.contentView addSubview:labelPrice];
+//    [cell.contentView addSubview:labelAmount];
+//    [cell.contentView addSubview:labelDate];
+//    }
+//    ProductModel *model=_searchArr[indexPath.row];
+//    cell.contentView.labelTitle.text=model.title;
+//    labelName.text=model.typeName;
+//    labelSource.text=model.address;
+    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    ProductModel *model=_searchArr[indexPath.row];
+    cell.textLabel.text=model.title;
+    
     return cell;
     
 }
