@@ -132,8 +132,15 @@
     
     //点击我要买
     if (btn.tag==1) {
-        [_sellVC.view removeFromSuperview];
         [sellScrollView removeFromSuperview];
+        
+        //激活状态移除
+        
+        if(_sellVC._search.active==YES)
+        {
+            [_sellVC._search.searchBar removeFromSuperview];
+        }
+        
         [_sellVC removeFromParentViewController];
         
         
@@ -150,6 +157,13 @@
         [sellScrollView addSubview:_sellVC.view];
         [_scrollView addSubview:sellScrollView];
         [self addChildViewController:_sellVC];
+        
+        //激活状态添加
+         if(_sellVC._search.active==YES)
+         {
+              [_sellVC.seachview addSubview:_sellVC._search.searchBar];
+         }
+        
         
         _label.frame=CGRectMake(SCREEN_WIDTH/2.0+SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *sellBtn=[self.view viewWithTag:btn.tag-1];
