@@ -16,6 +16,7 @@
     UIScrollView *_scrollView;
     UIScrollView *buyScrollView;   //分页滚动条我要买的子滚动条
     UIScrollView *sellScrollView;  //分页滚动条我要卖的子滚动条
+    SellViewController *_sellVC;
     
     UILabel      *_label;
     NSArray      *_btnArr;
@@ -104,17 +105,17 @@
     BuyViewController *buyVC=[[BuyViewController alloc]init];
     buyVC.view.frame=CGRectMake(SCREEN_WIDTH*0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0+1.0));
     
-    SellViewController *sellVC=[[SellViewController alloc]init];
-    sellVC.sellScrollView=sellScrollView;
-    sellVC.view.frame=CGRectMake(SCREEN_WIDTH*1, 0, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0+1.0));
+    _sellVC=[[SellViewController alloc]init];
+    _sellVC.sellScrollView=sellScrollView;
+    _sellVC.view.frame=CGRectMake(SCREEN_WIDTH*1, 0, SCREEN_WIDTH, SCREEN_HEIGHT-(NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0+1.0));
     [buyScrollView addSubview:buyVC.view];
     buyScrollView.contentSize=CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
     buyScrollView.pagingEnabled=YES;
     buyScrollView.bounces=NO;
     
-    [sellScrollView addSubview:sellVC.view];
+    [sellScrollView addSubview:_sellVC.view];
     [self addChildViewController:buyVC];
-    [self addChildViewController:sellVC];
+    [self addChildViewController:_sellVC];
     
 }
 #pragma mark --按钮事件
@@ -131,6 +132,11 @@
     
     //点击我要买
     if (btn.tag==1) {
+        [_sellVC.view removeFromSuperview];
+        [sellScrollView removeFromSuperview];
+        [_sellVC removeFromParentViewController];
+        
+        
         _label.frame=CGRectMake(SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *buyBtn=[self.view viewWithTag:btn.tag+1];
         [buyBtn setImage:_btnArr[btn.tag] forState:UIControlStateNormal];
@@ -141,6 +147,10 @@
     }
     //点击我要卖
     if (btn.tag==2) {
+        [sellScrollView addSubview:_sellVC.view];
+        [_scrollView addSubview:sellScrollView];
+        [self addChildViewController:_sellVC];
+        
         _label.frame=CGRectMake(SCREEN_WIDTH/2.0+SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *sellBtn=[self.view viewWithTag:btn.tag-1];
         [sellBtn setImage:_btnArr[btn.tag-2] forState:UIControlStateNormal];
@@ -161,6 +171,9 @@
     
     //点击我要买
     if (btn.tag==1) {
+      
+        
+        
         _label.frame=CGRectMake(SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *buyBtn=[self.view viewWithTag:btn.tag+1];
         [buyBtn setImage:_btnArr[btn.tag] forState:UIControlStateNormal];
@@ -169,6 +182,9 @@
     }
     //点击我要卖
     if (btn.tag==2) {
+        
+        
+        
         _label.frame=CGRectMake(SCREEN_WIDTH/2.0+SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *sellBtn=[self.view viewWithTag:btn.tag-1];
         [sellBtn setImage:_btnArr[btn.tag-2] forState:UIControlStateNormal];

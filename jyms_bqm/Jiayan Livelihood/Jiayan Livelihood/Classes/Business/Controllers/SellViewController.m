@@ -23,8 +23,12 @@
     NSMutableArray *_dataArr;
     NSMutableArray *_searchArr;
     
+    NSString *str;
+    
     //存储问题的数组
     NSMutableArray *_predicateArr;
+    
+    BOOL isChanged;
     
 }
 
@@ -35,17 +39,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    isChanged=NO;
     [self initData];
     //创建ui
     [self creatUI];
     //下载数据
     [self DownLoadData];
-    
-//    if(IS_IPHONE_4_OR_LESS)
-//    {
-//        NSLog(@"test");
-//    }
+
     
 }
 
@@ -156,7 +157,6 @@
             [_dataArr addObject:model];
             [_predicateArr addObject:model.title];
         }
-//        BQMLog(@"卖%@",_predicateArr);
         [_tableView.header endRefreshing];
         //使用searchArray专门负责数据的刷新
         _searchArr=_dataArr;
@@ -185,21 +185,14 @@
     
     //输关键字实时调用
     NSString * str = searchController.searchBar.text;
-//    NSString *str =@"1";
     //沙漏，用来筛选数据
     //NSPredicate
     NSPredicate * pre = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",str];
     //在标题的数组中(_predicateArr)中通过指定的筛选条件去筛选出数据，把筛选到的符合条件的数据放到一个数组中返回
     NSArray * array = [_predicateArr filteredArrayUsingPredicate:pre];
-    for (NSString *a in array) {
-        BQMLog(@"array======%@",a);
-    }
-    
-//        BQMLog(@"＝＝＝＝＝＝＝%@",array);
     //暂时存放根据问题对应的model
     NSMutableArray *arr=[[NSMutableArray alloc]init];
     for (ProductModel *model in _dataArr) {
-//        BQMLog(@"%@",model.title);
         for (NSString *title in array) {
             if ([model.title isEqualToString:title]) {
                 [arr addObject:model];
@@ -207,15 +200,8 @@
             }
         }
     }
-    for (int i=0; i<arr.count; i++) {
-        ProductModel *model=arr[i];
-        BQMLog(@"arr-----------%@",model.title);
-    }
     _searchArr=[[NSMutableArray alloc]initWithArray:arr];
-    for (int i=0; i<_searchArr.count; i++) {
-        ProductModel *model=_searchArr[i];
-         BQMLog(@"searchArr-----------%@",model.title);
-    }
+    isChanged=YES;
     [_tableView reloadData];
     
 }
@@ -234,67 +220,64 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *tableIdientifer=@"sellTable";//tableview标识符
-//    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:tableIdientifer];
-//    if (cell==nil)
-//    {
-//        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdientifer];
-//        cell.selectionStyle= UITableViewCellSelectionStyleNone;
-//    
-//    
-//    
-//    //设置分割线
-//    UIView *lineView=[self loadLineView];
-//    
-//    //加载图片
-//    UIImageView *imageView=[self loadImageView];
-//    
-//    //加载商品标题
-//    
-//    UILabel *labelTitle=[self loadTitle];
-////    labelTitle.text=model.title;
-//    
-//    //加载商品类型
-//    UILabel *labelName=[self loadProductName];
-////    labelName.text=model.typeName;
-//    
-//    //加载商品产地
-//    UILabel *labelSource=[self loadSource];
-////    labelSource.text=model.address;
-//    
-//    //加载商品价格
-//    UILabel *labelPrice=[self loadPrice];
-//    labelPrice.text=model.price_unit;
-//    
-//    //加载商品总量
-//    UILabel *labelAmount=[self loadAmount];
-//    labelAmount.text=model.num_unit;
-//    
-//    //加载发送时间
-//    UILabel *labelDate=[self loadDate];
-//    NSArray *timeArr=[model.addtime componentsSeparatedByString:@" "];
-//    labelDate.text=timeArr[0];
-//    
-//    
-//    [cell.contentView addSubview:lineView];
-//    [cell.contentView addSubview:imageView];
-//    [cell.contentView addSubview:labelTitle];
-//    [cell.contentView addSubview:labelName];
-//    [cell.contentView addSubview:labelSource];
-//    [cell.contentView addSubview:labelPrice];
-//    [cell.contentView addSubview:labelAmount];
-//    [cell.contentView addSubview:labelDate];
-//    }
-//    ProductModel *model=_searchArr[indexPath.row];
-//    cell.contentView.labelTitle.text=model.title;
-//    labelName.text=model.typeName;
-//    labelSource.text=model.address;
-    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    static NSString *tableIdientifer=@"sellTable";//tableview标识符
+    UITableViewCell *cell=[_tableView dequeueReusableCellWithIdentifier:tableIdientifer];
+    if (cell==nil||isChanged==YES)
+    {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdientifer];
+        cell.selectionStyle= UITableViewCellSelectionStyleNone;
+    
+     ProductModel *model=_searchArr[indexPath.row];
+    
+    //设置分割线
+    UIView *lineView=[self loadLineView];
+    
+    //加载图片
+    UIImageView *imageView=[self loadImageView];
+    
+    //加载商品标题
+    
+    UILabel *labelTitle=[self loadTitle];
+    labelTitle.text=model.title;
+    
+    //加载商品类型
+    UILabel *labelName=[self loadProductName];
+   labelName.text=model.typeName;
+    
+    //加载商品产地
+    UILabel *labelSource=[self loadSource];
+   labelSource.text=model.address;
+    
+    //加载商品价格
+    UILabel *labelPrice=[self loadPrice];
+    labelPrice.text=model.price_unit;
+
+    //加载商品总量
+    UILabel *labelAmount=[self loadAmount];
+    labelAmount.text=model.num_unit;
+    
+    //加载发送时间
+    UILabel *labelDate=[self loadDate];
+    NSArray *timeArr=[model.addtime componentsSeparatedByString:@" "];
+    labelDate.text=timeArr[0];
+    
+    
+    [cell.contentView addSubview:lineView];
+    [cell.contentView addSubview:imageView];
+    [cell.contentView addSubview:labelTitle];
+    [cell.contentView addSubview:labelName];
+    [cell.contentView addSubview:labelSource];
+    [cell.contentView addSubview:labelPrice];
+    [cell.contentView addSubview:labelAmount];
+    [cell.contentView addSubview:labelDate];
+        
+        if (_searchArr.count==indexPath.row+1) {
+            isChanged=NO;
+        }
+        
     }
-    ProductModel *model=_searchArr[indexPath.row];
-    cell.textLabel.text=model.title;
+
+
     
     return cell;
     
@@ -348,8 +331,6 @@
 -(UILabel*)  loadTitle
 {
     UILabel *labelTitle=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.02f, SCREEN_WIDTH*0.6f, SCREEN_HEIGHT*0.08f)];
-//    NSString *str=string;
-//    [labelTitle setText:str];
     
     if(IS_IPHONE_4_OR_LESS)
     {
@@ -367,9 +348,9 @@
 //加载产品名称
 -(UILabel*) loadProductName
 {
-//    NSString *str=string;
+
     UILabel *productName=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.06f, SCREEN_WIDTH*0.3, SCREEN_HEIGHT*0.08f)];
-//    [productName setText:str];
+
     if(IS_IPHONE_4_OR_LESS)
     {
         [productName  setFont:[UIFont systemFontOfSize:13]];
@@ -385,9 +366,8 @@
 //加载产地
 -(UILabel*) loadSource
 {
-//    NSString *str=string;
+
     UILabel *sourceName=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.65f, SCREEN_HEIGHT*0.06f, SCREEN_WIDTH*0.3, SCREEN_HEIGHT*0.08f)];
-//    [sourceName setText:str];
     if(IS_IPHONE_4_OR_LESS)
     {
         [sourceName  setFont:[UIFont systemFontOfSize:13]];
@@ -404,9 +384,7 @@
 -(UILabel*) loadPrice
 {
     UILabel *labelPrice=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.35f, SCREEN_HEIGHT*0.10f, SCREEN_WIDTH*0.3f, SCREEN_HEIGHT*0.08f)];
-//    CGFloat  price=3.0;
-//    NSString *strPrice=[NSString stringWithFormat:@"¥%.02f元／斤",price];
-//    [labelPrice setText:string];
+
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelPrice  setFont:[UIFont systemFontOfSize:12]];
@@ -423,9 +401,7 @@
 -(UILabel*) loadAmount
 {
     UILabel *labelAmount=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.65f, SCREEN_HEIGHT*0.10f, SCREEN_WIDTH*0.3f, SCREEN_HEIGHT*0.08f)];
-//    NSInteger  amount=10000;
-//    NSString *strAmount=[NSString stringWithFormat:@"%ld斤",(long)amount];
-//    [labelAmount setText:string];
+
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelAmount  setFont:[UIFont systemFontOfSize:12]];
@@ -443,8 +419,7 @@
 -(UILabel*) loadDate
 {
     UILabel *labelDate=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH*0.75f, SCREEN_HEIGHT*0.12f, SCREEN_WIDTH*0.25f, SCREEN_HEIGHT*0.1f)];
-//    NSString *strDate=@"2015-10-10";
-//    [labelDate setText:string];
+
     if(IS_IPHONE_4_OR_LESS)
     {
         [labelDate  setFont:[UIFont systemFontOfSize:9]];
