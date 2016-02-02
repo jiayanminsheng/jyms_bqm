@@ -85,7 +85,6 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         
         
     }
-    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -101,6 +100,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavig
         self.switchView?.removeFromSuperview()
         self.jymsView.removeFromSuperview()
         self.gzsnView.removeFromSuperview()
+        self.imageView.removeFromSuperview()
     }
     
     
