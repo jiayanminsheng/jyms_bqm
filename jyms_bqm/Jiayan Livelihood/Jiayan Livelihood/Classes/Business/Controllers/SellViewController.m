@@ -16,9 +16,9 @@
 
 @interface SellViewController ()<MXPullDownMenuDelegate,UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,UISearchResultsUpdating>{
    
-    UIView             *_seachview; //搜索栏
+   
     UIView             *_categoryBar;//信息筛选下拉框
-    UISearchController *_search;
+    
     UITableView *_tableView;
     NSMutableArray *_dataArr;
     NSMutableArray *_searchArr;
@@ -68,28 +68,28 @@
     //1.示例化
     _seachview=[[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*0, SCREEN_WIDTH, SCREEN_HEIGHT*0.06f)];
     [_seachview setBackgroundColor:[UIColor whiteColor]];
-    _search = [[UISearchController alloc] initWithSearchResultsController:nil];
-    _search.searchBar.frame=CGRectMake(0, SCREEN_HEIGHT*0, SCREEN_WIDTH, 40);
+    __search = [[UISearchController alloc] initWithSearchResultsController:nil];
+    __search.searchBar.frame=CGRectMake(0, SCREEN_HEIGHT*0, SCREEN_WIDTH, 40);
     //3.点击搜索框不隐藏navigationBar
-    _search.hidesNavigationBarDuringPresentation = NO;
+    __search.hidesNavigationBarDuringPresentation = NO;
     //4.是否隐藏背景（灰色透明的背景）
-    _search.dimsBackgroundDuringPresentation = NO;
+    __search.dimsBackgroundDuringPresentation = NO;
     //5.修改外面的颜色
-    _search.searchBar.barTintColor=[UIColor whiteColor];
+    __search.searchBar.barTintColor=[UIColor whiteColor];
     //6.修改里面的颜色
-    [_search.searchBar layoutSubviews];//加载所有视图
-    for (UIView *subView in [[_search.searchBar.subviews lastObject] subviews]) {
+    [__search.searchBar layoutSubviews];//加载所有视图
+    for (UIView *subView in [[__search.searchBar.subviews lastObject] subviews]) {
         if ([subView isKindOfClass:[UITextField class]]) {
             UITextField *textField=(UITextField *)subView;
             textField.backgroundColor=GrayColor;
         }
     }
     //7.设置代理
-    _search.searchResultsUpdater = self;
-    _search.delegate = self;
-    [_seachview addSubview:_search.searchBar];
+    __search.searchResultsUpdater = self;
+    __search.delegate = self;
+    [_seachview addSubview:__search.searchBar];
     [self.sellScrollView addSubview:_seachview];
-    [_search.searchBar setSearchBarStyle:UISearchBarStyleMinimal];
+    [__search.searchBar setSearchBarStyle:UISearchBarStyleMinimal];
     //[_search.searchBar setBackgroundColor:[UIColor redColor]];
     //[_search.searchBar.layer setBorderColor:[UIColor blueColor].CGColor];
     //[_search.searchBar.layer setBorderWidth:0.0f];
@@ -114,7 +114,7 @@
     [_tableView.header beginRefreshing];
     _tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         //判断搜索处于编辑状态，下拉的时候不重新下载数据，不刷新tableview
-        if (!(_search.searchBar.showsCancelButton)) {
+        if (!(__search.searchBar.showsCancelButton)) {
             
             [self DownLoadData];
         }else{

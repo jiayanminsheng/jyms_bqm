@@ -11,4 +11,6 @@
 
 @interface SellViewController : BaseViewController
     @property (nonatomic,strong) UIScrollView   *sellScrollView;
+    @property (nonatomic,strong) UISearchController *_search;
+    @property (nonatomic,strong )UIView             *seachview; //搜索栏
 @end
