@@ -185,8 +185,6 @@
     
     //点击我要买
     if (btn.tag==1) {
-      
-        
         
         _label.frame=CGRectMake(SCREEN_WIDTH/6.0,NAVBAR_HEIGHT+SCREEN_HEIGHT/13.0-2.0, SCREEN_WIDTH/6.0, 2.0);
         UIButton *buyBtn=[self.view viewWithTag:btn.tag+1];

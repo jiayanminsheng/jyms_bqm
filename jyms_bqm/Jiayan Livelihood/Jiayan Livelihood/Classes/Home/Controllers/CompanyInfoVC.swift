@@ -27,6 +27,13 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     ]
     
+    private var companyBtn:    UIButton!
+    private var developmentBtn:UIButton!
+    private var partnerBtn:UIButton!
+    private var leaderBtn:UIButton!
+    private var reputationBtn:UIButton!
+    
+    
     
     
     
@@ -83,12 +90,17 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     func initSwitch()
     {
         switchView = UIView(frame:CGRectMake(0,0,sWidth,sHeight*0.043))
-        switchView.backgroundColor=UIColor.whiteColor()
+        switchView.backgroundColor=tabColor
+        switchView.layer.borderWidth=0.5
+        switchView.layer.borderColor=UIColor.lightGrayColor().CGColor
         
         //公司简介按钮
-        let companyBtn     = UIButton(frame:CGRectMake(sWidth*0.0,sHeight*0.01,sWidth*0.2,sHeight*0.025))
+        companyBtn     = UIButton(frame:CGRectMake(sWidth*0.0,sHeight*0.01,sWidth*0.2,sHeight*0.025))
         companyBtn.setTitle     ("公司简介", forState:.Normal)
         companyBtn.setTitleColor(textColor, forState: .Normal)
+        //公司按钮点击事件
+        companyBtn.addTarget(self, action: Selector("companyBtnTapped:"), forControlEvents: .TouchUpInside)
+        
         if(IS_IPHONE_4_OR_LESS)
         {
            companyBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 14.0)
@@ -98,9 +110,12 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             companyBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 16.0)
         }
         
-        let developmentBtn = UIButton(frame:CGRectMake(sWidth*0.2,sHeight*0.01,sWidth*0.2,sHeight*0.025))
+        developmentBtn = UIButton(frame:CGRectMake(sWidth*0.2,sHeight*0.01,sWidth*0.2,sHeight*0.025))
         developmentBtn.setTitle     ("发展历程", forState: .Normal)
         developmentBtn.setTitleColor(textColor, forState: .Normal)
+        //发展按钮点击事件
+        developmentBtn.addTarget(self, action: Selector("developmentBtnTapped:"), forControlEvents: .TouchUpInside)
+        
         if(IS_IPHONE_4_OR_LESS)
         {
            developmentBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 14.0)
@@ -111,10 +126,10 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         
         
-        let partnerBtn     = UIButton(frame:CGRectMake(sWidth*0.4,sHeight*0.01,sWidth*0.2,sHeight*0.025))
+        partnerBtn     = UIButton(frame:CGRectMake(sWidth*0.4,sHeight*0.01,sWidth*0.2,sHeight*0.025))
         partnerBtn.setTitle     ("合作伙伴", forState: .Normal)
         partnerBtn.setTitleColor(textColor, forState: .Normal)
-        
+        partnerBtn.addTarget(self, action: Selector("partnerBtnTapped:"), forControlEvents: .TouchUpInside)
         if(IS_IPHONE_4_OR_LESS)
         {
           partnerBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 14.0)
@@ -124,9 +139,10 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             partnerBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 16.0)
         }
         
-        let leaderBtn      = UIButton(frame:CGRectMake(sWidth*0.6,sHeight*0.01,sWidth*0.2,sHeight*0.025))
+        leaderBtn      = UIButton(frame:CGRectMake(sWidth*0.6,sHeight*0.01,sWidth*0.2,sHeight*0.025))
         leaderBtn.setTitle     ("领导关怀", forState: .Normal)
         leaderBtn.setTitleColor(textColor, forState: .Normal)
+        leaderBtn.addTarget(self, action: Selector("leaderBtnTapped:"), forControlEvents: .TouchUpInside)
         
         if(IS_IPHONE_4_OR_LESS)
         {
@@ -137,9 +153,10 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
               leaderBtn.titleLabel?.font=UIFont(name: "HelveticaNeue", size: 16.0)
         }
         
-        let reputationBtn  = UIButton(frame:CGRectMake(sWidth*0.8,sHeight*0.01,sWidth*0.2,sHeight*0.025))
+        reputationBtn  = UIButton(frame:CGRectMake(sWidth*0.8,sHeight*0.01,sWidth*0.2,sHeight*0.025))
         reputationBtn.setTitle     ("资质荣誉", forState: .Normal)
         reputationBtn.setTitleColor(textColor, forState: .Normal)
+        reputationBtn.addTarget(self, action: Selector("reputationBtnTapped:"), forControlEvents: .TouchUpInside)
         
         if(IS_IPHONE_4_OR_LESS)
         {
@@ -151,6 +168,18 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
 
         
+        switch switchIndex
+        {
+            
+        case  0: companyBtn.setTitleColor( themeColor, forState: .Normal)
+        case  1: developmentBtn.setTitleColor( themeColor, forState: .Normal)
+        case  2: partnerBtn.setTitleColor( themeColor, forState: .Normal)
+        case  3: leaderBtn.setTitleColor( themeColor, forState: .Normal)
+        case  4: reputationBtn.setTitleColor( themeColor, forState: .Normal)
+            
+        default:print("error")
+        }
+
         
         switchView.addSubview(companyBtn)
         switchView.addSubview(developmentBtn)
@@ -245,7 +274,7 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         abstractTitle.textAlignment = .Center//居中显示
         contentView.addSubview(abstractTitle)
         
-        let abstarctContent=UILabel(frame:CGRectMake(sWidth*0.05,sHeight*0.1,sWidth*0.9,sHeight*0.58));
+        let abstarctContent=UILabel(frame:CGRectMake(sWidth*0.05,sHeight*0.07,sWidth*0.9,sHeight*0.48));
         abstarctContent.text="　    遂昌嘉言民生事务服务有限公司（以下简称“嘉言民生”）县便民服务中心运营总部于2012年成立，2014年由北京东方财星国际资本管理有限公司进一步投资，现有员工196人，系农业部“信息进村入户”试点县项目承担单位。\n　    嘉言民生作为第三方机构，与现有县、乡镇、村级便民服务中心相融合，形成农村公共服务的网络体系，采取“政企社共建村级便民服务中心”项目运营模式，提供一站式服务，以专人、专业方式处理日常民生事务。村级便民服务中心是党群、干群、企群之间的连心桥，是方便百姓、服务百姓的民心工程，是转变政府职能、提高行政效率的示范工程，是招商引资、对外开放的窗口工程和遏制腐败、树立形象的阳光工程。"
         abstarctContent.numberOfLines=0
         if(IS_IPHONE_4_OR_LESS)
@@ -350,6 +379,47 @@ class CompanyInfoVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         let reputationView:UIImageView=UIImageView(frame: CGRectMake(sWidth*0.05, sHeight*0.05, sWidth*0.9, sHeight*0.7))
         reputationView.image=UIImage(named: "fame")
         contentView.addSubview(reputationView)
+    }
+    //------------------------------------------------------------------------------------------------
+    
+    func addGreenUnderline(button:UIButton)
+    {
+        let underLine:UIView=UIView(frame: CGRectMake(0,0,sWidth*0.1,sHeight*0.1));
+        underLine.backgroundColor=UIColor.redColor()
+        switchView.addSubview(underLine)
+    }
+    
+    
+    //------------------------------------------------------------------------------------------------
+    //切换按钮
+    func companyBtnTapped(button:UIButton)
+    {
+        switchIndex=0
+        viewWillAppear(false)
+    }
+    
+    func developmentBtnTapped(button:UIButton)
+    {
+        switchIndex=1
+        viewWillAppear(false)
+    }
+    
+    func partnerBtnTapped(button:UIButton)
+    {
+        switchIndex=2
+        viewWillAppear(false)
+    }
+    
+    func leaderBtnTapped(button:UIButton)
+    {
+        switchIndex=3
+        viewWillAppear(false)
+    }
+    
+    func reputationBtnTapped(button:UIButton)
+    {
+        switchIndex=4
+         viewWillAppear(false)
     }
     
     
