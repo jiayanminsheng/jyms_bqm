@@ -2419,7 +2419,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Constant/PrefixHeader.pch";
 				INFOPLIST_FILE = "Jiayan Livelihood/Info.plist";
@@ -2443,7 +2443,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 727708984@qq.com (7U7HRP38FZ)";
 				DEFINES_MODULE = YES;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Constant/PrefixHeader.pch";
 				INFOPLIST_FILE = "Jiayan Livelihood/Info.plist";

@@ -74,8 +74,8 @@
     // tabbar上文字信息
     NSArray * nameArr = @[@"首页", @"了解政策", @"需要帮助", @"我要买卖",@"个人中心"];
     
-    NSDictionary * normalTitleAttri = @{NSFontAttributeName : [UIFont systemFontOfSize:9.0f], NSForegroundColorAttributeName :UIColorWithRGBA(47, 47, 47, 1)};
-    NSDictionary * selectedTitleAttri = @{NSFontAttributeName : [UIFont systemFontOfSize:9.0f], NSForegroundColorAttributeName : UIColorWithRGBA(35, 165, 58, 1)};
+    NSDictionary * normalTitleAttri = @{NSFontAttributeName : [UIFont systemFontOfSize:12.0f], NSForegroundColorAttributeName :UIColorWithRGBA(47, 47, 47, 1)};
+    NSDictionary * selectedTitleAttri = @{NSFontAttributeName : [UIFont systemFontOfSize:12.0f], NSForegroundColorAttributeName : UIColorWithRGBA(35, 165, 58, 1)};
     
     // 下标起始设置
     NSInteger index = 0;
