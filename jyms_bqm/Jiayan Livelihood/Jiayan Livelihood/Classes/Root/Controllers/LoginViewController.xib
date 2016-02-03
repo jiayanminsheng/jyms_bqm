@@ -46,8 +46,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nff-aR-qzY" userLabel="Button2">
                     <rect key="frame" x="0.0" y="240" width="320" height="49"/>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="在此输入登录密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-dJ-cN0">
-                    <rect key="frame" x="71" y="250" width="241" height="33"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="在此输入登录密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-dJ-cN0">
+                    <rect key="frame" x="91" y="250" width="221" height="33"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
@@ -65,8 +66,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mri-Wf-oJe" userLabel="Button1">
                     <rect key="frame" x="0.0" y="172" width="320" height="68"/>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="在此输入登录账号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk0-y3-T3z">
-                    <rect key="frame" x="71" y="201" width="241" height="33"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="在此输入登录账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk0-y3-T3z">
+                    <rect key="frame" x="91" y="201" width="221" height="33"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -122,7 +124,7 @@
                 <constraint firstAttribute="trailing" secondItem="e1J-cT-ngV" secondAttribute="trailing" constant="8" id="c2n-Xn-K4T"/>
                 <constraint firstItem="dpN-eK-yOj" firstAttribute="bottom" secondItem="Nff-aR-qzY" secondAttribute="bottom" constant="-2" id="cNy-vW-vKs"/>
                 <constraint firstItem="dpN-eK-yOj" firstAttribute="leading" secondItem="Nff-aR-qzY" secondAttribute="leading" constant="8" id="cVk-BR-zJZ"/>
-                <constraint firstItem="uk0-y3-T3z" firstAttribute="leading" secondItem="Fn7-1N-E4N" secondAttribute="trailing" constant="20" id="e4q-hg-sv5"/>
+                <constraint firstItem="uk0-y3-T3z" firstAttribute="leading" secondItem="Fn7-1N-E4N" secondAttribute="trailing" constant="40" id="e4q-hg-sv5"/>
                 <constraint firstItem="X9l-dJ-cN0" firstAttribute="height" secondItem="uk0-y3-T3z" secondAttribute="height" id="eWp-zJ-p9P"/>
                 <constraint firstItem="uk0-y3-T3z" firstAttribute="trailing" secondItem="mri-Wf-oJe" secondAttribute="trailing" constant="-8" id="fgC-xy-U4N"/>
                 <constraint firstItem="e4l-c4-ohO" firstAttribute="width" secondItem="CZT-zU-vef" secondAttribute="width" multiplier="0.25" id="gnd-Ue-hQu"/>
